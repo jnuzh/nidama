@@ -3,6 +3,10 @@
 
 <p>应用获取用户mother_fun的资料</p>
 <?php
+
+?>
+<?php
+echo "<p>begin</p>";
 header("Content-Type: text/html; charset=gb2312");
 include("taobao_sdk/TopSdk.php");
 $c = new TopClient;
@@ -13,4 +17,5 @@ $req = new UserGetRequest;
 $req->setFields("nick,sex");
 $resp = $c->execute($req, $sessionKey);
 print_r($resp);
+echo "<p>end</p>";
 ?>
