@@ -1,0 +1,11 @@
+component {528e3289-a272-4b32-9e38-ba734481452a} koProfiler.py
+component {1ec846a8-621c-4862-8142-0d85755cd3e1} koProfiler.py
+contract @activestate.com/koProfiler?type=callgrind;1 {528e3289-a272-4b32-9e38-ba734481452a}
+contract @activestate.com/koProfiler?type=python_pstats;1 {ba6a3989-686a-4856-a3d4-9c48403c3e43}
+contract @activestate.com/koProfilerService;1 {d9e4c237-0751-4b2c-aea5-13859845f4a5}
+contract @activestate.com/koCallgrindProfilerItem;1 {1ec846a8-621c-4862-8142-0d85755cd3e1}
+contract @activestate.com/koPythonProfilerItem;1 {2096937e-a797-46fd-9eb6-f5e1727b5880}
+component {ba6a3989-686a-4856-a3d4-9c48403c3e43} koProfiler.py
+component {2096937e-a797-46fd-9eb6-f5e1727b5880} koProfiler.py
+component {d9e4c237-0751-4b2c-aea5-13859845f4a5} koProfiler.py
+interfaces koIProfiler.xpt

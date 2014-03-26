@@ -1,0 +1,45 @@
+/* Copyright (c) 2000-2006 ActiveState Software Inc.
+   See the file LICENSE.txt for licensing information. */
+
+#include "nsISupports.idl"
+
+[scriptable, uuid(f98cecbe-9b76-11db-8957-000d935d3368)]
+interface koILicenseCallback: nsISupports
+{
+    const long LICCB_ABORT = 1;
+    const long LICCB_RETRY = 2;
+    const long LICCB_CONTINUE = 3;
+    
+    long trialDialog();
+};
+
+[scriptable, uuid(7d9a8b3a-9b76-11db-8957-000d935d3368)]
+interface koILicenseInfo: nsISupports
+{
+    const long LIC_PERPETUAL  = 0;  // Valid perpetual feature found
+    const long LIC_TRIAL      = 1;  // Valid trial feature found
+    const long LIC_EXPIRED    = 2;  // Expired trial feature
+    const long LIC_NOTCOVERED = 3;  // Feature doesn't cover this release
+    const long LIC_NOFEATURE  = 4;  // No matching feature in license file
+    const long LIC_NOFILE     = 5;  // No license file at all
+    const long LIC_ENDOFBETA  = 6;  // Time-limited beta has expired
+
+    readonly attribute long release_year;
+    readonly attribute long release_month;
+    readonly attribute long release_day;
+
+    readonly attribute long trial_duration;
+
+    /* Defaults to "Trial", or whatever is in the LicenseType field in the license */
+    readonly attribute string license_type; 
+
+    void setCallback(in koILicenseCallback callback);
+
+    /* Retval is one of the LIC_* constants. */
+    long status(out string featureName,
+                   out string feature);
+    string fetchValue(in string feature, in string key);
+    long daysUntil(in string feature, in string key);
+    void reset();
+};
+

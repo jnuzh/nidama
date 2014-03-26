@@ -1,0 +1,622 @@
+/* Copyright (c) 2000-2006 ActiveState Software Inc.
+   See the file LICENSE.txt for licensing information. */
+
+#include "nsISupports.idl"
+#include "koIFile.idl"
+#include "koIRunService.idl"
+#include "koIDocument.idl"
+#include "koIViews.idl"
+
+//XXX The Cons build system can't handle recursive .idl dependancies :-(
+//    As a result we need to add the following addition includes. (The
+//    problem is related to alphabetical order and is exacerbated by the low
+//    'D' in koIDBGP.idl.)
+#include "koIFileEx.idl"
+#include "koIEncoding.idl"
+#include "koIEncodingServices.idl"
+#include "koIHierarchyItem.idl"
+#include "koIPrefs.idl"
+#include "koILanguage.idl"
+#include "ISciMoz.idl"
+
+
+interface koIDBGPSession;
+interface koIBreakpointsTabManager;
+interface koIDBGPApplication;
+
+[scriptable, uuid(FA41C2B4-DF72-422A-BFAF-EEDDBE3AFAEF)]
+interface koIDBGPDataType: nsISupports
+{
+    readonly attribute wstring commonType;
+    readonly attribute wstring languageType;
+    readonly attribute wstring schemaType;
+};
+
+[scriptable, uuid(4C8A7C10-091B-4135-9DBC-4C48B351BC80)]
+interface koIDBGPBreakpoint: nsISupports
+{
+    attribute wstring language;
+    attribute wstring type;
+    attribute wstring filename;
+    attribute long    lineno;
+    attribute wstring functionName;
+    attribute wstring state;
+    attribute long    hitCount;
+    attribute long    hitValue;
+    attribute wstring hitCondition;
+    attribute boolean temporary;
+    attribute wstring exceptionName;
+    attribute wstring expression;
+
+    // Return a short string describing this breakpoint.
+    // Note: This is intended just for debugging purposes. This string is
+    // not appropriate for uniquely identifying breakpoints.
+    wstring getName();
+
+    long getGuid(); // return the unique identifier for this breakpoint
+    koIDBGPBreakpoint clone();
+    void update(in koIDBGPBreakpoint bp); // update with data from this bp
+    // Return an array of args appropriate for a "breakpoint_set" DBGp command.
+    void getSetArgs(out unsigned long count,
+                    [array, size_is(count)] out wstring args,
+                    out wstring data);
+};
+
+[scriptable, uuid(6A3E1DA3-E403-40BF-93E6-A08EB4365EA3)]
+interface koIDBGPSpawnpoint: koIDBGPBreakpoint
+{
+    //XXX Inheriting from koIDBGPBreakpoint is messy (because it is not a
+    //    a proper superset). Should find a common base and use that.
+};
+
+[scriptable, uuid(3BEA5683-6A83-484D-854A-2816A11A9181)]
+interface koIDBGPContextType: nsISupports
+{
+    readonly attribute wstring name;
+    readonly attribute long id;
+};
+
+[scriptable, uuid(E8871440-AE16-4659-89D9-BA260CC6C58A)]
+interface koIDBGPStackFrame: nsISupports
+{
+    readonly attribute long depth;
+    readonly attribute wstring filename;
+    readonly attribute long lineno;
+    readonly attribute wstring type;
+    readonly attribute wstring where;
+    
+    // the following two attributes are usefull for UI hightlighting
+    // of the current command
+    // start position of the command
+    readonly attribute long beginLine;
+    readonly attribute long beginOffset;
+    // end position of the command
+    readonly attribute long endLine;
+    readonly attribute long endOffset;
+    
+    readonly attribute koIDBGPStackFrame inputFrame;
+};
+
+[scriptable, uuid(BBD8DDD7-96E6-4C66-9CDF-CC788C4E501D)]
+interface koIDBGPProperty: nsISupports
+{
+    readonly attribute koIDBGPSession session;
+    
+    readonly attribute long contextId;
+    readonly attribute long depth;
+
+    readonly attribute AString name;
+    readonly attribute long id;
+    readonly attribute AString fullname;
+    readonly attribute wstring type;
+    readonly attribute wstring typeName; // generic dbgp type name (see typemap_get)
+    readonly attribute wstring typeScheme; // generic dbgp type scheme (see typemap_get)
+    readonly attribute wstring classname;
+    readonly attribute wstring facets;
+    readonly attribute long size;
+    readonly attribute boolean children;
+    readonly attribute long numchildren;
+    readonly attribute wstring address;
+    readonly attribute boolean recursive;
+    readonly attribute wstring encoding;
+    readonly attribute AString value;
+    
+    void setValue(in AString value, in wstring datatype);
+    AString getValue();
+
+    // Return a tooltip showing information about this property.
+    AString getTooltip(in long maxTooltipLength);
+
+    void getChildren(in long page,
+                    [array, size_is(count)]
+                    out koIDBGPProperty properties,
+                    out unsigned long count);
+    void getChildrenNextPage(
+                    [array, size_is(count)]
+                    out koIDBGPProperty properties,
+                    out unsigned long count);
+    void getAvailableChildren(
+                    [array, size_is(count)]
+                    out koIDBGPProperty properties,
+                    out unsigned long count);
+    void getAllChildren(
+                    [array, size_is(count)]
+                    out koIDBGPProperty properties,
+                    out unsigned long count);
+};
+
+
+[scriptable, uuid(9C8E354F-D2A0-4032-B0DF-AA2042FE48AD)]
+interface koIDBGPSessionBase: nsISupports
+{
+    readonly attribute wstring hostname;
+    readonly attribute string address;
+    readonly attribute long port;
+    long sendCommand([array, size_is(count)]
+                    in wstring argv,
+                    in unsigned long count,
+                    in wstring data);
+};
+
+
+[scriptable, uuid(2e3761e6-4954-4efa-831c-e764f0d5aaee)]
+interface koIDBGPSession: koIDBGPSessionBase
+{
+    // execution states
+    const long RESUME_STOP        = 0; // session terminated.
+    const long RESUME_STEP_IN     = 1; // step into things.
+    const long RESUME_STEP_OVER   = 2; // step over current thing
+    const long RESUME_STEP_OUT    = 3; // step out of current thing.
+    const long RESUME_GO          = 4; // go for it.
+    const long RESUME_INTERACTIVE = 5; // run the input from stdin
+
+    // status types
+    const long STATUS_STARTING    = 0;
+    const long STATUS_STOPPING    = 1;
+    const long STATUS_STOPPED     = 2;
+    const long STATUS_RUNNING     = 3;
+    const long STATUS_BREAK       = 4;
+    const long STATUS_INTERACTIVE = 5;
+
+    // status reason types
+    const long REASON_OK        = 0;
+    const long REASON_ERROR     = 1;
+    const long REASON_ABORTED   = 2;
+    const long REASON_EXCEPTION = 3;
+
+    readonly attribute wstring idekey;
+    readonly attribute wstring cookie;
+    readonly attribute koIDBGPApplication application;
+    
+    readonly attribute wstring applicationId;
+    readonly attribute wstring threadId;
+    readonly attribute wstring parentId; // parent applicationId
+    
+    // status values
+    readonly attribute long status;
+    readonly attribute wstring statusName;
+    readonly attribute long reason;
+    void updateStatus();
+
+    wstring getLastError(); //XXX Currently not implemented or used. Should it be? --TM
+
+    //---- DBGp API commands.
+    // In general there is a camelCase method on this class for each of the
+    // underscore_separated DBGp commands. Each such command raises a
+    // DBGPError if the command fails.
+    // Note: Some current method implementation _may_ not yet be updated to
+    //       work this way. It _is_ the ultimate intention that they do.
+    
+    // feature commands
+    wstring featureGet(in wstring name);
+    boolean featureSet(in wstring name, in AString value);
+    
+    // feature values
+    readonly attribute wstring languageName;
+    readonly attribute wstring languageVersion;
+    readonly attribute boolean supportsAsync;
+    readonly attribute boolean supportsDetach;
+    readonly attribute boolean supportsInteract;
+    readonly attribute boolean supportsHiddenVars;
+    readonly attribute boolean supportsPostmortem;
+    
+    // interactive prompt character(s) for the next input.  This is empty when
+    // the engine is not expecting interactive input.  It is set to empty when you
+    // call the interact function below, and is set when the response to the interact
+    // command is received.  This allows an interface to switch between the interactive
+    // prompt and the stdin prompt
+    readonly attribute wstring interactivePrompt;
+    readonly attribute long interactiveState;
+
+    void getBreakpointLanguages([array, size_is(count)]
+                        out wstring language,
+                        out unsigned long count);
+
+    //readonly attribute boolean language_supports_threads;
+    //attribute wstring encoding;
+    //attribute wstring data_encoding;
+    //readonly attribute wstring protocol_version;
+    //attribute boolean multiple_sessions;
+    attribute long maxChildren; // page size
+    attribute long maxData;  // max size of property value returned
+    attribute long maxDepth; // depth of children returned
+    //attribute boolean show_hidden;
+
+    // continuation commands
+    boolean resume(in long resumeAction);
+    void breakNow();
+    boolean stop();
+    boolean detach();
+    
+    // call interact with a chunck of code, and get the command id back
+    long interact(in wstring command);
+    
+    // stack commands
+    long stackDepth();
+    koIDBGPStackFrame stackGet(in long depth);
+    void stackFramesGet([array, size_is(count)]
+                        out koIDBGPStackFrame frames,
+                        out unsigned long count);
+    
+    // context commands
+    void contextNames([optional] out unsigned long count,
+                      [retval, array, size_is(count)]
+                      out koIDBGPContextType contextTypes);
+    void contextGet(in long contextId,
+                    in long depth,
+                    [array, size_is(count)]
+                    out koIDBGPProperty properties,
+                    out unsigned long count);
+    
+    // property commands
+    koIDBGPProperty propertyGet(in AString fullname);
+    koIDBGPProperty propertyGetEx(in long contextId,
+                                in long stackDepth,
+                                in AString fullname,
+                                in long maxData,
+                                in long dataType,
+                                in long dataPage,
+                                in wstring address);
+    koIDBGPProperty propertySet(in AString name);
+    koIDBGPProperty propertySetEx(in long contextId,
+                        in long stackDepth,
+                        in AString name,
+                        in wstring value);
+    AString propertyValue(in AString name);
+    AString propertyValueEx(in long contextId,
+                        in long stackDepth,
+                        in AString name);
+    
+    // breakpoint commands
+    wstring breakpointSet(in koIDBGPBreakpoint bp); // returns the session's breakpoint id
+    void breakpointUpdate(in wstring bpid,
+                          in koIDBGPBreakpoint bp,
+                          [array, size_is(attrCount)] in wstring attrs,
+                          in unsigned long attrCount);
+    koIDBGPBreakpoint breakpointGet(in wstring bpid);
+    void breakpointEnable(in wstring bpid); // OBSOLETE, use breakpointUpdate
+    void breakpointDisable(in wstring bpid); // OBSOLETE, use breakpointUpdate
+    void breakpointRemove(in wstring bpid);
+    void breakpointList([array, size_is(count)] out koIDBGPBreakpoint breakpoints,
+                        out unsigned long count);
+    
+    // spawnpoint commands
+    // The spawnpoint interface shadows the breakpoint interface. The
+    // "type" attribute will always be "spawn" for spawnpoints. It might make
+    // sense in the future to find a common base for spawnpoints and
+    // breakpoints, but for now spawnpoints have been sort of kludged onto
+    // breakpoints.
+    wstring spawnpointSet(in koIDBGPSpawnpoint sp);
+    void spawnpointUpdate(in wstring spid,
+                          in koIDBGPSpawnpoint sp,
+                          [array, size_is(attrCount)] in wstring attrs,
+                          in unsigned long attrCount);
+    koIDBGPSpawnpoint spawnpointGet(in wstring spid);
+    void spawnpointEnable(in wstring spid); // OBSOLETE, use spawnpointUpdate
+    void spawnpointDisable(in wstring spid); // OBSOLETE, use spawnpointUpdate
+    void spawnpointRemove(in wstring spid);
+    void spawnpointList([array, size_is(count)] out koIDBGPSpawnpoint spawnpoints,
+                        out unsigned long count);
+
+    // eval command.
+    koIDBGPProperty evalString(in AString expression);
+
+
+    void getTypeMap([array, size_is(count)]
+                    out koIDBGPDataType dateTypes,
+                    out unsigned long count);
+    koIDBGPDataType getDataType(in wstring commonType);
+    
+    // Gets the sourcecode for the named file.
+    ACString getSourceCode(in wstring filename, in long start, in long end);
+    
+    boolean sendStdin(in AString data, in long size);
+    boolean setStdinHandler(in koIFile file);
+    boolean setStdoutHandler(in koIFile file, in long mode);
+    boolean setStderrHandler(in koIFile file, in long mode);
+};
+
+interface koIDBGPUIManager;
+interface koITerminalInterrupt;
+
+[scriptable, uuid(E2CCB712-D493-4CA9-9A7C-146A09651586)]
+interface koIDBGPApplication: nsISupports
+{
+    attribute koIDBGPSession currentSession;
+    void setUIManager(in koIDBGPUIManager uiManager);
+    void getSessionList([array, size_is(count)]
+                        out koIDBGPSession sessions,
+                        out unsigned long count);
+    long sessionCount();
+    void shutdown();
+    
+    boolean sendStdin(in AString data, in long size);
+    void setStdinHandler(in koIFile file);
+    boolean setStdoutHandler(in koIFile file, in long mode);
+    boolean setStderrHandler(in koIFile file, in long mode);
+    
+    // this handler is used in the koITerminalHandler object to redirect
+    // stdin to an interactive prompt command.
+    readonly attribute koITerminalInterrupt interactiveHandler;
+    readonly attribute string uuid;
+};
+
+[scriptable, uuid(cdfc9395-1062-11db-aaed-000d935d3368)]
+interface koIDBGPNotification: nsISupports
+{
+    readonly attribute koIDBGPSession session;
+    readonly attribute wstring name;
+    readonly attribute wstring value;
+};
+
+// Note: The breakpoint manager is currently also responsible for managing
+//       "spawnpoints". A spawnpoint is very similar to a breakpoint. In the
+//       long run a spawnpoint manager should either move out of here or this
+//       manager should be renamed to not be breakpoint-specific, say
+//       koIDBGPActionpointManager or something like that.
+[scriptable, uuid(16DB17AE-891B-4C4E-868B-B9E8BD756AC5)]
+interface koIDBGPBreakpointManager: nsISupports
+{
+    //---- Methods that add, remove or change breakpoints.
+    koIDBGPBreakpoint addBreakpointConditional(
+                                        in wstring lang,
+                                        in wstring cond,
+                                        in wstring file,
+                                        in long line,
+                                        in wstring state,
+                                        in boolean temporary,
+                                        in long hitValue,
+                                        in wstring hitCondition);
+    koIDBGPBreakpoint addBreakpointWatch(
+                                        in wstring lang,
+                                        in wstring watch,
+                                        in wstring file,
+                                        in long line,
+                                        in wstring state,
+                                        in boolean temporary,
+                                        in long hitValue,
+                                        in wstring hitCondition);
+    koIDBGPBreakpoint addBreakpointLine(in wstring lang,
+                                        in wstring file,
+                                        in long line,
+                                        in wstring state,
+                                        in boolean temporary,
+                                        in long hitValue,
+                                        in wstring hitCondition);
+    koIDBGPBreakpoint addBreakpointException(
+                                        in wstring lang,
+                                        in wstring exceptionName,
+                                        in wstring state,
+                                        in boolean temporary,
+                                        in long hitValue,
+                                        in wstring hitCondition);
+    koIDBGPBreakpoint addBreakpointCall(in wstring lang,
+                                        in wstring func,
+                                        in wstring filename,
+                                        in wstring state,
+                                        in boolean temporary,
+                                        in long hitValue,
+                                        in wstring hitCondition);
+    koIDBGPBreakpoint addBreakpointReturn(
+                                        in wstring lang,
+                                        in wstring func,
+                                        in wstring filename,
+                                        in wstring state,
+                                        in boolean temporary,
+                                        in long hitValue,
+                                        in wstring hitCondition);
+    koIDBGPSpawnpoint addSpawnpoint(in wstring lang,
+                                    in wstring file,
+                                    in long line,
+                                    in wstring state);
+    koIDBGPBreakpoint addBreakpoint(in koIDBGPBreakpoint bp);
+
+    void removeBreakpoint(in long guid);
+    void removeAllBreakpoints();
+    void removeAllBreakpointsInURI(in wstring uri);
+
+    void copyBreakpointsToNewURI(in wstring uri_old, in wstring uri_new);
+    
+    void toggleBreakpointState(in long guid);
+    // If any breakpoint is enabled, disable all breakpoints. Otherwise,
+    // enable all breakpoints.
+    void toggleAllBreakpointStates();
+
+    // Note: one should never change an existing breakpoint's attributes
+    // in-place. Instead:
+    //  1. get the breakpoint;
+    //  2. call its .clone() method;
+    //  3. modify the clone; and
+    //  4. pass the clone into this updateBreakpoint().
+    void updateBreakpoint(in long guid, in koIDBGPBreakpoint bp);
+
+    // these functions are used to handle notifications from the debugger
+    // engine for adding/updating/removing breakpoints.  They do not
+    // interact (ie. send commands to) the debugger engine.
+    void client_addBreakpoint(in koIDBGPSession session,
+                              in koIDBGPBreakpoint bp);
+    void client_updateBreakpoint(in koIDBGPSession session,
+                              in koIDBGPBreakpoint bp);
+    void client_removeBreakpoint(in koIDBGPSession session, in wstring bpid);
+
+    //---- Methods for accessing the set of breakpoints and interacting with
+    //     debug sessions.
+    void getBreakpointsForLanguage(in wstring lang, 
+                                   [array, size_is(count)]
+                                   out koIDBGPBreakpoint breakpoints,
+                                   out unsigned long count);
+
+    // Return the breakpoint at the given file and line, if there is
+    // one, otherwise, return null.
+    //
+    //  "filename" is a file URI
+    //  "line" is a 1-based line number
+    //
+    // Note: In this case _spawn_points are specifically excluded. Use
+    //       getSpawnpointAtFileAndLine() for that.  As well, with the
+    //       current implementation, there may be more than one breakpoint
+    //       at the same line. This will just pick the first one.
+    koIDBGPBreakpoint getBreakpointAtFileAndLine(in wstring filename,
+                                                 in long line);
+    koIDBGPSpawnpoint getSpawnpointAtFileAndLine(in wstring filename,
+                                                 in long line);
+
+
+    // Add the relevant breakpoints to this session.
+    //
+    // Returns a newline-separated list of breakpoints (and reasons) that
+    // did not get properly set on the session.
+    wstring setSessionBreakpoints(in koIDBGPSession session);
+    void releaseSession(in koIDBGPSession session);
+    // Notification so the breakpoint mgr can send queued up bps/sps to
+    // the session when it goes into a break state.
+    void sendUpdatesToSession(in koIDBGPSession session);
+
+    //---- Attributes and methods related to the "Breakpoints" tab and its
+    //     nsITreeView
+    void addTabMgr(in koIBreakpointsTabManager tabMgr);
+    void removeTabMgr(in koIBreakpointsTabManager tabMgr);
+    nsITreeView treeViewFromTabMgr(in koIBreakpointsTabManager tabMgr);
+
+    koIDBGPBreakpoint currentBreakpointFromTabMgr(in koIBreakpointsTabManager tabMgr);
+    long currentBreakpointGuidFromTabMgr(in koIBreakpointsTabManager tabMgr);
+    wstring currentBreakpointNameFromTabMgr(in koIBreakpointsTabManager tabMgr);
+
+    // Sort the breakpoints by a certain key (this key typically matches
+    // the <treecol id=.../>  id's).
+    void sort(in string sortBy);
+
+
+    //---- Methods for managing breakpoint markers in Scintilla views
+    void addTopView(in koIViewList topView);
+    void removeTopView(in koIViewList topView);
+
+    // This is called when the first view for a document is opened so
+    // that markers for its breakpoints can be added.
+    //
+    // Dev Note: This module stores these marker handles for efficient
+    // updating or breakpoint information on view modification (see
+    // .updateBreakpointsFromDocument()).
+    void addMarkersForDocument(in koIDocument koDoc,
+                               in koIScintillaView scintilla);
+    // This is called when a document is modified so marker location
+    // changes from this modification can be reflected in the
+    // breakpoints system.
+    // - This update method should only be called when a document is saved,
+    //   because (1) debugging only uses the contents of files on disk and
+    //   (2) doing this update for every buffer modification would be
+    //   a little excessive.
+    void updateBreakpointsFromMarkers(in koIDocument koDoc,
+                                      in koIScintillaView scintilla);
+};
+
+
+[scriptable, uuid(4DBEAF4D-A553-4EF0-9FA0-ECC0EE730705)]
+interface koIDBGPManager: nsISupports
+{
+    readonly attribute koIDBGPBreakpointManager breakpointManager;
+    void setKey(in wstring key);
+    wstring getKey();
+    void setProxy(in string address, in long port);
+    void listen(in string address, in long port);
+    void start(); // starts listening on address/port from prefs
+    boolean isListening();
+    void stop();
+    void shutdown();
+    
+    readonly attribute wstring address;
+    readonly attribute long port;
+    readonly attribute wstring proxyAddress;
+    readonly attribute long proxyPort;
+    readonly attribute wstring proxyClientAddress;
+    readonly attribute long proxyClientPort;
+    readonly attribute long currentSessions;
+    readonly attribute long totalConnections;
+    readonly attribute long currentConnections;
+    attribute boolean stopOnConnect;
+    
+    void getApplicationList([array, size_is(count)]
+                            out koIDBGPApplication sessions,
+                            out unsigned long count);
+    koIDBGPApplication getApplicationFromUUID(in string uuid);
+};
+
+
+
+// A component to manage a debug session tab in Komodo's bottom pane.
+// This is implemented in JavaScript in debugSessionTab.js. A new one is
+// created for each DebugSessionTab_NewSession() call.
+[scriptable, uuid(D0DFE998-8495-4F0F-933D-2448066E5E12)]
+interface koIDebugSessionTabManager: nsISupports
+{
+    readonly attribute koITerminalHandler terminalHandler;
+    
+    void configure(/* XXX arguments here? */);
+    void show(); // make the tab visible
+    void clear(); // clear the tab's UI
+    //XXX ...
+};
+
+// A service to manage the "Breakpoints" tab in Komodo's bottom pane.
+// This is implemented in JavaScript in breakpointsTab.js.
+[scriptable, uuid(F9BBED80-18E0-4864-A806-41BB1A39D713)]
+interface koIBreakpointsTabManager: nsISupports
+{
+    void numBreakpointsChanged();
+};
+
+
+/* the following interfaces are necessary to implement support for
+    the dbgp protocol which is used for requesting eval buffers */
+
+#include "nsIURI.idl"
+#include "nsIProtocolHandler.idl"
+#include "nsIInputStream.idl"
+
+/* koIDBGPUIManager provides access to DBGP class in debugger.js */
+[scriptable, uuid(1A686D0F-83ED-44B2-904B-F6B8F0B3AA96)]
+interface koIDBGPUIManager : nsISupports {
+    void notifyDebuggerSessionStateChange(in koIDBGPSession session, in string statusName);
+    void notifyDebuggerSessionNotify(in koIDBGPNotification subject, in string data);
+};
+
+[scriptable, uuid(99874C86-2F14-4BAD-BAFB-DEB060AD7FC3)]
+interface koIInputStreamHack : nsIInputStream {
+    /* provided to allow javascript easier access to buffers */
+    wstring readStr(in long size);
+};
+
+[scriptable, uuid(4BC053A5-55C2-4DCC-BD28-E4C9BE0AD65B)]
+interface koIDBGPProtocolHandler : nsIProtocolHandler {
+    /* used in debugger.js to tell the protocol where to request
+       the current debugger session from */
+    // No additional public functions needed
+};
+
+/* uri class implementing dbgp protocol support */
+[scriptable, uuid(6BDDD45C-A02F-4B46-B5E4-C8EC22DFD6F0)]
+interface koIDBGPURI : nsIURI {
+  koIDBGPURI newURI(in wstring filename);
+  wstring getBaseURI(in wstring uri);
+  void init(in wstring uri);
+};

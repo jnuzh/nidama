@@ -1,0 +1,22 @@
+{
+    "name": "komodo-debug",
+    "version": "8.1.0",
+    "description": "This package contains the bits required for debugging node.js application with Komodo IDE remotely.",
+    "licenses": [{
+        "type": "Proprietary",
+        "url": "http://www.activestate.com/komodo-ide/license-agreement"
+    }],
+    "keywords": ["Komodo", "IDE", "debug", "debugger", "dbgp"],
+    "homepage": "http://www.activestate.com/komodo-ide",
+    "author": "ActiveState Software Inc. <support@activestate.com> (http://www.activestate.com)",
+    "bin": {
+        "node-dbgp": "./bin/node-dbgp"
+    },
+    "dependencies": {
+        "log": "=1.2.0"
+    },
+    "engines": {
+        "node": "0.6.x || 0.8.x || 0.10.x"
+    },
+    "preferGlobal": true
+}

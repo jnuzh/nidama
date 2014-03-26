@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/screen.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="favicon.ico" type=
+  "image/x-icon" />
+
+  <title>Unit Testing</title>
+</head>
+
+<body>
+<div id="content">
+  <h1><a name="unit_test_top" id="unit_test_top">Unit Testing</a></h1>
+
+  <p>Komodo has a unit testing interface for Perl, PHP, Ruby and Python.
+  Unit tests can be defined within project or file preferences. Test
+  output is displayed in the <strong>Test Results</strong> tab in the
+  bottom pane. Click on an error to jump to the relevant file and line
+  number.</p>
+
+  <h2><a name="unit_test_create" id="unit_test_create">Creating and Editing Test Plans</a></h2>
+
+  <p>To create a test plan for a specific file, click <strong>Tools|Test
+  Plans|Create New Test Plan...</strong>. File-based test plans can be
+  edited and managed in the file's <a
+  href="files.html#files_settings">preferences</a> (<strong>Edit|Current
+  File Settings</strong>).</p>
+
+  <p>To create a project-specific test plan, right-click on a
+  project and select <strong>Create New Test Plan...</strong>.
+  Project-specific test plans can be edited and managed in the project
+  preferences.</p>
+
+  <p>In the "Define a new Test Plan" dialog box:
+
+    <ol>
+      <li>Give the test plan a unique name</li>
+      <li>Select the language</li>
+      <li>Set the directory to run the test command in (usually the base directory
+      of a project).</li>
+      <li>Specify any additional command line options (see below).</li>
+      <li>Click 'OK' to save the test plan</li>
+    </ol>
+  </p>
+
+  <p>To edit an existing test plan, select the test plan from the drop
+  list in the <strong>Test Results</strong> tab and click the
+  <strong>Edit Current Test Plan</strong> button.</p>
+
+  <h3><a name="unit_test_langs" id="unit_test_langs">Supported Test Frameworks
+  by Language</a></h3>
+
+  <ul>
+    <li><strong>Perl</strong>: Uses '<tt>make test</tt>'. If no Makefile
+    is present, it first runs '<tt>perl Makefile.PL</tt>' to generate
+    one before running '<tt>make test</tt>'. Note: On Windows, if you're
+    testing an XS library, and nmake wants to rebuild part of it, you
+    need to have the Visual C++ environment loaded when Komodo is
+    launched.</li>
+
+    <li><strong>Python</strong>: Uses the <tt>unittest</tt> framework.
+    You need to specify a list of files and/or directories to test.</li>
+
+    <li><strong>PHP</strong>: Uses the <tt>PHPUnit</tt> framework. Set
+    the test plan to point to the base directory of the project. The
+    test harness will look for a subdirectory called
+    <em>tests</em>.</li>
+
+    <li><strong>Ruby</strong>: Runs '<tt>rake</tt>'. If the default
+    action of the Rakefile is to run tests, no command-line options are
+    needed. If not, enter the appropriate target for rake (e.g.
+    '<tt>rake test</tt>').</li>
+  </ul>
+
+  <h3><a id="unit_test_libs">Adding Libraries Required for Unit
+  Testing</a></h3>
+  
+  <p>If the test framework you are running requires additional libraries
+  that are not in the language interpreter's default search path (e.g.
+  PERL5LIB or PYTHONPATH), you can add them to the language settings in
+  the <a href="project.html#project_prefs">project properties</a> or
+  global <a href="prefs.html#lang_config">preferences</a>.</p>
+
+  <h2><a name="unit_test_run" id="unit_test_run">Running a Test Plan</a></h2>
+
+  <p>To run a test plan, select it from the drop list in the
+  <strong>Tests Results</strong> tab in the bottom pane and click the
+  <strong>Run Test Plan</strong> button. The drop list shows all test
+  plans available for the current file and in the <a
+  href="project.html">active project</a>.</p>
+
+  <p>These plans can also be started from the
+  <strong>Tools|Test</strong> menu.</p>
+
+  <p>Project-specific test plans can be run by right-clicking on the project
+  to bring up the context menu, then selecting the test plan from the
+  <strong>Test</strong> sub-menu.</p>
+
+  <h2><a name="importing_global_test_plans"
+  id="importing_global_test_plans">Importing Global Test Plans</a></h2>
+
+  <p>Version 4.3 of Komodo allowed the creation of global test plans.
+  Since these are almost always associated with specific files, version
+  4.4 has replaced global test plans with file-specific ones.</p>
+  
+  <p>To copy or move a global test plan into the current document's
+  preferences, select <strong>Tools|Test|Move Global Test Plans to
+  Document</strong>. This opens the "Import Global Test Plans" dialog.
+  Select the desired test plans and click <strong>Move</strong> (deletes
+  the global test plans), or <strong>Copy</strong> (leaves them
+  available for other documents).</p>
+
+
+  <br />
+  <!-- Footer Start -->
+  <hr />
+
+</div> <!-- content -->
+</body>
+</html>

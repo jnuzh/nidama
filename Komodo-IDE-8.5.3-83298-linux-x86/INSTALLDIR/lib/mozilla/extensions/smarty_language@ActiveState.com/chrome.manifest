@@ -1,0 +1,3 @@
+category komodo-language Smarty @activestate.com/koLanguage?language=Smarty;1
+component {2A2886F8-3D8D-4959-9FE1-32BD7FEA8294} components/koSmarty_UDL_Language.py
+contract @activestate.com/koLanguage?language=Smarty;1 {2A2886F8-3D8D-4959-9FE1-32BD7FEA8294}

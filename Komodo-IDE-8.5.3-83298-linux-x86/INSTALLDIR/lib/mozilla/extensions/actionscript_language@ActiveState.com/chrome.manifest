@@ -1,0 +1,10 @@
+content actionscriptprefs content/
+locale actionscriptprefs en-US locale/en-US/
+overlay chrome://komodo/content/pref/pref.xul chrome://actionscriptprefs/content/prefsOverlay.xul
+category category-komodo-linter ActionScript @activestate.com/koLinter?language=ActionScript;1
+contract @activestate.com/koLanguage?language=ActionScript;1 {4dd22f3a-52e2-426d-8a21-6f7ea2ba91ac}
+category komodo-linter ActionScript%20MTASC%20Linter @activestate.com/koLinter?language=ActionScript;1
+contract @activestate.com/koLinter?language=ActionScript;1 {50bc6a5c-950f-4b94-8d5a-194524d41f85}
+component {50bc6a5c-950f-4b94-8d5a-194524d41f85} components/koActionScript_UDL_Language.py
+component {4dd22f3a-52e2-426d-8a21-6f7ea2ba91ac} components/koActionScript_UDL_Language.py
+category komodo-language ActionScript @activestate.com/koLanguage?language=ActionScript;1

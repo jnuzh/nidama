@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/screen.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="favicon.ico" type=
+  "image/x-icon" />
+
+  <title>Find and Replace</title>
+</head>
+
+<body>
+<div id="content">
+  <h1><a name="search_top" id="search_top">Find &amp; Replace</a></h1>
+
+  <p>There are a number of ways to search for text in Komodo:</p>
+  
+    <ul>
+      <li><strong><a href="#search_incr">Fast Find (Incremental Search)</a></strong>
+      quickly finds text in the current buffer</li>
+      <li>The <strong><a href="#search_dialog">Find</a></strong> dialog
+      box offers several find and replace options.</li>
+      <li>The <strong><a href="#search_find_toolbar">Open/Find
+      Toolbar</a></strong> can search the current buffer or files in a
+      project or directory</li>
+    </ul>
+    
+  <p>To replace text, use the <strong><a href="#search_dialog">Find
+  dialog</a></strong> with the <strong>Replace</strong> option
+  enabled.</p>
+  
+  <p>Additional features are available for:</p>
+    <ul>  
+      <li><strong><a href="#search_repl_in_files">Replace in
+      Files</a></strong>, with <strong>Confirm</strong> and
+      <strong>Undo</strong> options.</li>
+      <li><strong><a href="#search_functions">Function
+      Search</a></strong> for Perl, Python, PHP, Ruby and
+      Tcl.</li>
+      <li><strong><a href="vikeybind.html#vi_emulation">Vi Mode command
+      line</a></strong> for searches and substitutions.</li>
+    </ul>
+  
+  <h2><a name="search_highlight" id="search_highlight">Match Highlighting</a></h2>
+  
+    <p>When performing a search on the current buffer, all matching text
+    strings will be highlighted. Press 'Esc' to clear the
+    highlighting.</p>
+    
+    <p>To guard against performance problems caused by slow searches,
+    Komodo will stop highlighting matches after the timeout configured
+    in the Find <a href="prefs.html#Find">preferences</a>.</p>
+  
+  <h2><a name="search_incr" id="search_incr">Fast Find (Incremental Search)</a></h2>
+
+  <p>Use the Fast Find bar to quickly find a word or string in the file
+  you are currently editing.</p>
+  
+  <div style="margin-left: 2em">
+    <img border="1" src="img/fast_find.png" alt="Fast Find Toolbar" />
+  </div>
+  
+  <ul>
+    <li><strong>Start an incremental search</strong>: Use the associated
+    <a href="prefs.html#Config_Key_Bindings">key binding</a> (by
+    default: 'Ctrl'+'F' on Windows and Linux, 'Cmd'+'F' on Mac OS X).
+    Start typing your search string in the Fast Find bar. As you type,
+    the cursor moves to the first match after the current cursor
+    position and highlights all other matches.</li>
+    
+    <li><strong>Jump to the next/previous occurrence</strong>: Press
+    'Ctrl'+'I' and 'Ctrl'+'Shift'+'I' or use the arrow buttons on the
+    Fast Find bar to move through all the matches.</li>
+    
+    <li><strong>Use a selection as your search string</strong>: Select
+    the text you want to use with the mouse or keyboard, then press
+    'Ctrl'+'F' ('Cmd'+'F').</li>
+    
+    <li><strong>Change the search string while searching</strong>: Use
+    'Shift'+'Right|Left Arrow' to add or remove characters from the
+    current selection.</li>
+    
+    <li><strong>Change case sensitivity</strong>: Use the button to the
+    right of the search field to toggle <a href="#search_case">case
+    sensitivity</a>.</li>
+    
+    <li><strong>Change search type</strong>: The next button toggles
+    between plain text / fixed strings ("F"), wildcard ("*") or <a
+    href="#search_regex">regular expression</a> ("//")searches.</li>
+    
+    <li><strong>Open the Find Dialog</strong>: If you need to open the
+    Find Dialog (e.g. to search in a project or a set of files), click
+    the green up arrow.</li>
+  
+    <li><strong>Cancel the search</strong>: Press 'Esc'.</li>
+  </ul>
+  
+  <h2><a name="search_dialog" id="search_dialog">Find Dialog</a></h2>
+  
+  <p>The Find dialog box is a multi-purpose interface for finding and
+  replacing text. It has the following options:</p>
+  
+  <ul>
+    <li><strong><a href="#search_regex">Regex</a></strong>: Use <a
+    href="regex-intro.html#regex-intro_top">regular expressions</a>
+    instead of plain text.</li>
+    <li><strong><a href="#search_case">Smart case / Match
+    case</a></strong>: Toggles between "Match case" (selected - case
+    sensitive), "Match case" (deselected - case insensitive), and "Smart
+    Case". </li>
+    <li><strong><a href="#search_word">Word</a></strong>: Match whole
+    words only.</li>
+    <li><strong><a href="#search_multiline">Multiline</a></strong>:
+    Changes the "Find what:" field to a multi-line field, allowing you
+    to insert blocks of text.</li>
+    <li><strong>Replace</strong>: Adds the "Replace with:" field for
+    making substitutions.</li>
+  </ul>
+  
+  <p>The interface changes as different options are selected, so that
+  you only see fields and <a href="#search_actions">buttons</a> that are
+  relevant to your task.</p>
+  
+  <h3><a name="search_regex" id="search_regex"></a>Regex Searches</h3>
+  
+  <p>Selecting <strong><a href=
+  "regex-intro.html#regex-intro_top">Regex</a></strong> will interpret
+  the search string as a <a href=
+  "regex-intro.html#python_regex_syntax">Python regular expression</a>,
+  and perform the search accordingly.</p>
+  
+  <p>To the right of the "Find what:" field are two buttons which can
+  help you compose your regular expression:</p>
+  
+  <ul>
+    <li><strong>Regular Expression Shortcuts</strong>: A drop list of
+    commonly used regular expression special characters and sequences
+    with a short description of what each one does.</li>
+    
+    <li><strong>Open in Rx Toolkit</strong>: Opens the regular
+    expression from the "Find what:" field in the <a href="regex.html">Rx
+    Toolkit</a>, allowing you to test it before running your search.
+    <span class="version_alert">Komodo IDE only</span></li>
+  </ul>
+  
+  <p>When used in conjunction with <strong>Replace</strong>, regular
+  expression replacement sequences can be used in the "Replace with:"
+  field (e.g. "\1", "\g&lt;<em>name</em>&gt;", etc.).</p>
+  
+  <h3><a name="search_case" id="search_case">Case Sensitivity</a></h3>
+  
+  <p>The <strong>Smart case / Match case</strong> option is a three-way
+  toggle:</p>
+  
+    <ul>
+      <li><strong>Match case</strong> (selected): Performs a case
+      sensitive search; only exact matches are found (e.g. "myString"
+      matches "myString" but not "mystring").</li>
+      <li><strong>Match case</strong> (deselected): Performs a case
+      insensitive search; strings will match even if the case is
+      different (e.g. "mystring" will match "myString").</li>
+      <li><strong>Smart case</strong> (selected): Search strings
+      containing capital letters are automatically case sensitive. When doing
+      "Smart case" replacements, the case of the replaced strings will follow the
+      case of the matched text if the following conditions hold:
+      <ul>
+        <li>The "Regex" option is unchecked</li>
+        <li>The search-pattern is all lower-case</li>
+        <li>If the found text is all upper-case, the matched text is
+        upper-cased</li>
+        <li>If the found text starts with an upper-case character, the first
+        character of the matched text is upper-cased, but the rest of the text
+        is left as is</li>
+      </ul>
+      <p>For example, a smart-case replacement of "cat" to "dog" in the text
+      would work like the following:</p>
+      <table><tbody><tr>
+      <td>
+        cool cat<br/>
+        fat CAT<br/>
+        Top Cat
+      </td>
+      <td><br/>&#8594;</td>
+      <td>
+        cool dog<br/>
+        fat DOG<br/>
+        Top Dog
+      </td>
+      </tr></tbody></table>
+      <p>For those writing macros, you would set
+      <code>koIFindOptions.patternType</code> to
+      <code>koIFindOptions.FOT_SIMPLE</code> and
+      <code>koIFindOptions.caseSensitivity</code> to
+      <code>koIFindOptions.FOC_SMART</code></p></li>
+    </ul>
+
+  <h3><a name="search_word" id="search_word"></a>Match Whole Words</h3>
+  
+  <p>With <strong>Word</strong> selected, search strings will only match
+  if a whitespace occurs on either side of the string. For example, if
+  the search string is "edit" and "Word" is selected, only occurrences
+  of the word "edit" will be found. If it is not selected, "editing",
+  "editor", "editorial" and "edited" could also be found.</p>
+  
+  <h3><a name="search_multiline" id="search_multiline"></a>Multiline</h3>
+  
+  <p>Selecting <strong>Multiline</strong> changes the "Find what:" field
+  (and the "Replace with:" field if <strong>Replace</strong> is selected)
+  with larger, multiline text boxes.</p>
+  
+  <p>This makes it easier to paste in multiline blocks of text in these
+  fields. The search text will only match if the line breaks are the
+  same. Line breaks in the "Replace with:" field are likewise
+  respected.</p>
+  
+  <h3><a name="search_scope" id="search_scope"></a>Scope</h3>
+  
+  <p>The "Search in:" drop list defines where the find or replace will
+  happen. It contains the following options:</p>
+  
+  <ul>
+    <li>Current document</li>
+    <li>Selected text</li>
+    <li>Open files</li>
+    <li>Project (<em>current project</em>)</li>
+    <li>Files</li>
+  </ul>
+  
+  <p>Selecting <strong>Files</strong> from this list opens additional
+  fields allowing you to set the scope of your search in directories on your filesystem:</p>
+  
+  <ul>
+    <li><strong>Directories</strong>: Defines the path to the directory
+    to start your search in. Multiple paths can be added by separating
+    them with a semi-colon (";"). Relative paths can be specified using
+    the path of the file in the current editor tab as the starting point
+    (e.g. "../adjacent-dir/").</li>
+    <li><strong>Search in sub-directories</strong>: If selected, makes
+    the search recursive. The search starts in the directory or
+    directories specified above and descends into all
+    sub-directories.</li>
+    <li><strong>Include</strong>: Defines the file names to include in
+    the search or replace. Can be used to specify a partial filename or
+    file extension with glob syntax (e.g. "*.html, *.txt").</li>
+    <li><strong>Exclude</strong>: As above, but defining the files and
+    directories to <em>exclude</em>.</li>
+  </ul>
+  
+  <p>See also the <strong><a href="#search_repl_in_files">Replace in
+  Files</a></strong> section for a description of the
+  <strong>Confirm</strong> and <strong>Undo</strong> options.</p>
+  
+  <h3><a name="search_actions" id="search_actions">Actions</a></h3>
+  
+  <p>Once all the options for the Find or Replace are set, choose the
+  action you wish to perform. The action buttons available will depend
+  on which options have been selected:</p>
+  
+  <ul>
+    <li><strong>Find Next</strong>: Finds consecutive occurrences
+    of the search string in your file or selection. As matches are
+    found, the text will be highlighted. The Find dialog box
+    remains in focus. To keep the focus in your file, close the
+    Find dialog box, then use the associated <a href=
+    "prefs.html#Config_Key_Bindings">key binding</a>.</li>
+
+    <li><strong>Find All</strong>: Locates all occurrences of the search
+    string in your file or selection. The matches will be displayed in
+    the <a href="#search_output">Find Results</a> tab in the Bottom
+    Pane.</li>
+
+    <li><strong>Replace</strong>: Highlights the next occurrence of
+    the search string; if you click <strong>Replace</strong> again,
+    the highlighted text will be replaced with the replacement
+    string and the next occurrence of the search string will be
+    highlighted.</li>
+
+    <li><strong>Replace All</strong>: Replaces all occurrences of
+    the search string in the document or selection without
+    prompting for confirmation. All replacements will be displayed
+    on the <a class="doc" href="#search_output">Find Results</a> tab
+    of the <a class="doc" href=
+    "workspace.html#Output_Pane">Bottom Pane</a>.</li>
+
+    <li><strong>Mark All</strong>: Inserts a <a href=
+    "editor.html#bookmarks">bookmark</a> on each line
+    that contains the search string. To move the editing cursor to
+    a bookmarked line, press 'F2'.</li>
+  </ul>
+  
+  <h3><a name="search_dialog_keys" id="search_dialog_keys">Find Dialog
+  Keyboard Shortcuts</a></h3>
+  
+  <p>On Windows and Linux, keyboard shortcuts for the Find dialog are
+  indicated by an underlined letter in the option, field and button
+  labels. Hold down 'Alt' and press the underlined letter to toggle the
+  option, jump to the field, or start the operation.</p>
+  
+  <p>On Mac OS X, these keyboard shortcuts are accessed by holding down
+  the 'Ctrl' key, but are not indicated in the interface. They are:</p>
+  
+  <ul>
+    <li>Find what: 'N'</li>
+    <li>Replace with: 'L'</li>
+    <li>Regex: 'X'</li>
+    <li>Match/Smart case: 'C'</li>
+    <li>Word: 'W'</li>
+    <li>Multiline: 'T'</li>
+    <li>Search in: 'I'</li>
+    <li>Directories: 'D'</li>
+    <li>Browse button: '.'</li>
+    <li>Search in sub-directories: 'B'</li>
+    <li>Include: 'U'</li>
+    <li>Exclude: 'E'</li>
+    <li>Find Next: 'F'</li>
+    <li>Replace: 'R'</li>
+    <li>Replace All: 'A'</li>
+    <li>Show results: 'O'</li>
+    <li>Confirm: 'M'</li>
+  </ul>
+  
+  <h2><a name="search_repl_in_files" id="search_repl_in_files">Replace in Files</a></h2>
+  
+  <p>Globally replacing strings in multiple files can be daunting. Using a
+  search string that matches more than what was intended, specifying an
+  incorrect replacement string, or selecting the wrong starting
+  directory for a recursive replacement can cause havoc.</p>
+  
+  <p>Komodo's <strong>Replace in Files</strong> feature has a
+  <strong>Confirm</strong> option which lets you check the substitutions
+  before you apply them, and an <strong>Undo</strong> feature to revert
+  the replacement if you make a mistake.</p>
+  
+  <h3><a name="search_repl_confirm" id="search_repl_confirm">Confirming Changes</a></h3>
+  
+  <p>When "Search in: Files" is selected, the only action button
+  available is <strong>Replace All</strong>. Beneath this button is a
+  <strong>Confirm</strong> check box. This option adds an additional
+  step to the replacement process which allows you to view changes
+  before applying them, and "un-mark" specific changes you don't want to
+  apply.</p>
+  
+  <h4><a name="search_confirm_dialog"
+  id="search_confirm_dialog">Confirm Replacements</a></h4>
+  
+  <p>The Confirm Replacements dialog box shows a list of all pending
+  replacements from the <strong>Replace in Files</strong> operation.
+  Each line shows:</p>
+  
+  <ul>
+    <li>A check mark (by default all are marked) indicating that the
+    replacements in that file are marked for inclusion. Click on the
+    check marks to toggle them on or off.</li>
+    <li>The path and filename</li>
+    <li>The number of replacements to be made in the file</li>
+  </ul>
+  
+  <p><strong>Show Selected Changes</strong> previews all
+  <em>selected</em> changes in the list. Use 'Shift'+'Click' or
+  'Ctrl'+'Click' to select multiple items.</p>
+  
+  <p><strong>Show Marked Changes</strong> previews all <em>marked</em>
+  changes.</p>
+  
+  <p>The preview window has the same format and options as <strong><a
+  href="files.html#Comparing_Files">Compare Files</a></strong>. The
+  preview is in unified diff format, so it can be copied and saved as a
+  patch.</p>
+  
+  <h4><a name="search_repl_make_changes" id="search_repl_make_changes">Make
+  Changes</a></h4>
+  
+  <p>Once you have confirmed that all pending replacements are correct,
+  or un-marked the changes you do <em>not</em> want to include, click
+  <strong>Make Changes</strong>.</p>
+  
+  <h3><a name="search_repl_undo" id="search_repl_undo">Review and Undo</a></h3>
+  
+  <p>As Komodo makes the replacements, it outputs a log of the changes
+  in a Find Results tab in the bottom pane. You can click on any of the
+  changes to open the file in an editor tab at the appropriate line.</p>
+  
+  <p>If you've made a mistake and would like to roll back all of the
+  changes from the last <strong>Replace in Files</strong> operation,
+  click the <strong>Undo Replacements</strong> button in the Find
+  Results tab toolbar.</p>
+  
+  <h3><a name="search_output" id="search_output">Find Results
+  Tabs</a></h3>
+
+  <p><strong>Find Results</strong> tabs are opened in the <a
+  href="workspace.html#Output_Pane">Bottom Pane</a> to display
+  matches from <strong>Find All</strong>, <strong>Find in
+  Files</strong> or <strong>Replace in Files</strong> operations.</p>
+  
+  <p>Komodo can open two tabs, <strong>Find Results 1</strong> and
+  <strong>Find Results 2</strong>, which can be locked using the
+  <strong>Lock</strong> button in their respective toolbars. New find or
+  replace operations will not overwrite contents in a locked tab.</p>
+  
+  <p>Komodo uses the first available tab for output. If both tabs are
+  locked during subsequent find or replace operations, Komodo prompts
+  you to unlock one of the tabs or cancel the action.</p>
+  
+  <p>The <strong>Find Results</strong> tabs display columns for:</p>
+  
+  <ul>
+    <li>File: the path and filename in which the match or replacement occurred</li>
+    <li>Line: the line number on which the match or replacement occurred</li>
+    <li>Content: the text that was matched or replaced</li>
+  </ul>
+  
+  <p>Double-click on any output line to jump to the relevant file and
+  line in an editor tab.</p>
+  
+  <p>The <strong>Find Results</strong> toolbar has buttons to:</p>
+  
+  <ul>
+    <li>Jump to Previous/Next Result</li>
+    <li>Stop Search</li>
+    <li>Undo Replacements (with Replace in Files output)</li>
+    <li>Lock or Unlock the tab</li>
+  </ul>
+  
+  <h2><a name="search_find_toolbar" id="search_find_toolbar">Open/Find Toolbar</a></h2>
+
+  <p>The <a href="workspace.html#Toolbars">Open/Find</a>
+  toolbar provides a quick way to open files and find 
+  strings. The toolbar is not displayed by default; to open
+  it select <strong>View|Toolbars|Open/Find</strong>.</p>
+  
+  <p>This toolbar has three fields:</p>
+  
+  <ul>
+    <li><strong>Open</strong>: The file to open. Use the full path of
+    the file, the relative path from the directory of the current file,
+    or just the filename if it's in the same directory as the current
+    file. </li>
+    
+    <li><strong>Find</strong>: The string to search for. Pressing
+    'Enter' after typing the search term searches the current file.</li>
+    
+    <li><strong>in</strong>: The directory or file to search in.
+    Pressing 'Enter' in this field causes the search term in the
+    <strong>Find</strong> field to be applied to the specified directory
+    or file instead of the current file. You can use the
+    <strong>Browse</strong> button to the right of the field to populate
+    this field. Accepts the glob wildcards '*' and '?'.</li>
+  </ul>
+  
+  <p>The <strong>Find</strong> and <strong>in</strong> fields both 
+  keep a list of the most recently entered strings and file
+  specifications. </p>
+
+  <p>If a file or directory is specified in the <strong>in</strong>
+  field, matches will be displayed in a <a name="find_results" id=
+  "find_results"><strong>Find Results</strong></a> tab.</p>
+
+  <p>Press 'Esc' to return focus to the Komodo editor. All fields can be
+  accessed via their associated <a href=
+  "prefs.html#Config_Key_Bindings">key bindings</a>.</p>
+
+ <h2><a name="search_functions" id="search_functions">Finding Functions:
+  Function Search</a> <span class="version_alert">Komodo Edit only</span></h2>
+
+  <p>The Function Search looks through the current document for the
+  following constructs:</p>
+
+  <ul>
+    <li><strong>Perl programs</strong>: <code>sub</code> and
+    <code>package</code> statements.</li>
+
+    <li><strong>Python programs</strong>: <code>class</code> and
+    <code>def</code> statements.</li>
+
+    <li><strong>PHP programs</strong>: <code>class</code> and
+    <code>function</code> statements.</li>
+
+    <li><strong>Ruby programs</strong>: <code>module</code>,
+    <code>class</code> and <code>def</code> statements.</li>
+
+    <li><strong>Tcl programs</strong>: <code>proc</code>
+    statements.</li>
+  </ul>
+
+  <p>Use <strong>Navigation|Find Next Function</strong> or <strong>Navigation|Find
+  Previous Function</strong> (or the associated <a
+  href="prefs.html#Config_Key_Bindings">key bindings</a>) to cycle
+  through the functions.</p>
+
+  <p>Use <strong>Navigation|Find All Functions</strong> to display a list of
+  all functions in a <strong><a href="#search_output">Find
+  Results</a></strong> tab. Double-click on any entry to jump to the
+  relevant line.</p>
+  
+  <p>Komodo IDE has a more powerful feature with the same default
+  keybinding ('Ctrl'+'F8') called the <a
+  href="sections_list.html">Sections List</a>.</p> 
+  
+  <!-- Footer Start -->
+  <hr />
+
+</div> <!-- content -->
+</body>
+</html>

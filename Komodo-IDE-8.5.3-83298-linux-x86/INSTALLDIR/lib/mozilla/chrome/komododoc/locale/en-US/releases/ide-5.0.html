@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Komodo IDE/Edit 5.0 Release Notes</title>
+  <link rel="stylesheet" type="text/css" href="../css/screen.css" />
+  <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+</head>
+<body>
+<div id="content">
+
+<h1>Komodo IDE/Edit Release Notes</h1>
+
+<p>Welcome to Komodo, ActiveState's Integrated Development
+Environment (IDE). These Release Notes cover <a href="#whatsnew">what's
+new</a>, <a href="#details">detailed changes and bug fixes</a> and <a
+href="#knownissues">known issues</a> for Komodo IDE and Komodo Edit.</p>
+
+
+<h2 id="whatsnew">What's New in Komodo IDE/Edit</h2>
+
+<h3 id="whatsnew-5.0">5.0</h3>
+
+<strong>Edit and IDE</strong>
+
+<ul>
+  <li><strong>Built on Mozilla 1.9</strong>: Komodo is now built on the
+  Mozilla 1.9 branch, the same code base Firefox 3.0 is built on. This
+  includes a number of bug fixes and performance improvements, and
+  provides a more platform-native look and feel.</li>
+
+  <li><strong>Multi-Window</strong>: Komodo can now open multiple
+  top-level windows, allowing you to configure your workspace the way you want
+  when editing or debugging.</li>
+
+  <li><strong>Improved Tabstops</strong>: <a
+  href="../tabstops.html">Tabstops</a> in snippets and file templates are
+  now more intuitive and flexible.</li>
+</ul>
+
+<strong>IDE only</strong>
+
+<ul>
+  <li><strong>Mercurial, Bazaar, and Git Support</strong>: Integration
+  support for the <a target="_blank"
+  href="http://www.selenic.com/mercurial/wiki/">Mercurial</a> (hg), <a
+  target="_blank" href="http://bazaar-vcs.org/">Bazaar</a> (bzr), and <a
+  target="_blank" href="http://git.or.cz/">Git</a> source control
+  systems.</li>
+  
+  <li><strong>Code Formatting</strong>: <a
+  href="../editor.html#editor_formatters">Configurable
+  commands</a> for formatting selections and documents.</li>
+
+  <li><strong>SCC Checkout</strong>: A <a
+  href="../scc.html#scc_checkout">new interface</a> for checking out
+  working copies of a repository from within Komodo.</li>
+</ul>
+
+<h2 id="details">Detailed Changes and Bug Fixes in Komodo IDE/Edit</h2>
+
+<p>Changes related to debugging, interactive shells, source code
+control, the HTTP Inspector, the Rx Toolkit, the Code Browser, and the
+Sections List apply to Komodo IDE only.</p>
+
+<h3 id="bug_fixes-5.0.3">5.0.3 Bug Fixes</h3>
+
+<ul>
+  <li>Tcl: Fixed spawnpoints in Tcl debugging. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=81047">81047</a>)</li>
+  
+  <li>Fixed updating of add-ons from the ActiveState Community site.
+  (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=81121">81121</a>)</li>
+  
+  <li>Fixed crash when working with a UDL language with an empty state
+  map. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=81200">81200</a>)</li>
+  
+  <li>Ruby: Debugger now properly handles UNC paths. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80991">80991</a>)</li>
+  
+  <li>Fold state preserved when reopening documents. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=45621">45621</a>)</li>
+  
+  <li>Mac OS X: Fixed run/debug. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=81298">81298</a>)</li>
+  
+  <li>Fixed exception caused by removing all items from a project
+  folder. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=81315">81315</a>)</li>
+  
+  <li>Mac OS X: Fixed slow typing response. This fix has an impact on
+  extensions using API calls such as "ko.open.URI" (see Open Komodo <a
+  href="http://svn.openkomodo.com/openkomodo/revision/?rev=2751">revision
+  2751</a> for details). (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80683">80683</a>)</li>
+</ul>
+
+<h3 id="bug_fixes-5.0.2">5.0.2 Bug Fixes</h3>
+
+<ul>
+  <li>Fixed settings import from previous versions when KOMODO_USERDATIDIR
+  is set. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80768">80768</a>)</li>
+  
+  <li>Preferences: Added preference for turning off mixed EOL warnings.
+  (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=33318">33318</a>)</li>
+  
+  <li>Preferences: Fixed encoding and language pop up menus so nested
+  items can be selected. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80721">80721</a>)</li>
+  
+  <li>Leading whitespace in snippets now follows the global settings.
+  The tabWidth in a snippet is the indentWidth in the editor, as each
+  tab corresponds to indenting by one indentLevel when a snippet is
+  inserted into a buffer. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=79809">79809</a>)</li>
+  
+  <li>PHP: Fixed code intelligence failing when scanning encounters a
+  non-existing symlinked PHP file. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80841">80841</a>)</li>
+  
+  <li>SDK: The koext tool now zips additional directories for Mozilla
+  extensions. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=75091">75091</a>)</li>
+  
+  <li>PHP: Fixed non-expanding arrays in debugger variable view. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=78260">78260</a>)</li>
+  
+  <li>SCC: Fixed SVN diff options being ignored. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80799">80799</a>)</li>
+  
+  <li>JavaScript: Provide calltips for "Function.apply" et al. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80880">80880</a>)</li>
+  
+  <li>Linux: Fixed file encoding preferences not being displayed
+  correctly. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=75399">75399</a>)</li>
+  
+  <li>Rx: Fixed "$" matching line feed rather than current line ending
+  when combined with a range. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80881">80881</a>)</li>
+  
+  <li>Fixed template names with periods being cut off. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80882">80882</a>)</li>
+  
+  <li>Remote Files: Fixed FTPS. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80386">80386</a>)</li>
+  
+  <li>SCC: Filter out "path contains illegal component: .hg" warning
+  messages. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80762">80762</a>)</li>
+  
+  <li>Leading tabs in snippets are now replaced with [indentWidth]
+  spaces on snippet insertion. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80784">80784</a>)</li>
+  
+  <li>SCC: Fixed diff between history versions failing with hg. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80933">80933</a>)</li>
+  
+  <li>JavaScript: Fixed object variables being incorrectly recognized as
+  class members. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=78497">78497</a>)</li>
+  
+  <li>Calltips: New preference for setting the calltip maximum line
+  width. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=67403">67403</a>)</li>
+  
+  <li>Debugging: CGI debugging of POST requests is fixed. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80970">80970</a>)</li>
+  
+  <li>"Jump to corresponding line" now works in diffs with relative
+  paths. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80989">80989</a>)</li>
+  
+  <li>Fixed LangInfoError exception on unknown filetype: matlab and
+  Forth. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80803">80803</a>)</li>
+  
+  <li>OS X: Fixed problem grabbing bottom pane splitter. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80756">80756</a>)</li>
+  
+  <li>OS X: 'Cmd'+'H' now hides Komodo. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80666">80666</a>)</li>
+  
+  <li>Tab key now inserts white-space when at end of a word with no
+  autocompletions. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80647">80647</a>)</li>
+  
+  <li>Code Browser sidebar state now correctly saved. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80843">80843</a>)</li>
+  
+  <li>Fixes for multi-window layout save and restore. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=79920">79920</a>)</li>
+</ul>
+
+<h3 id="bug_fixes-5.0.1">5.0.1 Bug Fixes</h3>
+
+<ul>
+  <li>Remote Files: Fixed "ValueError" warning message on console. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80726">80726</a>)</li>
+  
+  <li>Fixed run commands failing when using "Pass selection as input" or
+  "Insert output". (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80732">80732</a>)</li>
+  
+  <li>Linux: Fixed blurry icons when task switching. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80727">80727</a>)</li>
+  
+  <li>Windows: Fixed Komodo application icon. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80689">80689</a>)</li>
+  
+  <li>Windows: Maximized window state now restored properly. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80661">80661</a>)</li>
+  
+  <li>Remote files: Remote server accounts without passwords were not
+  being properly migrated from 4.4 profile. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80724">80724</a>)</li>
+  
+  <li>Removed incorrect error message when inserting snippets containing
+  [[%w]] or [[%W]] interpolation shortcuts. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80741">80741</a>)</li>
+  
+  <li>Mapped URIs: Fixed broken 'Remote' button in mapped URI dialog.
+  (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80730">80730</a>)</li>
+  
+  <li>Fixed problem saving preferences with "Use tab character to
+  complete words like Ctrl+Space" selected. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80767">80767</a>)</li>
+</ul>
+
+<h3 id="bug_fixes-5.0">5.0 Bug Fixes</h3>
+
+<ul>
+  <li>Key binding changes: Moved the debugger's default step over
+  keybinding from 'F10'/'Ctrl'+'F10' to 'F12'/'Ctrl-F12'. Toggling the
+  interactive shell has moved from 'F12' to 'Shift'-'F12'. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80296">80296</a>)</li>
+  
+  <li>SCC: fixed bzr incorrectly showing non-scc files as being under
+  scc control. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80431">80431</a>)</li>
+  
+  <li>Fixed file type not showing up in the status bar after opening or
+  creating a file. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80462">80462</a>)</li>
+  
+  <li>Projects: Moved the "New Project", "Open Project" and "Save
+  Project" buttons into a "Project Tools" menulist to make more room for
+  the filter box. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=79625">79625</a>)</li>
+  
+  <li>Fixed truncated run command and debugger output. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80291">80291</a>, <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80258">80258</a>)</li>
+  
+  <li>JavScript and PHP: Keywords now included in 3-char trigger completions.
+  (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=78185">78185</a>, <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=77532">77532</a>)</li>
+  
+  <li>Editor: Fixed indentation guessing for newly opened files. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80188">80188</a>)</li>
+  
+  <li>Toolbox: Trap exceptions on loading a toolbox that references
+  non-existent live folders. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80420">80420</a>)</li>
+  
+  <li>Snippets: Cursor position is now handled correctly after snippet
+  insertion. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80439">80439</a>)</li>
+  
+  <li>Editor: Fixed problem with increase line indent not handling
+  non-ASCII content. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80493">80493</a>)</li>
+  
+  <li>Fixed erroneous prompt to create a new file when double-clicking a
+  line in "Find Results" output for an untitled (new) document. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80232">80232</a>)</li>
+  
+  <li>Keybindings: Reordered keybindings so common shortcuts appear in
+  menus. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80530">80530</a>)</li>
+  
+  <li>Fix non-ascii character handling in replaceTarget (indent region,
+  comment/uncomment region, vi-mode replace, spell check, find/replace). (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80511">80511</a>)</li>
+  
+  <li>Sped up parsing of long lines of JavaScript and HTML. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80496">80496</a>)</li>
+  
+  <li>SCC: Less CPU intensive mercurial status checking. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80563">80563</a>)</li>
+  
+  <li>HTML: Changed default tidy linting to not include accessibility
+  checks. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80598">80598</a>)</li>
+  
+  <li>Remote Files: Fixed "File|Save Remotely As..." not working for
+  untitled (new) files. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80605">80605</a>)</li>
+  
+  <li>Fixed bug causing some editor commands to be disabled at startup.
+  (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80583">80583</a>)</li>
+  
+  <li>OS X: Fixed 'Cmd'+'W' close behavior for the Preferences dialog.
+  (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80619">80619</a>)</li>
+  
+  <li>JavaScript API: Added simple API for clipboard operations. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=79772">79772</a>)</li>
+  
+  <li>JavaScript API: Added the xtk namespace to the API documentation.
+  (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80646">80646</a>)</li>
+  
+  <li>Windows: Fixed hard crashes. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=76066">76066</a>)</li>
+  
+  <li>Calltips: Added preference for maximum number of lines shown. (Bug
+  <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=70560">70560</a>)</li>
+  
+  <li>PHP: Statically typed function arguments now correctly parsed.
+  (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=79003">79003</a>)</li>
+  
+  <li>Common application directories now added to the PATH in Komodo's
+  user environment settings. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80656">80656</a>)</li>
+  
+  <li>Vista: Fixed menus appearing with a vertical line through the
+  text. Extension authors must update usages of &lt;menu
+  class="menu-iconic-wide"&gt; and &lt;menuitem
+  class="menuitem-iconic-wide"&gt; according to these rules:
+  <ul>
+    <li>Drop custom 'menu-iconic-wide' and 'menuitem-iconic-wide'
+    classes/bindings in favor of the Mozilla toolkit 'menu-iconic' and
+    'menuitem-iconic'.</li>
+    <li>Use these classes only if your menu/menuitem has an icon.
+    Otherwise the alignment of the menu/menuitem labels will be
+    incorrect in context menus on Mac OS X.</li>
+  </ul>
+  (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80629">80629</a>)</li>
+  
+  <li>Debugger: Starting a remote debugging session no longer prompts
+  twice to create a mapped URI". (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80125">80125</a>)</li>
+  
+  <li>Prefs: Fixed failure to load preference files containing high-bit
+  characters. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80676">80676</a>)</li>
+  
+  <li>SCC: Fixed bzr status failing to detect all files in a folder.
+  (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80431">80431</a>)</li>
+  
+  <li>OS X: Workaround for custom menus crashing. Custom menus in
+  projects and toolboxes are no longer available on OS X due to an
+  internal error in the underlying Cocoa UI code. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80697">80697</a>)</li>
+</ul>
+
+<h3 id="bug_fixes-5.0b1">5.0 Beta 1 Bug Fixes</h3>
+
+<ul>
+  <li>CSS: Removed autocompletion fillup characters that got in the way
+  of regular usage. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80063">80063</a>, <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80126">80126</a>)</li>
+
+  <li>Debugger: Fixed space key failing to toggle breakpoint state in
+  breakpoints tab. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80163">80163</a></li>
+
+  <li>Multi-window: Added support for breakpoint handling when multiple
+  windows are open. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=79117">79117</a>)</li>
+
+  <li>Fixed error indicated by console error messages referencing
+  "ko.dbg.manager". (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80279">80279</a>)</li>
+
+  <li>Added background syntax checking support for Python 3.</li>
+
+  <li>Tabstops in snippets and templates are now implemented with
+  invisible markers in the buffer. Komodo now uses
+  highlighting/outlining instead of chevrons to delimit them. Nested
+  tabstops are now possible. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80201">80201</a>)</li>
+
+</ul>
+
+<h3 id="bug_fixes-5.0a3">5.0 Alpha 3 Bug Fixes</h3>
+
+<ul>
+  <li>Remote debugging fixed (dbgp URIs not working in Alphas 1 and 2). (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=80017">80017</a>)</li>
+
+  <li>Vi Emulation: Fixed the 'r' command (replace character). Now
+  correctly maintains the same cursor position. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=79021">79021</a>)</li>
+
+  <li>PHP: Fixed autocompletion when an instance name is the same as the
+  class name. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=70015">70015</a>)</li>
+
+  <li>SCC: SCC operations on project folders working again. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=79687">79687</a>)</li>
+
+  <li>Komodo now saves the layout information of multiple windows on
+  shutdown and restores them on restart. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=79920">79920</a>)</li>
+
+  <li>Windows: Fixed problems with sub-process launching (affecting
+  debugging, background syntax checking, run commands, etc.) when
+  starting Komodo from the command line. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=76208">76208</a>)</li>
+
+  <li>OS X: HTTP Proxy dialog is now a real dialog window, not a sheet.
+  (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=74504">74504</a>)</li>
+
+  <li>Fixed large memory leak in Find/Replace. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=78638">78638</a>)</li>
+
+  <li>Snippets:
+  <ul>
+    <li>Extra newline no longer added at insertion point.
+    (Bug <a
+    href="http://bugs.activestate.com/show_bug.cgi?id=78354">78354</a>)</li>
+
+    <li>Snippets now use spaces instead of tabs. To insert an actual tab in
+    a snippet you'll need to paste one in. (Bug <a
+    href="http://bugs.activestate.com/show_bug.cgi?id=79809">79809</a>)</li>
+
+    <li>Indentation fixed for snippets containing selections. (Bug <a
+    href="http://bugs.activestate.com/show_bug.cgi?id=72662">72662</a>)</li>
+    </ul>
+  </li>
+
+  <li>Fixed JavaScript debugging for Firefox 3. Connection was failing due
+  to attempt to use obsolete Firefox 2 code. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=78845">78845</a>)</li>
+
+  <li>Macros: The syntax checker no longer complains about return statements in
+  the top level of macros. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=78810">78810</a>)</li>
+
+  <li>Perl: The interactive shell now displays overloaded objects, and
+  also displays regexp objects. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=79784">79784</a>)</li>
+
+  <li>PHP: Obtain the correct expression for static class variables.
+  (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=79991">79991</a>)</li>
+</ul>
+
+<h3 id="bug_fixes-5.0a2">5.0 Alpha 2 Bug Fixes</h3>
+
+<ul>
+  <li>Windows: Fixed crash on startup caused by checking a trial
+  license. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=79607">79607</a>)</li>
+
+  <li>Restored missing application icon for Komodo Edit. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=79539">79539</a>)</li>
+
+  <li>Fixed 'Refresh Status' not causing a status update on remote files.
+  (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=79567">79567</a>)</li>
+
+  <li>Mapped URIs: Komodo no longer adds an extraneous slash after
+  protocol names. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=78847">78847</a>)</li>
+
+  <li>Sections List: Fixed section types for languages using
+  section_regexes. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=79073">79073</a>)</li>
+
+  <li>Fixed print preview. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=79701">79701</a>)</li>
+
+  <li>Continuing work on sidebar and tabs UI.</li>
+
+  <li>Miscellaneous plugin fixes.</li>
+</ul>
+
+<h3 id="bug_fixes-5.0a1">5.0 Alpha 1 Bug Fixes</h3>
+
+<ul>
+  <li>SCC:
+    <ul>
+      <li>SVN was slow to update modified status for paths that
+      contained spaces. (Bug <a
+      href="http://bugs.activestate.com/show_bug.cgi?id=79065">79065</a>)</li>
+
+      <li>Enabled the diff command when a file has a conflict. (Bug <a
+      href="http://bugs.activestate.com/show_bug.cgi?id=78883">78883</a>)</li>
+
+      <li>Added "Don't display this dialog again" option to File|Revert
+      dialog box. (Bug <a
+      href="http://bugs.activestate.com/show_bug.cgi?id=78328">78328</a>)</li>
+    </ul>
+  </li>
+
+  <li>Tcl Interactive shell menu option was grayed out - not respecting
+  Tcl preferences. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=79111">79111</a>)</li>
+
+  <li>Active project state correctly saved between Komodo sessions.
+  Previously, the last project opened at session start would be the
+  active one. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=78285">78285</a>)</li>
+
+  <li>Unit Testing: Fixed TAP parser problem (Perl) causing failed tests
+  to appear as passed. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=78781">78781</a>)</li>
+
+  <li>Keybindings: SCC commands can now be set in preferences. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=78938">78938</a>)</li>
+
+  <li>Windows Powershell language support. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=78905">78905</a>)</li>
+
+  <li>PHP: Code browser now shows functions inside alternative syntax
+  conditionals. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=78957">78957</a>)</li>
+
+  <li>PHP: Fixed code intelligence not working with chained function
+  calls that contained function arguments. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=77834">77834</a>)</li>
+
+  <li>Remote Files: Invalid HOME environment variable would break the
+  remote file dialog. (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=72402">72402</a>)</li>
+
+  <li>Fixed bug causing autocomplete to only display on primary monitor.
+  (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=38281">38281</a>)</li>
+
+</ul>
+
+<h2 id="knownissues">Known Issues</h2>
+
+<p>To view the status of outstanding Komodo issues,
+including those that have been fixed in this release, or to
+add comments or additional issues, please visit the
+<a href="http://bugs.activestate.com/query.cgi?product=Komodo">Komodo
+Bug Database</a>.</p>
+
+<h3><a name="install_issues" id=
+"install_issues">Installation &amp; Upgrade</a></h3>
+
+<ul>
+  <li>Windows Vista will prompt you to either 'Allow' or
+  'Deny' the installation. Click on 'Allow' and Komodo will
+  install normally.</li>
+
+  <li>The Komodo installer requires up to 230 MB in your
+  TMP directory (as indicated by the value of your 'TMP'
+  environment variable) during installation, even if you
+  plan to install Komodo to another drive. If you do not
+  have the required space on this drive, manually set the
+  'TMP' environment variable to another directory with
+  sufficient space. Ensure that you have enough space,
+  temporarily, for installation. (Bug 7057)</li>
+
+  <li>If you try to install Komodo on Windows and the MSI
+  install fails with error 2355, your MSI file is corrupt.
+  Please download Komodo again and re-run the MSI install.
+  (Bug 7405)</li>
+</ul>
+
+<h3><a name="Startup_Issues" id=
+"Startup_Issues">Startup</a></h3>
+
+<ul>
+  <li>The first time Komodo is run after installation, it
+  must register a number of components with the operating
+  system. This causes the first launch to be considerably
+  slower than subsequent launches.</li>
+</ul>
+
+<h3><a name="Editing_Issues" id=
+"Editing_Issues">Editing</a></h3>
+
+<ul>
+  <li><a href="../tabstops.html">Tabstop syntax</a> has changed in
+  Komodo 5.0. Abbreviation from the Toolbox|Samples directory of pre-5.0
+  versions of Komodo will not work as expected with the current
+  implementation. Delete the older versions to use the ones featured in
+  the "Samples (5.0.0)" directory. Alternatively, if you have made
+  modifications to these snippets or have implemented your own using
+  tabstops linked by name, consult the documentation and revise
+  them using numbered linking.</li>
+  
+  <li>By design, Komodo does not attempt Replace in Files operations on
+  unknown file types. However, file association preferences can be used
+  to associate a user-defined extension with a language category (e.g.
+  "Text") which then enables replacements for that file type.</li>
+
+  <li>Linux users may need to install the <acronym title="Smart Common
+  Input Method">SCIM</acronym> platform packages for non-ASCII text entry.
+  See "<a href="../install.html#System_Req_Lin">Linux Software
+  Prerequisites</a>" in the Installation Guide for details. (Bug
+  70812)</li>
+
+  <li>Autocompletion on the following Python Win32 modules
+  is not yet available: dbc, perfmon, pywintypes, win2kras,
+  dde, pythoncom, and the binary sub-modules of
+  win32com.</li>
+
+  <li>The macro recorder will record events that it cannot
+  handle, such as the opening of dialogs. The only dialog
+  that can be opened via a macro is the Find dialog; other
+  dialogs will cause the macro to stop.</li>
+
+  <li>Languages that are read right to left and Asian
+  languages are not supported. All Latin and Cyrillic
+  languages are fully supported. (Bug 29702)</li>
+
+  <li>On slow networks, users may notice performance
+  degradation when editing files on network machines.
+  Performance can be improved by disabling the Komodo
+  function that checks if files on disk have changed. Use
+  the <a href="../prefs.html#prefs_editor">Editor
+  Preferences</a> to disable this feature. (Bug 18297)</li>
+
+  <li>Interpolation shortcuts in snippets are not executed
+  when the snippet is inserted in the Editor Pane via
+  dragging and dropping.</li>
+
+  <li>On Linux, GTK2 hard codes 'Ctrl'+'Shift' to use
+  international input. Therefore, all key bindings
+  involving 'Ctrl'+'Shift'+ (any valid hexadecimal
+  character) do not work in Komodo. A workaround is to
+  start Komodo with the command: <code>export
+  GTK_IM_MODULE=xim; ./komodo'</code>. Otherwise, key
+  bindings of this kind must be changed. (Bug 38205)</li>
+
+  <li>When copying text that does not have Windows line
+  endings into another application, which expects Windows
+  line endings, the text may not retain the desired
+  formatting. The text is often pasted as a single line.
+  (Bug 36791)</li>
+
+  <li>Code snippets that are 8-bit-encoded and contain
+  high-bit characters may have the wrong encoding (or no
+  encoding) when inserted from the Toolbox into a UTF-8
+  encoded file in the Editor Pane. (Bug 36769)</li>
+
+  <li>When editing a code comment in Komodo you may use
+  &lt;Shift+Enter&gt; to start a new line <em>within</em>
+  the comment -- the comment prefix is added automatically.
+  Komodo may fail to properly add the comment prefix if
+  many new lines are added quickly with repeated
+  &lt;Shift+Enter&gt; presses. (Bug 38658)</li>
+</ul>
+
+<h3><a name="Debugging_Issues" id=
+"Debugging_Issues">Debugging</a></h3>
+
+<ul>
+  <li>PHP: A non-empty <code>doc_root</code> setting in <em>php.ini</em>
+  causes a 'No input file specified' error when starting a local
+  debugging session with CGI emulation. The Web Developer Suite 2.0
+  package and others use this setting, and it is copied into the
+  debugging version of <em>php.ini</em> during PHP auto-config. Comment
+  this setting out in the file specified in
+  'Preferences|Languages|PHP|Path to alternate PHP configuration file'
+  to avoid this problem.</li>
+
+  <li>Python: Breakpoints will not work with the <a target="_blank"
+  href="http://psyco.sourceforge.net/">Psyco</a> extension enabled.
+  The Komodo <a href="../trouble.html#psyco_debug">FAQ</a> has a
+  work-around solution.</li>
+
+  <li><strong>Tcl 8.5</strong>: Tcl Beta releases contain
+  only version-specific executables (e.g.
+  <code>tclsh85.exe</code> and <code>wish85.exe</code>).
+  Komodo does not automatically find these in the path. To
+  use them, specify the executables manually in
+  <strong>Edit|Preferences...|Languages|Tcl|Interpreters</strong>,
+  or create non-versioned symlinks/shortcuts to the
+  versioned executables.</li>
+
+  <li>The Perl debugger uses <code>alarm()</code>
+  internally. This can conflict with some Perl frameworks
+  and modules (such as <acronym title=
+  "Perl Object Environment">POE</acronym>) which use
+  <code>alarm()</code> as well. To work around this
+  problem, add <code>alarm=0</code> to the
+  <code>PERLDB_OPTS</code> environment variable (in the
+  Environment tab of the Debugger Options) which stops the
+  debugger from using <code>alarm()</code>. With this
+  work-around in place, the Break Now button and menu item
+  will not work in debugging sessions.</li>
+
+  <li>Using the JavaScript debugger on files with mapped
+  URIs can yield confusing results. Komodo will open the
+  mapped source file rather than querying Firefox for the
+  runtime JavaScript.</li>
+
+  <li>Python debugging with IronPython does not currently
+  work as there is no support for Python debugging hooks in
+  IronPython.</li>
+
+  <li>In PerlApp executables, it is now possible to step
+  into loaded modules, but not to set breakpoints in
+  them.</li>
+
+  <li>The Komodo JavaScript Debugger is incompatible with
+  the <a href=
+  "https://addons.mozilla.org/firefox/1843/">FireBug</a>
+  Firefox extension. FireBug must be manually disabled
+  (Tools|Firebug|Disable Firebug) for the JavaScript
+  debugger to work. (Bug 47208)</li>
+
+  <li>PHP 5.0.0, 5.0.1 and 5.0.2 do not work with the
+  debugger extension. Use PHP versions 4.3.10 or greater,
+  or 5.0.3 or greater, including 5.1.</li>
+
+  <li>If the debug listener (<strong>Debug|Listen for
+  Debugger Connections</strong>) is off, multithreaded
+  applications may not run or debug as expected. Only the
+  main thread operates through the debugger. To debug
+  multithreaded applications, turn on debug listening prior
+  to debugging. (Debug listening is turned on by default.)
+  (Bug 32776)</li>
+
+  <li>PHP configurations that use Zend Extensions (such as
+  PHP Accelerator) are not compatible with the Komodo PHP
+  debugger. (Bug 21890)</li>
+
+  <li>Due to the way the core Perl interpreter works, it is
+  not possible to step over "require" statements. (Bug
+  18776)</li>
+
+  <li>You cannot debug 'freestanding' executables created
+  with the PDK in Komodo. Instead, build a 'dependant'
+  executable, which requires a local install of
+  ActivePerl.</li>
+
+  <li>The variable watcher does not work when debugging
+  <code><em>\\machine\d$\path\to\perl_script.pl</em></code>.
+  It does work when opening the same file via a UNC path
+  that does not include a '$' character. (Bug 19558)</li>
+
+  <li>When debugging remote applications, Komodo fails if
+  the remote process does not have valid stdout and stderr
+  handles. GUI applications, such as those started with
+  "wperl.exe" or "pythonw.exe", or those using the
+  Pythonwin or wxPython frameworks, or those with certain
+  embedded applications, can have invalid stdout and stderr
+  handles. Until we resolve this issue, try to run and
+  debug your remote program under perl.exe or
+  python.exe.</li>
+
+  <li>Python, XSLT and PHP debugging require TCP/IP to be
+  installed and properly configured, even if you are
+  debugging scripts locally. While TCP/IP is configured by
+  default on most systems, early versions of Windows may
+  require manual TCP/IP configuration.</li>
+
+  <li>When debugging a GUI script in Komodo, adding a
+  "watched variable" when <i>not</i> stopped at a
+  breakpoint can cause Komodo to hang. You must manually
+  terminate the script being debugged to stop Komodo from
+  hanging. The problem occurs because the GUI script, while
+  in its message loop, does not respond to Komodo's request
+  for the variable value. (Bug 23516)</li>
+
+  <li>If the Komodo debugger is configured to use a
+  specific port, when Komodo is shut down, the port is
+  sometimes not immediately released. If Komodo is
+  restarted before the port is released by the operating
+  system, a message is displayed advising that the system
+  is unable to bind that port. As a workaround, we suggest
+  configuring port 0 as the Komodo debugging port and using
+  the debugger proxy for remote debugging. (Bug 32821)</li>
+
+  <li>Breaking into a running Perl script can only occur
+  while crossing sub boundaries in the Perl code, as that's
+  currently the only chance the Perl debugger has to check
+  to see if the IDE has sent the break command. (Bug
+  35611)</li>
+
+  <li>When debugging Perl, if you set a breakpoint on the
+  <code>while</code> statement, the debugger stops on the
+  breakpoint only once, namely before the first pass
+  through the loop. This is a limitation in the Perl
+  interpreter. (Bug 34866)</li>
+
+  <li>Komodo debugger uses TCP/IP networking for
+  communications. On systems with firewalls installed, the
+  debugger may fail if the firewall is not configured to
+  allow Komodo to listen for connections. On Windows, you
+  may see a "Windows Security Alert" dialog asking if you
+  want to allow Komodo to listen for connections, you will
+  need to unblock Komodo. (Bug 21684)</li>
+
+  <li>The Perl debugger cannot trap fatal runtime errors.
+  Users can accomplish this in their code by wrapping
+  problematic code in an <code>eval</code> block, and then
+  testing for an exception. (Bug 33855)</li>
+
+  <li>Komodo does not provide proper source debugging in
+  Python <code>exec</code> and <code>eval</code>
+  statements. This is a limitation of Python's interpreter.
+  (Bug 40336)</li>
+
+  <li>When debugging PHP on a remote Linux machine from a
+  local Windows machine, the debugging option "Try to find
+  files on the local system when remote debugging" has no
+  effect. This is due to differences in Unix and Win32 file
+  paths. (Bug 39137)</li>
+
+  <li>When debugging Python, Komodo does not permit you to
+  set local variables in the interactive shell. However,
+  you can edit those values from the program's variable
+  viewers, such as the <strong>Watch</strong> and
+  <strong>Locals</strong> panes on the
+  <strong>Debug</strong> tab. (Bug 36794)</li>
+
+  <li>When debugging PHP scripts on Komodo with CGI
+  emulation, you may need to change the setting for
+  <code>cgi.force_redirect</code> in the <em>php.ini</em>
+  file. You may also need to set an environment variable in
+  the Debugger Options dialog box: "REDIRECT_STATUS=200
+  OK". These settings vary depending on your system and the
+  configuration of PHP. (Bug 35021)</li>
+
+  <li>When Debugging PHP, the <strong>HTML</strong> pane of
+  the <strong>Output</strong> tab does not refresh
+  automatically. To refresh the contents of this pane,
+  click the "Reload HTML view" button on the
+  <strong>Output</strong> tab. (Bug 36999)</li>
+
+  <li>Komodo supports full Unicode debugging with Perl 5.8.
+  Although Perl 5.6 can be used for debugging programs with
+  single-byte encodings (e.g. cp1251), it is recommended
+  that programmers with multi-byte character sets upgrade
+  to Perl 5.8.5 or better. (Bug 36760)</li>
+
+  <li>When debugging Python, if you launch the debugger
+  from a directory containing a module with the same name
+  as one of the modules used by the debugger, the wrong
+  file is used. For example, if you have a file named
+  <em>logging.py</em> in the directory where the debugger
+  is launched, the debugger will fail. (Bug 36783)</li>
+
+  <li>When stepping through Perl files, the Komodo debugger
+  displays the wrong print results in the
+  <strong>Locals</strong> window of the
+  <strong>Debug</strong> tab. This is because Perl provides
+  only one iterator for each collection variable. The
+  Komodo debugger must iterate through a hash or an array
+  in order to display the values in Komodo. A workaround is
+  to display the <strong>Watch</strong> pane instead of the
+  <strong>Locals</strong> pane, and type the names of the
+  expressions that you want to view. (Bug 33668)</li>
+  
+  <li>As of Komodo 5.0, the Perl debugger emits numeric hash keys with
+  embedded underscores. For example, a hash key of '123456789' now
+  appears in the variables tabs as '123_456_789'.</li>
+  
+  <li>Breakpoints don't work in files with symlinks in their path. The
+  debugger engine calculates whether to break based on the actual file
+  path. To work around this limitation, load the file in Komodo using
+  the real path, or create a hard link (e.g. on Linux, use 'ln' without
+  the '-s' option). (Bug <a
+  href="http://bugs.activestate.com/show_bug.cgi?id=79147">79147</a>)</li>
+  
+</ul>
+
+<h3><a name="Interactive_Shell_Issues" id=
+"Interactive_Shell_Issues">Interactive Shell</a></h3>
+
+<ul>
+  <li>The interactive shell does not initialize properly when invoked
+  while the Command Output tab has focus. To avoid this, switch focus to
+  another tab or sidebar before starting the interactive shell.</li>
+  
+  <li>Perl: Only pattern variables $1 .. $9 are preserved
+  across each query. (Bug 34528)</li>
+
+  <li>Python: The getpass package requires the use of a tty
+  on UNIX systems. Komodo does not provide a tty in its
+  interactive shell so getpass will fail with an exception.
+  (Bug 34259)</li>
+</ul>
+
+<h3><a name="Source_Code_Control_Issues" id=
+"Source_Code_Control_Issues">Source Code Control</a></h3>
+
+<ul>
+  <li>The SCC Checkout wizard does not correctly handle password
+  authentication. SCC checkouts requiring password authentication should
+  be done at the command line.</li>
+  
+  <li>A bug in CVS will cause WinCVS and TortoiseCVS to
+  detect file changes when a Komodo project has merely been
+  opened. The problem is likely a bug in the cvshome.org
+  executable or in the cvsnt.org executable, which are used
+  by both WinCVS and TortoiseCVS. (Bug 21085)</li>
+
+  <li>Komodo's integration with the Perforce commit/submit
+  command cannot commit files that are not in the default
+  changelist. These files must be submitted via an external
+  interface (e.g. p4, P4Win). Note that any files checked
+  out inside Komodo are in the default changelist, so this
+  limitation should only apply to users who already use an
+  external interface to their Perforce repository. (Bug
+  27070)</li>
+
+  <li>If the Perforce connection cannot be established,
+  checking the status of files in a Perforce repository
+  will hang Komodo. (Bug 35058)</li>
+
+  <li>If you are using CVS Source Code Control, note that
+  the very first time you log in to a repository, cvs.exe
+  fails to create the .cvspass file correctly and will
+  return an error. Repeat the command to login a second
+  time and correctly generate the file. This is a CVS bug.
+  (Bug 20353)</li>
+
+</ul>
+
+<h3><a name="OSX_Issues" id="OSX_Issues">Mac OS X</a></h3>
+
+<ul>
+  <li>If you have two drives with the same name, and you
+  use the file open dialog in a Mozilla application, the
+  directory menu (top middle of dialog) may crash when
+  clicked. To avoid this, rename one of the hard
+  drives.</li>
+
+  <li>New Custom Menus created in a Project or in the
+  Toolbox will not appear until Komodo has been
+  restarted.</li>
+
+  <li>Throughout the Komodo documentation there are
+  references to key bindings that use the 'Cmd' key. This
+  key may be better known to OS X users as the 'Command'
+  key. (Bug 41959)</li>
+
+  <li>Komodo will shut down and restart itself the first
+  time it is run after installation. (Bug 40143)</li>
+
+  <li>Display of text during editing ("painting") may
+  sometimes be slow or pause momentarily.</li>
+
+  <li>Certain UI elements stop working after changing key
+  bindings. Restarting Komodo fixes this. (Bug 38683)</li>
+
+  <li>When saving a file, Komodo does not set file
+  information (type and creator) for the OS X Finder to
+  know that Komodo created the file. (Bug 38745)</li>
+
+  <li>Breakpoints cannot be removed when debugging XSLT
+  scripts. (Bug 40072)</li>
+
+  <li>PHP debugging will not work with the PHP build
+  distributed with OS X because it does not load external
+  modules. To use PHP debugging on OS X, build PHP from
+  source or download a binary from <a class="doc" target=
+  "_blank" href=
+  "http://www.entropy.ch/software/macosx/php">http://www.entropy.ch/software/macosx/php</a><br />
+
+  (Bug 39901)</li>
+
+  <li>Komodo is sometimes recognized as a web browser by
+  some applications on OS X (e.g. Safari's "Default Web
+  Browser" setting). Using Komodo as the default web
+  browser is not recommended.</li>
+
+  <li>Application menu items that have multi-key key
+  bindings will not show their key bindings in a pop-up
+  tool tip on OS X. This is a limitation in OS X.</li>
+
+  <li>Context menus may not display unless you hold down
+  the mouse button for a period of time. This is because
+  the Komodo editor is implemented in Mozilla as a plugin,
+  and it does not access the appropriate context menu event
+  to handle this behavior properly without interfering
+  with other mouse events (for example, drag and drop).
+  (Bug 41216)</li>
+
+  <li>Due to a limitation in the Mozilla code base, key
+  bindings for the <strong>Next File</strong> and
+  <strong>Previous File</strong> options on the
+  <strong>Window</strong> menu are not displayed next to
+  the menu items. The key bindings are 'Cmd'+'PageDown' to
+  view the next file and 'Cmd'+'PageUp' to view the
+  previous file. (Bug 40716)</li>
+</ul>
+
+<h3><a name="Linux_Issues" id="Linux_Issues">Linux</a></h3>
+
+<ul>
+  <li>The <strong>Fonts and Colors</strong> pane in the
+  Preferences dialog box displays the same list of fonts in
+  both the Fixed and Proportional lists. There is no
+  programmatic way to identify whether a font is
+  proportional or not on GTK; therefore, users must know
+  the properties of the individual fonts when modifying
+  these values. (Bug 27206)</li>
+
+  <li>Install Komodo into a directory path that only
+  includes alphanumeric characters. Komodo is known to have
+  trouble with paths that include spaces and some
+  non-alphanumeric characters.</li>
+
+  <li>Key bindings defined in the window manager (such as
+  KDE) take precedence over Komodo key bindings. In the
+  case of conflicts, you must either change the Komodo key
+  bindings or the window manager key bindings. (Bug
+  30926)</li>
+
+  <li>You cannot move an existing Komodo installation to a
+  new directory. You must uninstall Komodo from the
+  existing location and reinstall it in the new location.
+  (Bug 19478)</li>
+
+  <li>When using the PHP Configuration Wizard, you must
+  have write access to any directories you specify in the
+  wizard. (Bug 37176)</li>
+
+  <li>Red Hat Linux 9.0 is known to have threading library
+  bugs in its glibc that may cause Komodo to hang in
+  certain situations. The recommended solution is to
+  upgrade to the latest glibc for Red Hat Linux 9.0. (Bug
+  24340)</li>
+
+  <li>Using colon-separated include paths in the Perl
+  shebang line causes a parse failure on some versions of
+  Perl. Instead of using "/usr/bin/perl -cwT
+  -I/path1:/path2 yourscript.pl", try using multiple
+  include arguments such as "/usr/bin/perl -cwT -I/path1
+  -I/path2 yourscript.pl"<br />
+  (Bug 33524)</li>
+
+  <li>Komodo may not start up correctly on some Linux
+  systems if C++ compatibility libraries have not been
+  installed. On Fedora and Red Hat systems, install the
+  "compat-libstdc++" package. On SuSE, install the "compat"
+  package. On Gentoo, as root, run <code>emerge
+  lib-compat</code>. This is not thought to be a problem on
+  Debian systems. (Bug 36244)</li>
+
+</ul>
+
+<h3><a name="Other_Issues" id="Other_Issues">Other</a></h3>
+
+<ul>
+  <li>A limitation in the parser used by the DOM Viewer
+  causes HTML elements embedded in JavaScript strings to
+  appear as element nodes of the current document. Placing
+  the JavaScript in a CDATA section or a comment avoids
+  this problem.</li>
+
+  <li>Komodo inherits a Mozilla bug whereby certain video
+  drivers on Windows cause Komodo to crash. If you
+  experience this behavior, upgrade your video driver to
+  the latest version. If the problem persists, reduce the
+  color definition assigned to the driver (<strong>Control
+  Panel|Display|Settings</strong>). (Bug 32746)</li>
+
+  <li>Komodo inherits a <a href=
+  "http://bugzilla.mozilla.org/show_bug.cgi?id=230512">Mozilla
+  bug</a> regarding display on dual-monitor systems where
+  the secondary monitor is to the left of the primary
+  monitor (causing negative coordinate results). The Komodo
+  display occasionally fails to refresh; Komodo must be
+  stopped and restarted to fix the display (Bug 26852)</li>
+
+  <li>When using Komodo's Preview in Browser feature, users
+  running Mozilla on Windows XP Pro, Windows 2000 Pro and
+  Windows 98 may find that they cannot exit Komodo if
+  Mozilla is still open. If this should occur, close all
+  open browser windows before exiting Komodo. (Bug
+  26431)</li>
+
+  <li>The Palm Desktop for Windows software makes exclusive
+  use of the 'Ctrl'+'Shift'+'T' key combination, thus
+  making this combination unavailable in Komodo. (Bug
+  27851)</li>
+
+  <li>When using the PDK <strong>Build Standalone
+  Application</strong> feature in Komodo with Perl 5.8.0 on
+  a Linux installation where the environment is set to use
+  UTF-8, you must add a module 'utf8' on the modules tab.
+  This is the equivalent of 'perlapp --add utf8'. This does
+  not affect Perl 5.6.x or future versions of Perl 5.8.1 or
+  higher. (Bug 26898)</li>
+
+  <li>On Windows NT, some interactive commands may not work
+  properly when run from the <strong>Command
+  Output</strong> tab of the Output Pane. You must run
+  these commands in a separate shell. (Bug 23176)</li>
+
+  <li>Perforce client version 2001.1 and previous for
+  Windows is known to hang when used for Komodo's Perforce
+  integration. Upgrading to the most recent version of
+  Perforce is known to fix the problem. (Bug 19959)</li>
+
+  <li>The Output tab cuts off lines at 250 characters. (Bug
+  20711)</li>
+
+  <li>Macros will not record certain commands, including
+  (but possibly not limited to)
+  'Ctrl'+'Shift'+'B'|'R'|'E'|'D' (toggle toolbars or button
+  text), 'Ctrl'+'Shift'+'N' (new default file), and View as
+  Language menu items.</li>
+
+  <li>If you are using the Pop-Up Stopper ad-blocking
+  program (Pop-Up Zapper on OS X), it will close the Rx
+  Toolkit window immediately after it is opened. (Bug
+  21768)</li>
+
+  <li>When you schedule a new file to be added using CVS,
+  CVS will not permit you to remove the file from the
+  repository using the "revert changes" command. (Bug
+  27192)</li>
+
+  <li>Users of the Japanese version of Windows XP may
+  experience difficulties in starting Komodo.</li>
+
+  <li>The <strong>Open</strong> field in the Open/Find
+  Toolbar does not automatically display a drop-down list
+  of directories when an UNC path is typed. Currently, the
+  list is only displayed when a the path includes a
+  subdirectory. (Bug 29011)</li>
+
+  <li>When creating a "diff" in Komodo
+  (<strong>Tools|Compare Files</strong>), the line endings
+  of the files are normalized to Unix style line endings.
+  Lines in files that have different line endings are not
+  displayed differently in the diff (unless other
+  differences are present), but a warning is provided to
+  the user in the 'diff' window, or the 'no difference'
+  dialog. (Bug 32932)</li>
+
+  <li>In Komodo's Rx Toolkit, the match offsets for Unicode
+  or high-bit data are incorrect. When matching, the
+  program does not account for UTF-8 multi-byte characters.
+  (Bug 33287)</li>
+
+  <li>When adding new key bindings via the Preferences
+  dialog box, Komodo displays a message indicating that the
+  key bindings will not take effect until Komodo is
+  restarted. However, some changes do take effect
+  immediately.(Bug 36710)</li>
+
+  <li>If you rename a folder that was added to a custom
+  menu, the name is changed in Komodo's Toolbox but not on
+  the menu itself. A workaround is to move the renamed
+  folder out and then back into the associated custom menu
+  icon in the Toolbox. (Bug 36679)</li>
+
+  <li>A newly created custom menu is added to the Toolbox
+  but is not immediately displayed alongside existing
+  toolbars. Restarting Komodo causes the new toolbar to
+  display. (Bug 40078)</li>
+</ul>
+
+
+</div> <!-- content -->
+</body>
+</html>

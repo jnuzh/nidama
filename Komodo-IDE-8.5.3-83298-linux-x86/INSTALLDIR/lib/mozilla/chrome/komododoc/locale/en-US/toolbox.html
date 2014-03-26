@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/screen.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="favicon.ico" type=
+  "image/x-icon" />
+
+  <title>Using the Toolbox</title>
+</head>
+
+<body>
+<div id="content">
+  <h1><a id="toolbox_top">Toolboxes</a></h1>
+
+  <div class="right-float-box">
+    <p><strong>Feature Showcases</strong></p>
+
+    <ul>
+      <li>create a <a href=
+      "tutorial/tourlet_custtoolbar.html#custtoolbar_top">custom
+      toolbar</a></li>
+
+      <li>assign a <a href=
+      "tutorial/tourlet_keybinding.html#keybinding_top">custom
+      keybinding</a> to a component</li>
+    </ul>
+  </div>
+  
+  <p>The Toolbox sidebar is for storing "tools" - bits of code that
+  you can quickly add to Komodo to automate tasks, integrate extrnal
+  tools, or just store snippets of text or links.</p>
+  
+  <p>The following types of tools can be added anywhere in the Toolbox
+  sidebar:</p>
+    
+  <ul>
+    <li><a href="macros.html">macros</a></li>
+    <li><a href="run.html">commands</a></li>
+    <li><a href="snippets.html">snippets</a></li>
+    <li><a href="templates.html">templates</a></li>
+    <li><a href="urls.html">URLs</a></li>
+  </ul>
+  
+  <p>To show and hide the Toolbox sidebar click the <strong>Show/Hide
+  Right Pane</strong> button in the Workspace toolbar, click
+  <strong>View|Tabs &amp; Sidebars|Toolbox</strong>, or use the key
+  binding for your platform (e.g. "Ctrl" + "Shift" + "L").</p>
+  
+  <p>The top level of the Toolbox sidebar is considered the global
+  toolbox. This is an area for tools that are generally applicable for
+  any file you might be working on. Tools can be grouped into folders to
+  keep them organized.</p>
+  
+  <p>There are also two optional toolboxes indicated by special toolbox
+  icons in the sidebar:</p>
+      
+  <ul>
+    <li><strong>Shared Toolbox</strong>: A toolbox for tools shared with
+    a group of people or otherwise accessed by other installations of
+    Komodo. It is configured and toggled on or off in the <a
+    href="prefs.html#Shared_Support">Shared Support</a>
+    preferences.</li>
+  
+    <li><strong>Project Toolbox</strong>: Tools specific to a particular
+    project, only visible when that project is active.</li>
+  </ul>
+
+  <h2><a id="tools_add_rem">Adding, Removing and Managing Tools</a></h2>
+  
+  <p><strong>To add an item to the toolbox</strong>: click the Tools menu button and
+  select the type of tool you want (e.g. "<strong>New
+  Macro...</strong>"). A relevant dialog box will open with options for
+  the tool. Clicking "OK" adds it the new tool at the top level of the
+  Toolbox.</p>
+  
+  <p><strong>To add an item in a specific place</strong>: right-click on
+  the desired folder or toolbox, and select <strong>Add|New...</strong>
+  from the context menu.</p>
+
+  <p><strong>To remove an item</strong>: select it and hit the Delete
+  key or right-click on it and choose "Delete" from the context menu.</p>
+  
+  <p><strong>To move tools</strong>: drag tools or directories between
+  folders and toolboxes or cut/copy paste anywhere in the Toolbox
+  sidebar.</p>
+  
+  <h2><a id="tools_special_folders">Special Folders - Abbreviations and
+  Vi Commands</a></h2>
+  
+  <p>There are two folder names that have special behavior in
+  Komodo:</p>
+  
+  <ul>
+    
+    <li><strong>Abbreviations</strong>: Any folder named "Abbreviations"
+    for snippets it can use with the <a
+    href="abbreviations.html">Abbreviations</a> function. See the
+    "Samples" toolbox directory for an example.</li>
+    
+    <li><strong>Vi Commands</strong>: Macros stored in a folder named
+    "Vi Commands" can be run in command-line mode if <a
+    href="vikeybind.html#vi_emulation">Vi emulation</a> is enabled.</li>
+  </ul>
+  
+  <h2><a id="tools_behind_scenes">Behind the Scenes - How Tools are
+  Stored</a></h2>
+  
+  <p>Tooboxes are stored as special directories containing a file for
+  each tool.</p>
+  
+  <ul>
+    <li><strong>global toolbox</strong>: stored
+    in a "tools" sub-directory of the <a
+    href="trouble.html#appdata_dir">user data directory</a>.</li>
+    <li><strong>shared toolbox</strong>: stored in a "tools"
+    sub-directory of the path set in the <a
+    href="prefs.html#Shared_Support">Shared Support preferences</a>.
+    This will generally be on a mapped network drive or mounted network
+    directory, but synchronizing a local copy of the directory (e.g.
+    using source code
+    control, rsync, or <a href="publish.html">Publishing</a>) is also
+    an option.</li>
+    <li><strong>project-specific toolboxes</strong>: stored in a hidden
+    ".komodotools" directory adjacent to the project file. Note:
+    projects stored in the same directory will have a common
+    toolbox, whether or not the base directories set in the project
+    settings are different.</li>
+  </ul>
+  
+  <p>The individual tools are stored in JSON files with a ".komodotool"
+  extension.</p>
+  
+  <h2><a id="tools_import_export">Importing and Exporting Tools</a></h2>
+
+  <p>The toolbox menu and context menu have options to help with saving,
+  importing and exporting tools and directories. Files with the
+  ".komodotool" extension or directories containing those files can be
+  imported, as can legacy (5.2 and previous) Komodo toolbox files in
+  ".kpf" format.</p>
+  
+  <p>Toolboxes can also be exported as standard zip archives using
+  "<strong>Export as Zip File...</strong>"</p>
+  
+
+</div> <!-- content -->
+</body>
+</html>

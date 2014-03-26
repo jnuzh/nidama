@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="GBK"?>
+<module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="../../../module.xsd">
+    <id>side_help</id>
+    <name>左侧帮助</name>
+    <file>side_help.php</file>
+    <thumbnail>/assets/images/frontpage.png</thumbnail>
+    <description>测试模块</description>
+    <parameters>
+        <param name="ww_0" label="客服1" description="客服1" ptype="text" formType="text">
+            售前导购 9:00-24:00 七格格
+        </param>
+        <param name="ww_1" label="客服2" description="客服2" ptype="text" formType="text">
+            售前导购 9:00-24:00 七格格
+        </param>
+
+        <param name="li_0" label="注意事项1" description="注意事项1" ptype="text" formType="text">
+            在线能拍下的均表示有货!
+        </param>
+        <param name="li_1" label="注意事项2" description="注意事项2" ptype="text" formType="text">
+            在线能拍下的均表示有货!2
+        </param>
+        <param name="li_2" label="注意事项3" description="注意事项3" ptype="text" formType="text">
+            在线能拍下的均表示有货!3
+        </param>
+        <param name="li_3" label="注意事项4" description="注意事项4" ptype="text" formType="text">
+            在线能拍下的均表示有货!4
+        </param>
+        <param name="li_4" label="注意事项5" description="注意事项5" ptype="text" formType="text">
+            在线能拍下的均表示有货!5
+        </param>
+
+        <param name="img" label="图片url" description="图片url" ptype="text" formType="text">
+            assets/images/service.png
+        </param>
+
+    </parameters>
+</module>

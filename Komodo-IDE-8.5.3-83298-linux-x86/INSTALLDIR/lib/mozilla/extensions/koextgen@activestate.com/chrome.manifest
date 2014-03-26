@@ -1,0 +1,12 @@
+
+
+
+
+
+
+content koextgen jar:koextgen.jar!/content/
+skin koextgen classic/1.0 jar:koextgen.jar!/skin/
+locale koextgen en-US jar:koextgen.jar!/locale/en-US/
+
+
+overlay chrome://komodo/content/komodo.xul chrome://koextgen/content/koextgen_overlay.xul

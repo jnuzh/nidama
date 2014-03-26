@@ -1,0 +1,6 @@
+contract @activestate.com/koLinter?language=MXML;1 {85d92de0-f7d6-4c33-8736-dcb8ea9b6a41}
+contract @activestate.com/koLanguage?language=MXML;1 {8cdb154f-47e6-420e-a918-1548ab748499}
+component {85d92de0-f7d6-4c33-8736-dcb8ea9b6a41} components/koMXML_UDL_Language.py
+category komodo-language MXML @activestate.com/koLanguage?language=MXML;1
+category category-komodo-linter MXML @activestate.com/koLinter?language=MXML;1
+component {8cdb154f-47e6-420e-a918-1548ab748499} components/koMXML_UDL_Language.py

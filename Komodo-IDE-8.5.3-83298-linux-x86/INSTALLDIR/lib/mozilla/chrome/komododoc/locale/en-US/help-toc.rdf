@@ -1,0 +1,2011 @@
+<?xml version="1.0"?>
+<!DOCTYPE rdf:RDF SYSTEM "chrome://branding/locale/brand.dtd" >
+<rdf:RDF xmlns:nc="http://home.netscape.com/NC-rdf#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+
+<rdf:Description about="urn:root">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="welcome_to_komodo" nc:link="top.html" nc:name="Welcome to Komodo" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="projects" nc:link="project.html#project_top" nc:name="Projects" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="places" nc:link="places.html#places_top" nc:name="Places" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="open_files" nc:link="openfiles.html#openfiles_top" nc:name="Open Files" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="database_explorer" nc:link="db_explorer.html#database_exp_top" nc:name="Database Explorer" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="toolbox" nc:link="toolbox.html#toolbox_top" nc:name="Toolbox" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="files" nc:link="files.html#files_top" nc:name="Files" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="komodo_sync" nc:link="sync.html#sync_top" nc:name="Komodo Sync" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="collaboration" nc:link="collab.html#collab_top" nc:name="Collaboration" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="stackato" nc:link="stackato.html#stackato_top" nc:name="Stackato" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="publishing" nc:link="publish.html#publish_top" nc:name="Publishing" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="find_and_replace" nc:link="search.html#search_top" nc:name="Find and Replace" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="editing" nc:link="editor.html#editor_top" nc:name="Editing" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="snippets" nc:link="snippets.html#snippets_top" nc:name="Snippets" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="tabstops" nc:link="tabstops.html#tabstops_top" nc:name="Tabstops" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="refactoring" nc:link="refactoring.html#refactoring_top" nc:name="Refactoring" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="macros" nc:link="macros.html#macros_top" nc:name="Macros" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="templates" nc:link="templates.html#templates_top" nc:name="Templates" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="url_shortcuts" nc:link="urls.html#urls_top" nc:name="URL Shortcuts" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="run_commands" nc:link="run.html#run_top" nc:name="Run Commands" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="custom_toolbars_and_menus" nc:link="custtbi.html#custtbi_top" nc:name="Custom Toolbars and Menus" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="debugging" nc:link="debugger.html#debugger_top" nc:name="Debugging" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="code_profiling" nc:link="profiling.html#profiler_top" nc:name="Code Profiling" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="unit_testing" nc:link="unittest.html#unit_test_top" nc:name="Unit Testing" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="http_inspector" nc:link="http-insp.html#http_top" nc:name="HTTP Inspector" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="interactive_shell" nc:link="intshell.html#intshell_top" nc:name="Interactive Shell" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="code_intelligence" nc:link="codeintel.html#codeintel_top" nc:name="Code Intelligence" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="dom_viewer" nc:link="dom.html#dom_top" nc:name="DOM Viewer" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="source_code_control" nc:link="scc.html#scc_top" nc:name="Source Code Control" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="regular_expressions" nc:link="regex.html#regex_top" nc:name="Regular Expressions" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="perl_dev_kit_integration" nc:link="pdk.html#pdk_top" nc:name="Perl Dev Kit Integration" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="interpolation_shortcuts" nc:link="shortcuts.html#shortcuts_top" nc:name="Interpolation Shortcuts" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="preferences" nc:link="prefs.html#prefs_top" nc:name="Preferences" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="tutorials" nc:link="tut-intro.html#tut_over_top" nc:name="Tutorials" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="komodo_reference" nc:name="Komodo Reference" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#welcome_to_komodo">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="release_notes" nc:link="releases/ide.html" nc:name="Release Notes (IDE/Edit)" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="starting_komodo" nc:link="starting.html#starting_top" nc:name="Starting Komodo" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="installation_guide" nc:link="install.html#top" nc:name="Installation Guide" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="the_komodo_workspace" nc:link="workspace.html#workspace_top" nc:name="The Komodo Workspace" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="komodo's_sample_project" nc:link="getstarted.html#getstarted_top" nc:name="Komodo's Sample Project" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="releases" nc:link="releases/index.html" nc:name="Releases" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="license_and_copyright" nc:link="lic_copy.html#lic_copy_top" nc:name="License and Copyright" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="support_and_feedback" nc:link="support.html#support_feedback_top" nc:name="Support and Feedback" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#release_notes">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="whatsnew_ide" nc:link="releases/ide.html#whatsnew" nc:name="What's New" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="details_ide" nc:link="releases/ide.html#details" nc:name="Detailed Changes" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="knownissues_ide" nc:link="releases/ide.html#knownissues" nc:name="Known Issues" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#knownissues_ide">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="installation_issues" nc:link="releases/ide.html#install_issues" nc:name="Installation Issues" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="startup_issues" nc:link="releases/ide.html#Startup_Issues" nc:name="Startup Issues" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="editing_issues" nc:link="releases/ide.html#Editing_Issues" nc:name="Editing Issues" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="debugging_issues" nc:link="releases/ide.html#Debugging_Issues" nc:name="Debugging Issues" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="interactive_shell_issues" nc:link="releases/ide.html#Interactive_Shell_Issues" nc:name="Interactive Shell Issues" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="linux_issues" nc:link="releases/ide.html#Linux_Issues" nc:name="Linux Issues" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="mac_os_x_issues" nc:link="releases/ide.html#OSX_Issues" nc:name="Mac OS X Issues" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="other_issues" nc:link="releases/ide.html#Other_Issues" nc:name="Other Issues" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#starting_komodo">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="starting_on_windows" nc:link="starting.html#Windows_Start" nc:name="Starting on Windows" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="starting_on_mac_os_x" nc:link="starting.html#OSX_Start" nc:name="Starting on Mac OS X" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="starting_on_linux" nc:link="starting.html#Linux_Start" nc:name="Starting on Linux" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#installation_guide">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="installing_on_windows" nc:link="install.html#Windows" nc:name="Installing on Windows" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="installing_on_mac_os_x" nc:link="install.html#mac_os_x" nc:name="Installing on Mac OS X" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="installing_on_linux" nc:link="install.html#linux" nc:name="Installing on Linux" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="language_debugging_prerequisites" nc:link="install.html#Lang_Debug_Prerequisites" nc:name="Language Debugging Prerequisites" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="source_code_control_integration_prerequisites" nc:link="install.html#SCC_Prerequisites" nc:name="Source Code Control Integration Prerequisites" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#installing_on_windows">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="windows_prerequisites" nc:link="install.html#System_Req_Win" nc:name="Windows Prerequisites" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="installing_the_komodo_license_on_windows" nc:link="install.html#License_Installation_Windows" nc:name="Installing the Komodo License on Windows" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="upgrading_komodo_on_windows" nc:link="install.html#Upgrading_Win" nc:name="Upgrading Komodo on Windows" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="installing_komodo_on_windows" nc:link="install.html#Installing_Komodo_on_Windows" nc:name="Installing Komodo on Windows" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="command_line_installation_options" nc:link="install.html#Command_Line_Installation_Win" nc:name="Command Line Installation Options" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="starting_komodo_on_windows" nc:link="install.html#Starting_Komodo_on_Windows" nc:name="Starting Komodo on Windows" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="uninstalling_komodo_on_windows" nc:link="install.html#Uninstalling_Komodo_Win" nc:name="Uninstalling Komodo on Windows" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#installing_on_mac_os_x">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="os_x_prerequisites" nc:link="install.html#System_Req_OSX" nc:name="OS X Prerequisites" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="installing_the_komodo_license_on_os_x" nc:link="install.html#License_Installation_OSX" nc:name="Installing the Komodo License on OS X" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="upgrading_komodo_on_os_x" nc:link="install.html#Upgrading_OSX" nc:name="Upgrading Komodo on OS X" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="installing_komodo_on_os_x" nc:link="install.html#Installing_Komodo_on_OSX" nc:name="Installing Komodo on OS X" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="starting_komodo_on_os_x" nc:link="install.html#Starting_Komodo_on_OSX" nc:name="Starting Komodo on OS X" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="uninstalling_komodo_on_os_x" nc:link="install.html#Uninstalling_Komodo_OSX" nc:name="Uninstalling Komodo on OS X" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#installing_on_linux">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="linux_prerequisites" nc:link="install.html#System_Req_Lin" nc:name="Linux Prerequisites" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="installing_the_komodo_license_on_linux" nc:link="install.html#License_Installation_Linux" nc:name="Installing the Komodo License on Linux" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="upgrading_komodo_on_linux" nc:link="install.html#Upgrading_Lin" nc:name="Upgrading Komodo on Linux" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="installing_komodo_on_linux" nc:link="install.html#Installing_Komodo_on_Linux" nc:name="Installing Komodo on Linux" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="starting_komodo_on_linux" nc:link="install.html#Starting_Komodo_on_Linux" nc:name="Starting Komodo on Linux" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="uninstalling_komodo_on_linux" nc:link="install.html#Uninstalling_Komodo_Lin" nc:name="Uninstalling Komodo on Linux" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#the_komodo_workspace">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="start_page" nc:link="workspace.html#Get_Started_Page" nc:name="Start Page" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="menus" nc:link="workspace.html#Menus" nc:name="Menus" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="context_menus" nc:link="workspace.html#Context_Menus" nc:name="Context Menus" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="toolbars" nc:link="workspace.html#Toolbars" nc:name="Toolbars" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="panes_and_movable_widgets" nc:link="workspace.html#moveable_widgets" nc:name="Panes and Movable Widgets" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="left_pane" nc:link="workspace.html#Left_Pane" nc:name="Left Pane" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="right_pane" nc:link="workspace.html#Right_Pane" nc:name="Right Pane" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="editor_pane" nc:link="workspace.html#Editor_Pane" nc:name="Editor Pane" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="bottom_pane" nc:link="workspace.html#Output_Pane" nc:name="Bottom Pane" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="managing_sidebars,_tabs_and_panes" nc:link="workspace.html#manage" nc:name="Managing Sidebars, Tabs and Panes" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="enabling_full_screen_mode" nc:link="workspace.html#full_screen" nc:name="Enabling Full Screen Mode" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#komodo's_sample_project">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="open_the_sample_project" nc:link="getstarted.html#Opening_the_Sample_Project" nc:name="Open the Sample Project" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="edit_a_sample_program" nc:link="getstarted.html#Editing_Sample_File" nc:name="Edit a Sample Program" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="debug_a_sample_program" nc:link="getstarted.html#Running_the_Debugger" nc:name="Debug a Sample Program" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#support_and_feedback">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="documentation" nc:link="support.html#support_docs" nc:name="Documentation" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="activestate_community_site" nc:link="support.html#support_community" nc:name="ActiveState Community Site" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="mailing_lists" nc:link="support.html#support_lists" nc:name="Mailing Lists" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="reporting_bugs" nc:link="support.html#support_bugs" nc:name="Reporting Bugs" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="feature_requests" nc:link="support.html#support_feature_req" nc:name="Feature Requests" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="activestate_technical_support" nc:link="support.html#support_email" nc:name="ActiveState Technical Support" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="comments_and_feedback" nc:link="support.html#support_feedback" nc:name="Comments and Feedback" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#projects">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="projects_pane" nc:link="project.html#project_pane" nc:name="Projects Pane" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="open_vs._active_projects" nc:link="project.html#project_active" nc:name="Open vs. Active Projects" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="file_&amp;_folder_links" nc:link="project.html#project_links" nc:name="File &amp; Folder Links" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="project_groups" nc:link="project.html#project_groups" nc:name="Project Groups" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="project_menus" nc:link="project.html#project_menu" nc:name="Project Menus" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="project_properties_and_settings" nc:link="project.html#project_prefs" nc:name="Project Properties and Settings" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#places">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="projects_&amp;_places" nc:link="places.html#places_projects_pane" nc:name="Projects &amp; Places" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="views" nc:link="places.html#places_views" nc:name="Views" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#database_explorer">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="adding_a_database_connection" nc:link="db_explorer.html#database_exp_add" nc:name="Adding a Database Connection" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="examining_tables" nc:link="db_explorer.html#database_exp_tables" nc:name="Examining Tables" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#toolbox">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="adding,_removing,_and_managing_tools" nc:link="toolbox.html#tools_add_rem" nc:name="Adding, Removing, and Managing Tools" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="special_folders_-_abbreviations_and_vi_commands" nc:link="toolbox.html#tools_special_folders" nc:name="Special Folders - Abbreviations and Vi Commands" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="behind_the_scenes_-_how_tools_are_stored" nc:link="toolbox.html#tools_behind_scenes" nc:name="Behind the Scenes - How Tools are Stored" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="importing_and_exporting_tools" nc:link="toolbox.html#tools_import_export" nc:name="Importing and Exporting Tools" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#files">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="creating_files" nc:link="files.html#Creating_a_New_File" nc:name="Creating Files" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="creating_files_from_templates" nc:link="files.html#files_templates" nc:name="Creating Files from Templates" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="opening_files" nc:link="files.html#Opening_a_File" nc:name="Opening Files" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="switching_between_files" nc:link="files.html#Switching_Between_Files" nc:name="Switching Between Files" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="comparing_files" nc:link="files.html#Comparing_Files" nc:name="Comparing Files" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="refreshing_file_status" nc:link="files.html#files_refstatus" nc:name="Refreshing File Status" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="source_code_control_files" nc:link="files.html#files_scc" nc:name="Source Code Control Files" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="file_properties_and_settings" nc:link="files.html#files_settings" nc:name="File Properties and Settings" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="printing_files" nc:link="files.html#Printing" nc:name="Printing Files" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="saving_files" nc:link="files.html#Saving_a_File" nc:name="Saving Files" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#opening_files">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="go_to_file_(fast_open)" nc:link="files.html#files_go_to_file" nc:name="Go to File (Fast Open)" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="opening_files_with_the_open/find_toolbar" nc:link="files.html#files_openfindtoolbar" nc:name="Opening Files with the Open/Find Toolbar" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="opening_remote_files" nc:link="files.html#Opening_Remote_Files" nc:name="Opening Remote Files" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="opening_mapped_uris" nc:link="files.html#Open_Mapped_URI" nc:name="Opening Mapped URIs" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#go_to_file_(fast_open)">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="go_to_file_shortcuts_(fast_open)" nc:link="files.html#files_go_to_file_shortcuts" nc:name="Go to File Shortcuts (Fast Open)" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#opening_remote_files">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="connecting_to_a_remove_server" nc:link="files.html#files_remote_connect" nc:name="Connecting to a Remove Server" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="using_public_key_authentication" nc:link="files.html#files_public_key_auth" nc:name="Using Public Key Authentication" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="navigating_the_remote_file_system" nc:link="files.html#files_navremote" nc:name="Navigating the Remote File System" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#file_properties_and_settings">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="files_settings_props" nc:link="files.html#files_settings_props" nc:name="Properties" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="files_settings_scc" nc:link="files.html#files_settings_scc" nc:name="Source Control" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="files_settings_editing" nc:link="files.html#files_settings_editing" nc:name="Editing" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="files_settings_indent" nc:link="files.html#files_settings_indent" nc:name="Indentation" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="files_browser_preview" nc:link="files.html#browser_preview" nc:name="Preview" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#printing_files">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="printing_overview" nc:link="files.html#Printing" nc:name="Printing Overview" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="page_setup" nc:link="files.html#page_setup" nc:name="Page Setup" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="print_to_html_file" nc:link="files.html#files_printhtml" nc:name="Print to HTML File" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#saving_files">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="saving_files_remotely" nc:link="files.html#Saving_Files_Remotely" nc:name="Saving Files Remotely" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="show_unsaved_changes" nc:link="files.html#files_showunsaved" nc:name="Show Unsaved Changes" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="reverting_files" nc:link="files.html#Revert_File" nc:name="Reverting Files" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="closing_files" nc:link="files.html#Closing_Files" nc:name="Closing Files" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#komodo_sync">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="sync_setup" nc:link="sync.html#set_up_sync" nc:name="Sync Setup" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="synchronizing_komodo" nc:link="sync.html#sync_sync" nc:name="Synchronizing Komodo" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#synchronizing_komodo">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="synchronizing_your_data" nc:link="sync.html#sync_data" nc:name="Synchronizing your Data" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="synchronizing_additional_machines" nc:link="sync.html#sync_other_machines" nc:name="Synchronizing Additional Machines" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="synchronizing_between_different_komodo_versions" nc:link="sync.html#sync_komodo_versions" nc:name="Synchronizing between different Komodo versions" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#collaboration">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="collaboration_account_setup" nc:link="collab.html#collab_account" nc:name="Collaboration Account Setup" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="collaboration_overview" nc:link="collab.html#collab_collab" nc:name="Collaboration Overview" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="using_collaboration" nc:link="collab.html#collab_usage" nc:name="Using Collaboration" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="collaborative_editing" nc:link="collab.html#collab_editing" nc:name="Collaborative Editing" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#using_collaboration">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="sessions" nc:link="collab.html#collab_sessions" nc:name="Sessions" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="contacts" nc:link="collab.html#collab_contacts" nc:name="Contacts" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#stackato">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="stackato_client_setup" nc:link="stackato.html#stackato_client_setup" nc:name="Stackato Client Setup" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="connecting_to_stackato" nc:link="stackato.html#stackato_connecting" nc:name="Connecting to Stackato" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#connecting_to_stackato">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="viewing_target_info" nc:link="stackato.html#stackato_info" nc:name="Viewing Target Info" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="creating_applications" nc:link="stackato.html#creating_applications" nc:name="Creating Applications" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="debugging_applications" nc:link="stackato.html#debugging_applications" nc:name="Debugging Applications" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#publishing">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="creating_a_publishing_configuration" nc:link="publish.html#publish_config" nc:name="Creating a Publishing Configuration" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="synchronizing" nc:link="publish.html#publish_sync" nc:name="Synchronizing" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="publishing_commands" nc:link="publish.html#publish_commands" nc:name="Publishing Commands" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#find_and_replace">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="match_highlighting" nc:link="search.html#search_highlight" nc:name="Match Highlighting" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="incremental_search" nc:link="search.html#search_incr" nc:name="Incremental Search" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="find_dialog" nc:link="search.html#search_dialog" nc:name="Find Dialog" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="replace_in_files" nc:link="search.html#search_repl_in_files" nc:name="Replace in Files" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="find_results_tabs" nc:link="search.html#search_output" nc:name="Find Results Tabs" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="open/find_toolbar" nc:link="search.html#search_find_toolbar" nc:name="Open/Find Toolbar" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="function_search" nc:link="search.html#search_functions" nc:name="Function Search" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#find_dialog">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="regex_searches" nc:link="search.html#search_regex" nc:name="Regex Searches" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="case_sensitivity" nc:link="search.html#search_case" nc:name="Case Sensitivity" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="match_whole_words" nc:link="search.html#search_word" nc:name="Match Whole Words" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="multiline" nc:link="search.html#search_multiline" nc:name="Multiline" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="search_scope" nc:link="search.html#search_scope" nc:name="Search Scope" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="search_and_replace_actions" nc:link="search.html#search_actions" nc:name="Search and Replace Actions" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#replace_in_files">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="confirming_changes" nc:link="search.html#search_repl_confirm" nc:name="Confirming Changes" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="review_and_undo" nc:link="search.html#search_repl_undo" nc:name="Review and Undo" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#confirming_changes">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="confirm_replacements" nc:link="search.html#search_confirm_dialog" nc:name="Confirm Replacements" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="make_changes" nc:link="search.html#search_repl_make_changes" nc:name="Make Changes" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#editing">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="language_support" nc:link="editor.html#editor_lang" nc:name="Language Support" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="manipulating_code" nc:link="editor.html#editor_mancode" nc:name="Manipulating Code" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="editor_display" nc:link="editor.html#editor_dispchar" nc:name="Editor Display" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="navigating_within_files" nc:link="editor.html#editor_nav" nc:name="Navigating Within Files" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="detecting_changed_files" nc:link="editor.html#Detect_Changed" nc:name="Detecting Changed Files" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="preview_in_browser" nc:link="editor.html#browser_preview" nc:name="Preview in Browser" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="editor_tab_display" nc:link="editor.html#editor_tabs" nc:name="Editor Tab Display" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="abbreviations" nc:link="abbreviations.html#abbrev_top" nc:name="Abbreviations" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="history" nc:link="history.html#history_top" nc:name="History" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="editor_hyperlinks" nc:link="hyperlinks.html#hyperlinks_top" nc:name="Editor Hyperlinks" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#language_support">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="syntax_coloring_and_indentation" nc:link="editor.html#Syntax_Coloring" nc:name="Syntax Coloring and Indentation" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="background_syntax_checking" nc:link="editor.html#Linting" nc:name="Background Syntax Checking" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="autocomplete_and_calltips" nc:link="editor.html#AutoComplete" nc:name="AutoComplete and CallTips" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="variable_highlighting" nc:link="editor.html#Variable_Highlighting" nc:name="Variable Highlighting" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="soft_characters" nc:link="editor.html#Soft_Char" nc:name="Soft Characters" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="fast_characters" nc:link="editor.html#Fast_Chars" nc:name="Fast Characters" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="viewing_file_as_another_language" nc:link="editor.html#View_as_Lang" nc:name="Viewing File as Another Language" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="commenting_blocks_of_code" nc:link="editor.html#Code_Commenting" nc:name="Commenting Blocks of Code" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#autocomplete_and_calltips">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="perl_autocomplete" nc:link="editor.html#Perl_AutoComplete" nc:name="Perl AutoComplete" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="python_autocomplete" nc:link="editor.html#Python_AutoComplete" nc:name="Python AutoComplete" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ruby_autocomplete" nc:link="editor.html#Ruby_AutoComplete" nc:name="Ruby AutoComplete" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="php_autocomplete" nc:link="editor.html#PHP_AutoComplete" nc:name="PHP AutoComplete" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="tcl_autocomplete" nc:link="editor.html#Tcl_AutoComplete" nc:name="Tcl AutoComplete" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="xslt_autocomplete" nc:link="editor.html#XSLT_AutoComplete" nc:name="XSLT AutoComplete" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="xml_autocomplete" nc:link="editor.html#XML_AutoComplete" nc:name="XML AutoComplete" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#manipulating_code">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="cutting_and_copying_lines" nc:link="editor.html#line_cut_copy" nc:name="Cutting and Copying Lines" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="selecting_and_dragging_lines" nc:link="editor.html#line_select_drag" nc:name="Selecting and Dragging Lines" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="repeating_keystrokes" nc:link="editor.html#repeat_keystrokes" nc:name="Repeating Keystrokes" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="indenting_code" nc:link="editor.html#Indenting" nc:name="Indenting Code" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="reflowing_paragraphs" nc:link="editor.html#reflow" nc:name="Reflowing Paragraphs" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="formatting_code" nc:link="editor.html#editor_formatters" nc:name="Formatting Code" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="joining_lines" nc:link="editor.html#join_lines" nc:name="Joining Lines" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="converting_case" nc:link="editor.html#Case" nc:name="Converting Case" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="transposing_characters" nc:link="editor.html#transpose" nc:name="Transposing Characters" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="literal_characters" nc:link="editor.html#raw_keys" nc:name="Literal Characters" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="commenting_code" nc:link="editor.html#Commenting" nc:name="Commenting Code" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="cleaning_line_endings" nc:link="editor.html#Cleaning" nc:name="Cleaning Line Endings" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="tabifying_code_regions" nc:link="editor.html#Tabifying" nc:name="Tabifying Code Regions" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="rectangular_selection" nc:link="editor.html#Column_Select" nc:name="Rectangular Selection" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="column_editing" nc:link="editor.html#column_edit" nc:name="Column Editing" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="completing_words" nc:link="editor.html#Complete_Word" nc:name="Completing Words" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="multiple_carets" nc:link="editor.html#multiple_carets" nc:name="Multiple Carets" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="selecting_blocks_of_code" nc:link="editor.html#Select_Block" nc:name="Selecting Blocks of Code" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="quickly_renaming_start-_and_end-tags" nc:link="editor.html#Rename_Tag" nc:name="Quickly Renaming Start- and End-Tags" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#editor_display">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="toggling_whitespace_display" nc:link="editor.html#whitespace" nc:name="Toggling Whitespace Display" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="toggling_indentation_guides" nc:link="editor.html#indentation_guides" nc:name="Toggling Indentation Guides" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="toggling_line_numbers" nc:link="editor.html#line_numbers_on" nc:name="Toggling Line Numbers" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="toggling_eol_markers" nc:link="editor.html#EOL" nc:name="Toggling EOL Markers" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="changing_the_font_size" nc:link="editor.html#font_size" nc:name="Changing the Font Size" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="toggling_font_width" nc:link="editor.html#Toggling_Font_Width" nc:name="Toggling Font Width" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="code_folding" nc:link="editor.html#Folding" nc:name="Code Folding" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="minimap" nc:link="editor.html#Minimap" nc:name="Minimap" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#navigating_within_files">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="moving_to_a_specific_line" nc:link="editor.html#Moving_to_a_line" nc:name="Moving to a Specific Line" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="go_to_definition" nc:link="editor.html#go_to_def" nc:name="Go to Definition" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="using_bookmarks_and_marks" nc:link="editor.html#bookmarks" nc:name="Using Bookmarks and Marks" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="matching_braces" nc:link="editor.html#matching_brace" nc:name="Matching Braces" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#abbreviations">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="inserting_snippets" nc:link="abbreviations.html#abbrev_inserting" nc:name="Inserting Snippets" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="abbreviations_search_order" nc:link="abbreviations.html#abbrev_search_order" nc:name="Abbreviations Search Order" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="adding_new_abbreviations" nc:link="abbreviations.html#abbrev_new" nc:name="Adding New Abbreviations" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#history">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="locations" nc:link="history.html#history_locations" nc:name="Locations" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="history_navigation" nc:link="history.html#history_navigation" nc:name="History Navigation" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#editor_hyperlinks">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="hyperlinks_goto_def" nc:link="hyperlinks.html#hyperlinks_definition" nc:name="Go to Definition" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="hyperlinks_url" nc:link="hyperlinks.html#hyperlinks_url" nc:name="URLs" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="hyperlinks_color" nc:link="hyperlinks.html#hyperlinks_color" nc:name="Colors" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="hyperlinks_custom" nc:link="hyperlinks.html#hyperlinks_custom" nc:name="Custom" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#snippets">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="creating_snippets" nc:link="snippets.html#snippets_creating" nc:name="Creating Snippets" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="configuring_snippets" nc:link="snippets.html#snippets_config" nc:name="Configuring Snippets" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="using_snippets" nc:link="snippets.html#snippets_using" nc:name="Using Snippets" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="conditional_snippets" nc:link="snippets.html#conditional_snippets" nc:name="Conditional Snippets" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="snippet_options" nc:link="snippets.html#snippets_options" nc:name="Snippet Options" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#using_snippets">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="snippet_abbreviations" nc:link="snippets.html#snippets_abbreviations" nc:name="Snippet Abbreviations" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="auto_abbreviations" nc:link="snippets.html#snippets_auto_abbreviations" nc:name="Auto Abbreviations" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#snippet_options">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="snippet_properties" nc:link="snippets.html#snippets_properties" nc:name="Snippet Properties" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#snippet_properties">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="assigning_custom_icons_to_snippets" nc:link="snippets.html#snippets_Cust_Icons" nc:name="Assigning Custom Icons to Snippets" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="snippet_key_bindings" nc:link="snippets.html#snippets_key_bindings" nc:name="Snippet Key Bindings" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#tabstops">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="creating_tabstops" nc:link="tabstops.html#tabstop_create" nc:name="Creating Tabstops" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="using_tabstops" nc:link="tabstops.html#tabstop_usage" nc:name="Using Tabstops" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="tabstop_examples" nc:link="tabstops.html#tabstop_examples" nc:name="Tabstop Examples" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#refactoring">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="refactoring_commands" nc:link="refactoring.html#refactoring_commands" nc:name="Refactoring Commands" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#refactoring_commands">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="rename_variable" nc:link="refactoring.html#refactoring_rename_variable" nc:name="Rename Variable" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="extract_method" nc:link="refactoring.html#refactoring_extract_method" nc:name="Extract Method" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="rename_class_member" nc:link="refactoring.html#refactoring_rename_class_member" nc:name="Rename Class Member" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#macros">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="creating_macros" nc:link="macros.html#creating_macros" nc:name="Creating Macros" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="running_macros" nc:link="macros.html#macros_running" nc:name="Running Macros" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="managing_macros" nc:link="macros.html#macros_managing" nc:name="Managing Macros" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="macro_properties" nc:link="macros.html#macros_properties" nc:name="Macro Properties" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="vi_command_mode_macros" nc:link="macros.html#vi_macros" nc:name="Vi Command Mode Macros" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="macro_api" nc:link="macroapi.html#macroapi_top" nc:name="Macro API" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="command_id_list" nc:link="commandid.html" nc:name="Command ID List" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#creating_macros">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="recording_macros" nc:link="macros.html#macros_recording" nc:name="Recording Macros" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="writing_macros" nc:link="macros.html#macros_writing" nc:name="Writing Macros" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#macro_properties">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="assigning_key_bindings_to_macros" nc:link="macros.html#key_bindings" nc:name="Assigning Key Bindings to Macros" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="assigning_custom_icons_to_macros" nc:link="macros.html#Cust_Icons" nc:name="Assigning Custom Icons to Macros" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="running_macros_in_the_background" nc:link="macros.html#run_background" nc:name="Running Macros in the Background" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="specifying_macro_triggers" nc:link="macros.html#triggers_macros" nc:name="Specifying Macro Triggers" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#specifying_macro_triggers">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="trigger_macro_subject_variable" nc:link="macros.html#macros_trigger_subject" nc:name="Trigger Macro subject Variable" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="macro_return_values" nc:link="macros.html#macros_return_values" nc:name="Macro Return Values" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#macro_api">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="macro_api_overview" nc:link="macroapi.html#macroapi_overview" nc:name="Macro API Overview" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="javascript_macros" nc:link="macroapi.html#macroapi_js" nc:name="JavaScript Macros" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="python_macros" nc:link="macroapi.html#macroapi_py" nc:name="Python Macros" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#javascript_macros">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="the_scimoz_object" nc:link="macroapi.html#macroapi_scimoz" nc:name="The scimoz Object" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="the_kodoc_object" nc:link="macroapi.html#macroapi_koDoc" nc:name="The koDoc Object" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="the_document.file_object" nc:link="macroapi.html#macroapi_file" nc:name="The document.file Object" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="the_docommand_function" nc:link="macroapi.html#macroapi_doCommand" nc:name="The doCommand Function" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="the_open.uri_function" nc:link="macroapi.html#macroapi_openURI" nc:name="The open.URI Function" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="the_findpart_function" nc:link="macroapi.html#macroapi_findPart" nc:name="The findPart Function" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="the_interpolate_function" nc:link="macroapi.html#macroapi_interpolate" nc:name="The interpolate Function" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="the_getwordundercursor_function" nc:link="macroapi.html#macroapi_getWordUnderCursor" nc:name="The getWordUnderCursor Function" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="the_runencodedcommand_function" nc:link="macroapi.html#macroapi_runencodedcommand" nc:name="The runEncodedCommand Function" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#python_macros">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="creating_a_view_object_(xpcom)" nc:link="macroapi.html#xpcom_currentView" nc:name="Creating a view object (XPCOM)" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="opening_a_uri_(xpcom)" nc:link="macroapi.html#xpcom_openURI" nc:name="Opening a URI (XPCOM)" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="interpolate_a_string_(komodo.interpolate)" nc:link="macroapi.html#komodo_interpolate" nc:name="Interpolate a string (komodo.interpolate)" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="get_word_under_cursor_(komodo.getwordundercursor)" nc:link="macroapi.html#komodo_getWordUnderCursor" nc:name="Get word under cursor (komodo.getWordUnderCursor)" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="running_a_komodo_command_(xpcom)" nc:link="macroapi.html#xpcom_doCommand" nc:name="Running a Komodo command (XPCOM)" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="find_a_part_(xpcom)" nc:link="macroapi.html#xpcom_findPart" nc:name="Find a part (XPCOM)" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#templates">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="creating_new_files_from_templates" nc:link="templates.html#templates_newmenu" nc:name="Creating New Files from Templates" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="custom_templates" nc:link="templates.html#create_custom" nc:name="Custom Templates" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="project_templates" nc:link="templates.html#project_templates" nc:name="Project Templates" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="storing_templates_in_a_toolbox" nc:link="templates.html#templates_projtool" nc:name="Storing Templates in a Toolbox" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#custom_templates">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="using_interpolation_shortcuts_in_custom_templates" nc:link="templates.html#template_variables" nc:name="Using Interpolation Shortcuts in Custom Templates" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#storing_templates_in_a_toolbox">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="template_options" nc:link="templates.html#templates_options" nc:name="Template Options" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="assigning_custom_icons_to_templates" nc:link="templates.html#Cust_Icons" nc:name="Assigning Custom Icons to Templates" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="template_key_bindings" nc:link="templates.html#template_key_bindings" nc:name="Template Key Bindings" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#url_shortcuts">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="url_shortcut_options" nc:link="urls.html#urls_options" nc:name="URL Shortcut Options" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#url_shortcut_options">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="url_shortcut_properties" nc:link="urls.html#urls_props" nc:name="URL Shortcut Properties" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#url_shortcut_properties">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="assigning_custom_icons_to_url_shortcuts" nc:link="urls.html#urls_icons" nc:name="Assigning Custom Icons to URL Shortcuts" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="url_shortcut_key_bindings" nc:link="urls.html#urls_keybindings" nc:name="URL Shortcut Key Bindings" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#run_commands">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="creating_run_commands" nc:link="run.html#run_create" nc:name="Creating Run Commands" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="storing_run_commands_in_a_toolbox" nc:link="run.html#run_projtool" nc:name="Storing Run Commands in a Toolbox" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#creating_run_commands">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="simple_run_commands" nc:link="run.html#run_simple" nc:name="Simple Run Commands" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="advanced_run_commands" nc:link="run.html#run_advanced" nc:name="Advanced Run Commands" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="command_output_tab" nc:link="run.html#run_outputtab" nc:name="Command Output Tab" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#storing_run_commands_in_a_toolbox">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="run_command_properties" nc:link="run.html#runcmd_props" nc:name="Run Command Properties" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#run_command_properties">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="assigning_custom_icons_to_run_commands" nc:link="run.html#run_Cust_Icons" nc:name="Assigning Custom Icons to Run Commands" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="run_command_key_bindings" nc:link="run.html#run_key_bindings" nc:name="Run Command Key Bindings" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#custom_toolbars_and_menus">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="creating_custom_toolbars_and_menus" nc:link="custtbi.html#Cust_Toolbar_Menu" nc:name="Creating Custom Toolbars and Menus" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="custom_menu_and_toolbar_properties" nc:link="custtbi.html#custtbi_props" nc:name="Custom Menu and Toolbar Properties" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#debugging">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="general_usage" nc:link="debugger.html#debugger_top" nc:name="General Usage" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="debugging_node.js" nc:link="debugnode.html#debugnode_top" nc:name="Debugging Node.js" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="debugging_perl" nc:link="debugperl.html" nc:name="Debugging Perl" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="debugging_python" nc:link="debugpython.html" nc:name="Debugging Python" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="debugging_php" nc:link="debugphp.html" nc:name="Debugging PHP" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="debugging_ruby" nc:link="debugruby.html" nc:name="Debugging Ruby" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="debugging_tcl" nc:link="debugtcl.html" nc:name="Debugging Tcl" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="debugging_xslt" nc:link="debugxslt.html" nc:name="Debugging XSLT" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#general_usage">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="starting_the_debugger" nc:link="debugger.html#Starting_the_Debugger" nc:name="Starting the Debugger" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="multi-session_debugging" nc:link="debugger.html#multi_session_debug" nc:name="Multi-Session Debugging" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="debugging_options" nc:link="debugger.html#Debugging_Options" nc:name="Debugging Options" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="breakpoints_and_tcl_spawnpoints" nc:link="debugger.html#breakpoints_and_spawnpoints" nc:name="Breakpoints and Tcl Spawnpoints" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="remote_debugging" nc:link="debugger.html#remote_debugging" nc:name="Remote Debugging" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="sending_input_to_the_program" nc:link="debugger.html#Sending_Input" nc:name="Sending Input to the Program" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="debugger_commands" nc:link="debugger.html#Debugging_Commands" nc:name="Debugger Commands" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="viewing_the_debugging_session" nc:link="debugger.html#debug_session" nc:name="Viewing the Debugging Session" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="watching_files" nc:link="debugger.html#Watching_Files" nc:name="Watching Files" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="detaching_the_debugger" nc:link="debugger.html#Detaching_the_Debugger" nc:name="Detaching the Debugger" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="stopping_the_debugger" nc:link="debugger.html#Stopping_the_Debugger" nc:name="Stopping the Debugger" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#debugging_options">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="global_options" nc:link="debugger.html#Debugging_Options_Global" nc:name="Global Options" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="general_options" nc:link="debugger.html#Debugging_Options_General" nc:name="General Options" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="environment_options" nc:link="debugger.html#Debugging_Options_Environment" nc:name="Environment Options" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="cgi_environment_options" nc:link="debugger.html#Debugging_Options_CGI_Environment" nc:name="CGI Environment Options" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="cgi_input_options" nc:link="debugger.html#Debugging_Options_CGI_Input" nc:name="CGI Input Options" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="storing_debug_configurations" nc:link="debugger.html#debugger_storingconfig" nc:name="Storing Debug Configurations" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#breakpoints_and_tcl_spawnpoints">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="breakpoint_and_spawnpoint_management" nc:link="debugger.html#breakpoint_management" nc:name="Breakpoint and Spawnpoint Management" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="toggling_breakpoints" nc:link="debugger.html#toggle_breakpoint" nc:name="Toggling Breakpoints" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="toggling_spawnpoints" nc:link="debugger.html#toggle_spawnpoint" nc:name="Toggling Spawnpoints" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="go_to_the_source_code" nc:link="debugger.html#go_source" nc:name="Go to the Source Code" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="breakpoint_properties" nc:link="debugger.html#set_breakpoint_prop" nc:name="Breakpoint Properties" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="forcing_a_break" nc:link="debugger.html#debug_break" nc:name="Forcing a Break" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#remote_debugging">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="when_to_use_remote_debugging" nc:link="debugger.html#when_to_remote_debug" nc:name="When to use Remote Debugging" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="listen_for_remote_debugger" nc:link="debugger.html#set_remote_debug" nc:name="Listen for Remote Debugger" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="check_listener_status" nc:link="debugger.html#check_listener_status" nc:name="Check Listener Status" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="multi-user_debugging" nc:link="debugger.html#multi_user_debugging" nc:name="Multi-User Debugging" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="mapped_uris_for_remote_debugging" nc:link="debugger.html#remote_uri_mapping" nc:name="Mapped URIs for Remote Debugging" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="debugger_proxy" nc:link="debugger.html#dbgp_proxy" nc:name="Debugger Proxy" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#debugger_commands">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="command_description" nc:link="debugger.html#How_use_Debugger" nc:name="Command Description" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="debugger_stepping_behavior" nc:link="debugger.html#Debugger_Stepping_Behavior" nc:name="Debugger Stepping Behavior" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#viewing_the_debugging_session">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="viewing_variables" nc:link="debugger.html#viewing_variables" nc:name="Viewing Variables" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="setting_watched_variables" nc:link="debugger.html#Watching_Variables" nc:name="Setting Watched Variables" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="output_tab" nc:link="debugger.html#output_tab" nc:name="Output Tab" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="html_preview_tab" nc:link="debugger.html#html_tab" nc:name="HTML Preview Tab" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="viewing_the_call_stack" nc:link="debugger.html#Call_Stack" nc:name="Viewing the Call Stack" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#viewing_variables">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="python,_php_and_tcl_variables" nc:link="debugger.html#debugger_pyphptcl" nc:name="Python, PHP and Tcl Variables" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="perl_variables" nc:link="debugger.html#debugger_perl_tabs" nc:name="Perl Variables" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="xslt_variables" nc:link="debugger.html#debugger_varsxslt" nc:name="XSLT Variables" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#debugging_node.js">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="configuring_node_in_the_preferences" nc:link="debugnode.html#Configure_Node" nc:name="Configuring Node in the Preferences" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="debugging_node_locally" nc:link="debugnode.html#Node_Local_Debugger" nc:name="Debugging Node Locally" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="debugging_node_remotely" nc:link="debugnode.html#Node_Remote_Debugger" nc:name="Debugging Node Remotely" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#debugging_node_remotely">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="node.js_hard_coded_breakpoints" nc:link="debugnode.html#Node_Debugger_Statement" nc:name="Node.js Hard Coded Breakpoints" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#debugging_perl">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="configuring_the_perl_debugger" nc:link="debugperl.html#Configuring_Perl_Debugger" nc:name="Configuring the Perl Debugger" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="debugging_perl_remotely" nc:link="debugperl.html#Perl_Remote_Debugger" nc:name="Debugging Perl Remotely" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="cgi_debugging" nc:link="debugperl.html#Configuring_Perl_CGI" nc:name="CGI Debugging" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="debugging_mod_perl" nc:link="debugperl.html#Debugging_Mod_Perl" nc:name="Debugging mod_perl" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#configuring_the_perl_debugger">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="starting_a_komodo_debugging_session_with_perl_-d" nc:link="debugperl.html#using_perl_-d" nc:name="Starting a Komodo debugging session with perl -d" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="enabling_break_now" nc:link="debugperl.html#Enabling_Break_Now" nc:name="Enabling Break Now" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#debugging_perl_remotely">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="disabling_remote_pdk_debugger" nc:link="debugperl.html#Abling_PDK_Debugger" nc:name="Disabling Remote PDK Debugger" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#cgi_debugging">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="configuring_an_iis_web_server" nc:link="debugperl.html#CGI_Config_IIS" nc:name="Configuring an IIS Web Server" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="configuring_an_apache_web_server" nc:link="debugperl.html#CGI_Config_Apache" nc:name="Configuring an Apache Web Server" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="starting_a_cgi_debugging_session" nc:link="debugperl.html#debugperl_cgi_start" nc:name="Starting a CGI Debugging Session" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#debugging_python">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="configuring_the_python_debugger" nc:link="debugpython.html#Configuring_Python_Debugger" nc:name="Configuring the Python Debugger" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="python_remote_debugging" nc:link="debugpython.html#Using_the_Python_Remote_Debugger" nc:name="Python Remote Debugging" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#python_remote_debugging">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="installing_the_python_remote_debugger" nc:link="debugpython.html#Installing_the_Python_Remote_Debugger" nc:name="Installing the Python Remote Debugger" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="invoking_the_python_remote_debugger" nc:link="debugpython.html#Invoking_the_Python_Remote_Debugger" nc:name="Invoking the Python Remote Debugger" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="python_cgi_debugging" nc:link="debugpython.html#debugpython_dbgpclient_cgi" nc:name="Python CGI Debugging" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#invoking_the_python_remote_debugger">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="running_dbgpclient.py_from_the_command_line" nc:link="debugpython.html#debugpython_dbgpclient_command_line" nc:name="Running dbgpClient.py from the Command Line" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="using_dbgpclient_functions_in_python_programs" nc:link="debugpython.html#debugpython_dbgpclient_functions" nc:name="Using dbgpClient Functions in Python Programs" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="python_just-in-time_debugging" nc:link="debugpython.html#just_in_time" nc:name="Python Just-in-Time Debugging" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#debugging_php">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="local_php_debugging" nc:link="debugphp.html#local_debug_PHP" nc:name="Local PHP Debugging" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="remote_php_debugging" nc:link="debugphp.html#remote_debug_PHP" nc:name="Remote PHP Debugging" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="common_php_debugging_problems" nc:link="debugphp.html#config_PHP_problems" nc:name="Common PHP Debugging Problems" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#local_php_debugging">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="configuring_php_local_debugging" nc:link="debugphp.html#config_local_PHP" nc:name="Configuring PHP Local Debugging" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#remote_php_debugging">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="configuring_php_remote_debugging" nc:link="debugphp.html#config_remote_PHP" nc:name="Configuring PHP Remote Debugging" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="invoking_the_php_remote_debugger" nc:link="debugphp.html#Invoking_the_PHP_Remote_Debugger" nc:name="Invoking the PHP Remote Debugger" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="using_xdebug_break()" nc:link="debugphp.html#using_xdebug_break" nc:name="Using xdebug_break()" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="xdebug_logging" nc:link="debugphp.html#xdebug_logging" nc:name="Xdebug Logging" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="php_just-in-time_debugging_/_break_on_exception" nc:link="debugphp.html#php_just_in_time" nc:name="PHP Just-in-Time Debugging / Break on Exception" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#common_php_debugging_problems">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="debugging_php_on_os_x" nc:link="debugphp.html#config_PHP_os_x" nc:name="Debugging PHP on OS X" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="debugging_php_on_64-bit_linux" nc:link="debugphp.html#config_PHP_amd64" nc:name="Debugging PHP on 64-bit Linux" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="zend_optimizer_and_zend_studio_debugger" nc:link="debugphp.html#config_PHP_zend" nc:name="Zend Optimizer and Zend Studio Debugger" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#debugging_ruby">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="configuring_the_ruby_debugger" nc:link="debugruby.html#Configure_Ruby_Debugger" nc:name="Configuring the Ruby Debugger" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="debugging_ruby_remotely" nc:link="debugruby.html#Ruby_Remote_Debugger" nc:name="Debugging Ruby Remotely" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="debugging_rails_applications" nc:link="debugruby.html#Remote_Rails_Debugging" nc:name="Debugging Rails Applications" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="troubleshooting_ruby_debugging" nc:link="debugruby.html#Troubleshooting_Ruby" nc:name="Troubleshooting Ruby Debugging" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#debugging_ruby_remotely">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="setting_a_break_in_your_ruby_code" nc:link="debugruby.html#rdbgp_stop_next" nc:name="Setting a Break in your Ruby Code" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="rubygems_and_rubyopt" nc:link="debugruby.html#Ruby_Debugging_and_Rubygems" nc:name="Rubygems and RUBYOPT" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#debugging_tcl">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="configuring_the_tcl_debugger" nc:link="debugtcl.html#Configuring_Tcl_Debugger" nc:name="Configuring the Tcl Debugger" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="debugging_tcl_remotely" nc:link="debugtcl.html#Using_the_Tcl_Remote_Debugger" nc:name="Debugging Tcl Remotely" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#debugging_tcl_remotely">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="installing_the_remote_debugger" nc:link="debugtcl.html#Installing_the_Tcl_Remote_Debugger" nc:name="Installing the Remote Debugger" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="invoking_the_remote_debugger" nc:link="debugtcl.html#Invoking_the_Tcl_Remote_Debugger" nc:name="Invoking the Remote Debugger" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#debugging_xslt">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="using_the_xslt_debugger" nc:link="debugxslt.html#debugxslt_using" nc:name="Using the XSLT Debugger" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="using_a_remote_xml_input_file" nc:link="debugxslt.html#debugxslt_remote_xml" nc:name="Using a Remote XML Input File" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="xslt_stepping_behavior" nc:link="debugxslt.html#debugxslt_top" nc:name="XSLT Stepping Behavior" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#code_profiling">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="starting_a_new_code_profiling_session" nc:link="profiling.html#start_profiling" nc:name="Starting a New Code Profiling Session" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#starting_a_new_code_profiling_session">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="local_code_profiling" nc:link="profiling.html#local_profiling" nc:name="Local Code Profiling" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="remote_code_profiling" nc:link="profiling.html#remote_profiling" nc:name="Remote Code Profiling" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#remote_code_profiling">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="python_remote_profiling" nc:link="profiling.html#python_remote_profiling" nc:name="Python Remote Profiling" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="php_remote_profiling" nc:link="profiling.html#php_remote_profiling" nc:name="PHP Remote Profiling" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#unit_testing">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="creating_and_editing_test_plans" nc:link="unittest.html#unit_test_create" nc:name="Creating and Editing Test Plans" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="running_a_test_plan" nc:link="unittest.html#unit_test_run" nc:name="Running a Test Plan" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="importing_global_test_plans" nc:link="unittest.html#importing_global_test_plans" nc:name="Importing Global Test Plans" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#creating_and_editing_test_plans">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="supported_test_frameworks_by_language" nc:link="unittest.html#unit_test_langs" nc:name="Supported Test Frameworks by Language" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="adding_libraries_required_for_unit_testing" nc:link="unittest.html#unit_test_libs" nc:name="Adding Libraries Required for Unit Testing" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#http_inspector">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="http_inspector_overview" nc:link="http-insp.html#http_top" nc:name="HTTP Inspector Overview" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="starting_the_http_inspector" nc:link="http-insp.html#http_start_inspector" nc:name="Starting the HTTP Inspector" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="connecting_the_browser" nc:link="http-insp.html#http_browser_connect" nc:name="Connecting the Browser" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="inspecting_the_http_data" nc:link="http-insp.html#http_inspect" nc:name="Inspecting the HTTP Data" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="break_on_request/response" nc:link="http-insp.html#http_break" nc:name="Break on Request/Response" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="rules" nc:link="http-insp.html#http_ruleset" nc:name="Rules" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#interactive_shell">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="stand-alone_interactive_shell" nc:link="intshell.html#intshell_standalone" nc:name="Stand-Alone Interactive Shell" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="debugging_with_an_interactive_shell" nc:link="intshell.html#intshell_debug" nc:name="Debugging with an Interactive Shell" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="using_the_interactive_shell" nc:link="intshell.html#using_interactive_shell" nc:name="Using the Interactive Shell" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="python_interactive_shell" nc:link="intshell.html#intshell_python" nc:name="Python Interactive Shell" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="tcl_interactive_shell" nc:link="intshell.html#intshell_tcl" nc:name="Tcl Interactive Shell" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="perl_interactive_shell" nc:link="intshell.html#intshell_perl" nc:name="Perl Interactive Shell" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ruby_interactive_shell" nc:link="intshell.html#intshell_ruby" nc:name="Ruby Interactive Shell" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#using_the_interactive_shell">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="setting_shell_preferences" nc:link="intshell.html#intshell_prefs" nc:name="Setting Shell Preferences" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="starting_the_interactive_shell" nc:link="intshell.html#starting_shell" nc:name="Starting the Interactive Shell" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="using_multiple_shells" nc:link="intshell.html#intshell_mult" nc:name="Using Multiple Shells" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="using_autocomplete_and_calltips" nc:link="intshell.html#code_completion" nc:name="Using AutoComplete and CallTips" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="customizing_colors_and_fonts" nc:link="intshell.html#custom_colors" nc:name="Customizing Colors and Fonts" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="viewing_history" nc:link="intshell.html#history" nc:name="Viewing History" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="stopping_a_shell_session" nc:link="intshell.html#intshell_stop" nc:name="Stopping a Shell Session" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="clearing_the_shell_buffer" nc:link="intshell.html#intshell_clear" nc:name="Clearing the Shell Buffer" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#python_interactive_shell">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="debugging_with_the_python_shell" nc:link="intshell.html#intshell_debugpy" nc:name="Debugging with the Python Shell" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#tcl_interactive_shell">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="debugging_with_the_tcl_shell" nc:link="intshell.html#intshell_debugtcl" nc:name="Debugging with the Tcl Shell" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#perl_interactive_shell">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="debugging_with_the_perl_shell" nc:link="intshell.html#intshell_debugperl" nc:name="Debugging with the Perl Shell" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#ruby_interactive_shell">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="debugging_with_the_ruby_shell" nc:link="intshell.html#intshell_debugrb" nc:name="Debugging with the Ruby Shell" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#code_intelligence">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="code_browser" nc:link="codeintel.html#codeintel_codebrowser" nc:name="Code Browser" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="sections_list" nc:link="sections_list.html#sections_top" nc:name="Sections List" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#code_browser">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="settings_menu" nc:link="codeintel.html#codeintel_code_browser_context" nc:name="Settings Menu" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="locating_current_scope" nc:link="codeintel.html#codeintel_scope" nc:name="Locating Current Scope" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="filtering_symbols" nc:link="codeintel.html#codeintel_filter" nc:name="Filtering Symbols" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#sections_list">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="viewing_the_list" nc:link="sections_list.html#sections_view" nc:name="Viewing the List" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="selecting_and_filtering" nc:link="sections_list.html#sections_select" nc:name="Selecting and Filtering" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#dom_viewer">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="navigating_the_dom_tree" nc:link="dom.html#dom_navigate" nc:name="Navigating the DOM Tree" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="filtering_the_dom_tree" nc:link="dom.html#dom_filter" nc:name="Filtering the DOM Tree" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="dom_resources" nc:link="dom.html#dom_resources" nc:name="DOM Resources" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#source_code_control">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="using_source_code_control" nc:link="scc.html#using_scc" nc:name="Using Source Code Control" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="scc_checkout_wizard" nc:link="scc.html#scc_checkout" nc:name="SCC Checkout Wizard" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="scc_commit_(check-in)_dialog" nc:link="scc.html#commit_dialog" nc:name="SCC Commit (Check-in) Dialog" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="configuring_scc_integration" nc:link="scc.html#config" nc:name="Configuring SCC Integration" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#using_source_code_control">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="scc_toolbar,_menus_and_output_tab" nc:link="scc.html#toolbar_output" nc:name="SCC Toolbar, Menus and Output Tab" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="scc_commands" nc:link="scc.html#scc_commands" nc:name="SCC Commands" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="file_status_icons" nc:link="scc.html#file_status" nc:name="File Status Icons" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="refresh_status" nc:link="scc.html#scc_refresh_status" nc:name="Refresh Status" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#scc_checkout_wizard">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="set_the_scc_handler_and_the_checkout_data" nc:link="scc.html#scc_checkout_1" nc:name="Set the SCC handler and the checkout data" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="customize_the_scc_checkout_parameters" nc:link="scc.html#scc_checkout_2" nc:name="Customize the SCC checkout parameters" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="scc_command_line_summary" nc:link="scc.html#scc_checkout_3" nc:name="SCC Command line summary" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#configuring_scc_integration">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="configuring_cvs" nc:link="scc.html#config_cvs" nc:name="Configuring CVS" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="configuring_subversion_(svn)" nc:link="scc.html#config_svn" nc:name="Configuring Subversion (SVN)" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="configuring_perforce_(p4)" nc:link="scc.html#config_perforce" nc:name="Configuring Perforce (P4)" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="basic_perforce_configuration" nc:link="scc.html#basic_p4_config" nc:name="Basic Perforce Configuration" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="configuring_preferences" nc:link="scc.html#config_prefs" nc:name="Configuring Preferences" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="configuring_ssh_support_for_cvs_and_subversion" nc:link="scc.html#config_ssh" nc:name="Configuring SSH Support for CVS and Subversion" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#configuring_cvs">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="basic_cvs_configuration" nc:link="scc.html#basic_cvs_config" nc:name="Basic CVS Configuration" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="configuring_cvs_with_ssh" nc:link="scc.html#cvs_over_ssh" nc:name="Configuring CVS with SSH" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#configuring_subversion_(svn)">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="basic_svn_configuration" nc:link="scc.html#basic_svn_config" nc:name="Basic SVN Configuration" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="configuring_svn_with_ssh" nc:link="scc.html#svn_over_ssh" nc:name="Configuring SVN with SSH" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#configuring_ssh_support_for_cvs_and_subversion">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="configuring_putty_on_windows" nc:link="scc.html#config_putty_install" nc:name="Configuring Putty on Windows" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="using_cvs_with_putty_on_windows" nc:link="scc.html#config_cvs_putty" nc:name="Using CVS with Putty on Windows" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="using_subversion_with_putty_on_windows" nc:link="scc.html#config_svn_putty" nc:name="Using Subversion with Putty on Windows" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="configuring_cvs_with_windows/cygwin-ssh_or_linux/ssh" nc:link="scc.html#config_cvs_ssh" nc:name="Configuring CVS with Windows/Cygwin-SSH or Linux/SSH" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="configuring_subversion_with_windows/cygwin-ssh_or_linux/ssh" nc:link="scc.html#config_svn_ssh" nc:name="Configuring Subversion with Windows/Cygwin-SSH or Linux/SSH" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#regular_expressions">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="rx_toolkit" nc:link="regex.html" nc:name="Rx Toolkit" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="regular_expressions_primer" nc:link="regex-intro.html#regex-intro_top" nc:name="Regular Expressions Primer" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#rx_toolkit">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="selecting_a_language" nc:link="regex.html#select_rx_language" nc:name="Selecting a Language" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="creating_regular_expressions" nc:link="regex.html#Creating_rx" nc:name="Creating Regular Expressions" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="evaluating_regular_expressions" nc:link="regex.html#Debugging_rx" nc:name="Evaluating Regular Expressions" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="modifier_examples" nc:link="regex.html#Viewing_Sample_Rx" nc:name="Modifier Examples" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="using_regular_expressions" nc:link="regex.html#Using_rx" nc:name="Using Regular Expressions" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#creating_regular_expressions">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="adding_metacharacters_to_a_regular_expression" nc:link="regex.html#Add_Metacharacters" nc:name="Adding Metacharacters to a Regular Expression" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="setting_the_match_type" nc:link="regex.html#Match_Type" nc:name="Setting the Match Type" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="adding_modifiers_to_a_regular_expression" nc:link="regex.html#Add_Modifiers_rx" nc:name="Adding Modifiers to a Regular Expression" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#evaluating_regular_expressions">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="regular_expressions_overview" nc:link="regex.html#Debugging_rx" nc:name="Regular Expressions Overview" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="match_results" nc:link="regex.html#debug_output" nc:name="Match Results" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#modifier_examples">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="using_ignore_case" nc:link="regex.html#Using_Ignore_Case" nc:name="Using Ignore Case" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="using_multi-line_mode" nc:link="regex.html#Using_Multi_line_Mode" nc:name="Using Multi-Line Mode" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="using_single-line_mode" nc:link="regex.html#Using_Single_line_Mode" nc:name="Using Single-Line Mode" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="using_multi-_and_single-line_mode" nc:link="regex.html#Using_Multi_and_Single" nc:name="Using Multi- and Single-line Mode" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="using_verbose" nc:link="regex.html#Using_Verbose" nc:name="Using Verbose" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#regular_expressions_primer">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="about_this_primer" nc:link="regex-intro.html#about_primer" nc:name="About this Primer" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="what_are_regular_expressions?" nc:link="regex-intro.html#about_regex" nc:name="What are regular expressions?" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="matching:_searching_for_a_string" nc:link="regex-intro.html#matching" nc:name="Matching: Searching for a String" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="substitution:_searching_and_replacing" nc:link="regex-intro.html#substitution" nc:name="Substitution: Searching and Replacing" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="modifiers" nc:link="regex-intro.html#anchors" nc:name="Modifiers" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="python_regex_syntax" nc:link="regex-intro.html#python_regex_syntax" nc:name="Python Regex Syntax" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="more_regex_resources" nc:link="regex-intro.html#more" nc:name="More Regex Resources" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#matching:_searching_for_a_string">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="literal_match" nc:link="regex-intro.html#literal" nc:name="Literal Match" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="wildcards" nc:link="regex-intro.html#wildcards" nc:name="Wildcards" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="escaping_metacharacters" nc:link="regex-intro.html#escaping" nc:name="Escaping Metacharacters" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="quantifiers" nc:link="regex-intro.html#quantifiers" nc:name="Quantifiers" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="alternation" nc:link="regex-intro.html#alternation" nc:name="Alternation" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="grouping_with_parentheses" nc:link="regex-intro.html#parentheses" nc:name="Grouping with Parentheses" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="character_classes" nc:link="regex-intro.html#charclass" nc:name="Character Classes" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="negated_character_classes" nc:link="regex-intro.html#neg_charclass" nc:name="Negated Character Classes" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="anchors:_matching_at_specific_locations" nc:link="regex-intro.html#anchors" nc:name="Anchors: Matching at Specific Locations" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#quantifiers">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="question_mark" nc:link="regex-intro.html#question_mark" nc:name="Question Mark" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="asterisk" nc:link="regex-intro.html#asterisk" nc:name="Asterisk" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="plus" nc:link="regex-intro.html#plus" nc:name="Plus" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="number:_'{n}'" nc:link="regex-intro.html#number" nc:name="Number: '{N}'" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ranges:_'{min,_max}'" nc:link="regex-intro.html#ranges" nc:name="Ranges: '{min, max}'" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="quantifier_summary" nc:link="regex-intro.html#quantifiersummary" nc:name="Quantifier Summary" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#modifiers">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="modifier_summary" nc:link="regex-intro.html#modifiersummary" nc:name="Modifier Summary" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#perl_dev_kit_integration">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="version_6_and_7" nc:link="pdk.html#pdk_v6" nc:name="Version 6 and 7" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="versions_3.1_to_5.3" nc:link="pdk.html#pdk_v3-5" nc:name="Versions 3.1 to 5.3" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#versions_3.1_to_5.3">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="general_tab" nc:link="pdk.html#General" nc:name="General Tab" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="modules_tab" nc:link="pdk.html#Modules" nc:name="Modules Tab" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="files_tab" nc:link="pdk.html#Files" nc:name="Files Tab" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="version_tab" nc:link="pdk.html#Version" nc:name="Version Tab" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="library_paths_tab" nc:link="pdk.html#Library" nc:name="Library Paths Tab" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="extra_tab" nc:link="pdk.html#Extra" nc:name="Extra Tab" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#interpolation_shortcuts">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="interpolation_shortcut_list" nc:link="shortcuts.html#shortcuts_all_codes" nc:name="Interpolation Shortcut List" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="interpolation_shortcut_syntax" nc:link="shortcuts.html#basic" nc:name="Interpolation Shortcut Syntax" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="basic_interpolation_shortcut_options" nc:link="shortcuts.html#options" nc:name="Basic Interpolation Shortcut Options" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="%(date)" nc:link="shortcuts.html#shortcuts_datecode" nc:name="%(date)" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="%(ask)" nc:link="shortcuts.html#shortcuts_askcode" nc:name="%(ask)" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="%(path)" nc:link="shortcuts.html#shortcuts_pathcode" nc:name="%(path)" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="%(debugger)" nc:link="shortcuts.html#shortcuts_debugcode" nc:name="%(debugger)" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="%(pref)" nc:link="shortcuts.html#shortcuts_prefscode" nc:name="%(pref)" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="back-references" nc:link="shortcuts.html#back_references" nc:name="Back-References" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#interpolation_shortcut_syntax">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="non-bracketed_syntax" nc:link="shortcuts.html#shortcuts_nonbrack" nc:name="Non-Bracketed Syntax" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="bracketed_syntax" nc:link="shortcuts.html#shortcuts_brack" nc:name="Bracketed Syntax" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#preferences">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="filtering_the_preferences_list" nc:link="prefs.html#searching_prefs" nc:name="Filtering the Preferences List" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="appearance" nc:link="prefs.html#UI_Configuration" nc:name="Appearance" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="code_intelligence_preferences" nc:link="prefs.html#code_intel" nc:name="Code Intelligence Preferences" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="database_explorer_preferences" nc:link="prefs.html#db_explorer_prefs" nc:name="Database Explorer Preferences" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="debugger" nc:link="prefs.html#Debugger" nc:name="Debugger" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="editor" nc:link="prefs.html#prefs_editor" nc:name="Editor" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="environment" nc:link="prefs.html#Environment" nc:name="Environment" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="fast_open_preferences" nc:link="prefs.html#fast_open" nc:name="Fast Open Preferences" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="find" nc:link="prefs.html#Find" nc:name="Find" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="file_associations" nc:link="prefs.html#File_Associations" nc:name="File Associations" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="fonts_and_colors" nc:link="prefs.html#Customizing_Fonts" nc:name="Fonts and Colors" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="code_formatters" nc:link="prefs.html#code_formatters" nc:name="Code Formatters" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="http_inspector_preferences" nc:link="prefs.html#http_inspector" nc:name="HTTP Inspector Preferences" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="interactive_shell_preferences" nc:link="prefs.html#int_shell" nc:name="Interactive Shell Preferences" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="internationalization_preferences" nc:link="prefs.html#Internationalization" nc:name="Internationalization Preferences" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="language_help_preferences" nc:link="prefs.html#language_help" nc:name="Language Help Preferences" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="language_configuration_preferences" nc:link="prefs.html#lang_config" nc:name="Language Configuration Preferences" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="mapped_uris" nc:link="prefs.html#mapped_uris" nc:name="Mapped URIs" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="new_files" nc:link="prefs.html#new_files" nc:name="New Files" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="printing" nc:link="prefs.html#printing" nc:name="Printing" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="projects_and_workspace" nc:link="prefs.html#projects" nc:name="Projects and Workspace" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="server_configuration" nc:link="prefs.html#Servers" nc:name="Server Configuration" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="shared_support" nc:link="prefs.html#Shared_Support" nc:name="Shared Support" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="source_code_control_preferences" nc:link="prefs.html#scc" nc:name="Source Code Control Preferences" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="stackato_preferences" nc:link="prefs.html#stackato_prefs" nc:name="Stackato Preferences" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="syntax_checking_preferences" nc:link="prefs.html#syntax_checking" nc:name="Syntax Checking Preferences" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="test_plans" nc:link="prefs.html#test_plan_prefs" nc:name="Test Plans" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="web_and_browser" nc:link="prefs.html#web" nc:name="Web and Browser" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="windows_integration" nc:link="prefs.html#integration" nc:name="Windows Integration" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#debugger">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="debugger_connection_options" nc:link="prefs.html#DebuggerConnection" nc:name="Debugger Connection Options" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="advanced_debugger_preferences" nc:link="prefs.html#Debugger_advanced" nc:name="Advanced Debugger Preferences" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#editor">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="key_bindings" nc:link="prefs.html#Config_Key_Bindings" nc:name="Key Bindings" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="indentation" nc:link="prefs.html#Indentation_Features" nc:name="Indentation" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="smart_editing" nc:link="prefs.html#smart_editing" nc:name="Smart Editing" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="save_options" nc:link="prefs.html#Save_Options" nc:name="Save Options" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#smart_editing">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="word_completion" nc:link="prefs.html#Config_Word_Complete" nc:name="Word Completion" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="word_wrap" nc:link="prefs.html#Config_Auto_Wrap" nc:name="Word Wrap" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="configuring_edge_lines" nc:link="prefs.html#Config_Edge_Line" nc:name="Configuring Edge Lines" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="enable_soft_characters" nc:link="prefs.html#Soft_Chars" nc:name="Soft Characters" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="line_cut_copy" nc:link="prefs.html#line_cut_copy" nc:name="Line Cut/Copy" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="configuring_folding" nc:link="prefs.html#Folding" nc:name="Configuring Folding" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="variable_highlighting_settings" nc:link="prefs.html#Variable_Highlighting_Prefs" nc:name="Variable Highlighting Settings" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#fonts_and_colors">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="fonts" nc:link="prefs.html#fonts" nc:name="Fonts" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="colors" nc:link="prefs.html#colors" nc:name="Colors" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="common_syntax_coloring" nc:link="prefs.html#common_syntax" nc:name="Common Syntax Coloring" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="language-specific_coloring" nc:link="prefs.html#lang_specific" nc:name="Language-Specific Coloring" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#language_configuration_preferences">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="javascript_configuration" nc:link="prefs.html#JavaScript" nc:name="JavaScript Configuration" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="node.js_configuration" nc:link="prefs.html#Node" nc:name="Node.js Configuration" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="perl_configuration" nc:link="prefs.html#Perl" nc:name="Perl Configuration" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="php_configuration" nc:link="prefs.html#PHP" nc:name="PHP Configuration" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="python_configuration" nc:link="prefs.html#Python" nc:name="Python Configuration" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ruby_configuration" nc:link="prefs.html#Ruby" nc:name="Ruby Configuration" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="tcl_configuration" nc:link="prefs.html#Tcl" nc:name="Tcl Configuration" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="html_configuration" nc:link="prefs.html#html" nc:name="HTML Configuration" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="xml_catalog_configuration" nc:link="prefs.html#xml_catalogs" nc:name="XML Catalog Configuration" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#shared_support">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="configuring_the_common_data_directory" nc:link="prefs.html#Config_CDD" nc:name="Configuring the Common Data Directory" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="sharing_.tip,_.pcx_and_.pdx_files" nc:link="prefs.html#Share_Files" nc:name="Sharing .tip, .pcx and .pdx Files" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="sharing_preferences" nc:link="prefs.html#Share_Prefs" nc:name="Sharing Preferences" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#source_code_control_preferences">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="cvs_integration" nc:link="prefs.html#CVS" nc:name="CVS Integration" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="perforce_integration" nc:link="prefs.html#Perforce" nc:name="Perforce Integration" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="subversion_integration" nc:link="prefs.html#Subversion" nc:name="Subversion Integration" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#tutorials">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="showcase_tutorial" nc:link="tutorial/tourlet_over.html#over_top" nc:name="Feature Showcase" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="perl_tutorial" nc:link="tutorial/perltut.html#perltut_top" nc:name="Perl Tutorial" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="php_tutorial" nc:link="tutorial/phptut.html#phptut_top" nc:name="PHP Tutorial" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="python_tutorial" nc:link="tutorial/pythontut.html#pythontut_top" nc:name="Python Tutorial" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ruby_tutorial" nc:link="tutorial/rubytut.html#rubytut_top" nc:name="Ruby Tutorial" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="rails_tutorial" nc:link="tutorial/railstut.html#rails_top" nc:name="Rails Tutorial" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="xslt_tutorial" nc:link="tutorial/xslttut.html#xslttut_top" nc:name="XSLT Tutorial" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="runcmd_tutorial" nc:link="tutorial/runcmdtut.html#runcmdtut_top" nc:name="Run Command Tutorial" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#showcase_tutorial">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="remote_files" nc:link="tutorial/tourlet_remote_files.html#tourlet_remote_files_top" nc:name="Remote Files" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="custom_toolbars" nc:link="tutorial/tourlet_custtoolbar.html#custtoolbar_top" nc:name="Custom Toolbars" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="export/import_a_project_package" nc:link="tutorial/tourlet_expimppkg.html#expimppkg_top" nc:name="Export/Import a Project Package" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="custom_keybindings" nc:link="tutorial/tourlet_keybinding.html#keybinding_top" nc:name="Custom Keybindings" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="custom_template_in_a_project" nc:link="tutorial/tourlet_tempproj.html#tempproj_top" nc:name="Custom Template in a Project" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="preview_cascading_style_sheets" nc:link="tutorial/tourlet_viewcss.html#viewcss_top" nc:name="Preview Cascading Style Sheets" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="simple_snippets" nc:link="tutorial/tourlet_reuse.html#reuse_top" nc:name="Simple Snippets" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="create_a_prompting_snippet" nc:link="tutorial/tourlet_snipinput.html#snipinput_top" nc:name="Create a Prompting Snippet" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="code_completion_snippet" nc:link="tutorial/tourlet_codecomp.html#codecomp_top" nc:name="Code Completion Snippet" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="break_on_a_variable_value" nc:link="tutorial/tourlet_condbreak.html#condbreak_top" nc:name="Break on a Variable Value" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="debug_an_xslt_program" nc:link="tutorial/tourlet_debug_xslt.html#debug_xslt_top" nc:name="Debug an XSLT Program" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="fast_string_finder" nc:link="tutorial/tourlet_faststr.html#faststr_top" nc:name="Fast String Finder" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="incremental_searching" nc:link="tutorial/tourlet_incrsrch.html#incrsrch_top" nc:name="Incremental Searching" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="the_open/find_toolbar" nc:link="tutorial/tourlet_openfind.html#openfind_top" nc:name="The Open/Find Toolbar" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="installing_extensions" nc:link="tutorial/tourlet_extensions.html#tourlet_install_extension_top" nc:name="Installing Extensions" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="using_scc" nc:link="tutorial/tourlet_scc.html#tourlet_scc_top" nc:name="Using SCC" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="google_run_command" nc:link="tutorial/tourlet_googrun.html#googrun_top" nc:name="Google Run Command" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="using_interactive_shells" nc:link="tutorial/tourlet_intshell.html#intshell_top" nc:name="Using Interactive Shells" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="test_a_regular_expression" nc:link="tutorial/tourlet_rx.html#rx_top" nc:name="Test a Regular Expression" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#perl_tutorial">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="perl_tutorial_overview" nc:link="tutorial/perltut.html#perltut_over" nc:name="Perl Tutorial Overview" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="installing_perl_modules" nc:link="tutorial/perltut.html#perltut_modules" nc:name="Installing Perl Modules" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="opening_perl_tutorial_files" nc:link="tutorial/perltut.html#perltut_open" nc:name="Opening Perl Tutorial Files" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="analyzing_the_perl_program" nc:link="tutorial/perltut.html#perltut_analyze" nc:name="Analyzing the Perl Program" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="run_the_program_to_generate_output" nc:link="tutorial/perltut.html#perltut_run" nc:name="Run the Program to Generate Output" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="debugging_the_perl_program" nc:link="tutorial/perltut.html#perltut_debug" nc:name="Debugging the Perl Program" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="more_perl_resources" nc:link="tutorial/perltut.html#perltut_resources" nc:name="More Perl Resources" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#php_tutorial">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="php_overview" nc:link="tutorial/phptut.html#phptut_over" nc:name="PHP Overview" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="opening_the_php_tutorial_project" nc:link="tutorial/phptut.html#phptut_open" nc:name="Opening the PHP Tutorial Project" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="analyzing_the_php_tutorial_file" nc:link="tutorial/phptut.html#phptut_analyzefiles" nc:name="Analyzing the PHP Tutorial File" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="running_the_php_program" nc:link="tutorial/phptut.html#phptut_run" nc:name="Running the PHP Program" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="debugging_the_php_program" nc:link="tutorial/phptut.html#phptut_debug" nc:name="Debugging the PHP Program" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="more_php_resources" nc:link="tutorial/phptut.html#phptut_resources" nc:name="More PHP Resources" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#python_tutorial">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="python_overview" nc:link="tutorial/pythontut.html#pythontut_overview" nc:name="Python Overview" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="opening_the_python_tutorial_project" nc:link="tutorial/pythontut.html#pythontut_open" nc:name="Opening the Python Tutorial Project" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="analyzing_the_python_files" nc:link="tutorial/pythontut.html#pythontut_analyze" nc:name="Analyzing the Python Files" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="running_the_python_program" nc:link="tutorial/pythontut.html#pythontut_run" nc:name="Running the Python Program" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="debugging_the_python_program" nc:link="tutorial/pythontut.html#pythontut_debug" nc:name="Debugging the Python Program" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="explore_python_with_the_interactive_shell" nc:link="tutorial/pythontut.html#pythontut_interactive_shell" nc:name="Explore Python with the Interactive Shell" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="more_python_resources" nc:link="tutorial/pythontut.html#pythontut_preprocess_resources" nc:name="More Python Resources" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#ruby_tutorial">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="ruby_tutorial_overview" nc:link="tutorial/rubytut.html#rubytut_overview" nc:name="Ruby Tutorial Overview" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="opening_the_ruby_tutorial_files" nc:link="tutorial/rubytut.html#rubytut_open" nc:name="Opening the Ruby Tutorial Files" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="analyzing_the_ruby_program" nc:link="tutorial/rubytut.html#rubytut_analyze" nc:name="Analyzing the Ruby Program" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="running_the_ruby_program" nc:link="tutorial/rubytut.html#rubytut_run" nc:name="Running the Ruby Program" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="debugging_the_ruby_program" nc:link="tutorial/rubytut.html#rubytut_debug" nc:name="Debugging the Ruby Program" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="more_ruby_resources" nc:link="tutorial/rubytut.html#rubytut_resources" nc:name="More Ruby Resources" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#rails_tutorial">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="rails_tutorial_overview" nc:link="tutorial/railstut.html#rails_overview" nc:name="Rails Tutorial Overview" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="creating_the_rails_project" nc:link="tutorial/railstut.html#rails_template_new" nc:name="Creating the Rails Project" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="creating_the_database" nc:link="tutorial/railstut.html#rails_create_db" nc:name="Creating the Database" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="creating_a_scaffold" nc:link="tutorial/railstut.html#rails_generate_scaffold" nc:name="Creating a Scaffold" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="migration" nc:link="tutorial/railstut.html#rails_migration" nc:name="Migration" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="rails_testing_basics" nc:link="tutorial/railstut.html#rails_testing_basics" nc:name="Rails Testing Basics" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="starting_the_rails_application_server" nc:link="tutorial/railstut.html#rails_starting_app" nc:name="Starting the Rails Application Server" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="installing_plugins" nc:link="tutorial/railstut.html#installing_plugins" nc:name="Installing Plugins" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="adding_borrower_data" nc:link="tutorial/railstut.html#adding_borrower_data" nc:name="Adding Borrower Data" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="handling_checkouts" nc:link="tutorial/railstut.html#handling_checkouts" nc:name="Handling Checkouts" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="rails_resources" nc:link="tutorial/railstut.html#rails_resources" nc:name="Rails Resources" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#rails_tutorial_overview">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="rails_tutorial_prerequisites" nc:link="tutorial/railstut.html#rails_prerequisites" nc:name="Rails Tutorial Prerequisites" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="rails_tutorial_scenario" nc:link="tutorial/railstut.html#rails_scenario" nc:name="Rails Tutorial Scenario" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#creating_the_database">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="editing_the_database.yml_file" nc:link="tutorial/railstut.html#rails_edit_database_yml" nc:name="Editing the database.yml file" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="running_the_create_databases_macro" nc:link="tutorial/railstut.html#rails_create_databases_macro" nc:name="Running the Create Databases Macro" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#rails_testing_basics">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="running_model_tests_in_komodo_ide" nc:link="tutorial/railstut.html#running_tests_in_komodo_ide" nc:name="Running Model Tests in Komodo IDE" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="running_tests_in_komodo_edit" nc:link="tutorial/railstut.html#running_tests_in_komodo_edit" nc:name="Running Tests in Komodo Edit" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="running_controller_tests" nc:link="tutorial/railstut.html#running_controller_tests" nc:name="Running Controller Tests" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#starting_the_rails_application_server">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="mongrel_issues" nc:link="tutorial/railstut.html#mongrel_issues" nc:name="Mongrel Issues" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="testing_the_application" nc:link="tutorial/railstut.html#testing_app_1" nc:name="Testing the Application" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#installing_plugins">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="adding_pagination" nc:link="tutorial/railstut.html#adding_pagination" nc:name="Adding Pagination" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="testing_pagination" nc:link="tutorial/railstut.html#testing_pagination" nc:name="Testing Pagination" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="using_pagination" nc:link="tutorial/railstut.html#using_pagination" nc:name="Using Pagination" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="adding_in-place_editing" nc:link="tutorial/railstut.html#adding_in_place_editing" nc:name="Adding In-Place Editing" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#xslt_tutorial">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="xslt_tutorial_overview" nc:link="tutorial/xslttut.html#xslttut_over" nc:name="XSLT Tutorial Overview" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="opening_the_xslt_tutorial_project" nc:link="tutorial/xslttut.html#xslttut_openproject" nc:name="Opening the XSLT Tutorial Project" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="analyzing_the_xslt_program" nc:link="tutorial/xslttut.html#xslttut_analyze" nc:name="Analyzing the XSLT Program" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="running_the_xslt_program" nc:link="tutorial/xslttut.html#xslttut_run" nc:name="Running the XSLT Program" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="debugging_the_xslt_program" nc:link="tutorial/xslttut.html#xslttut_debug" nc:name="Debugging the XSLT Program" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="more_xslt_resources" nc:link="tutorial/xslttut.html#xslttut_resources" nc:name="More XSLT Resources" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#runcmd_tutorial">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="run_command_tutorial_overview" nc:link="tutorial/runcmdtut.html#runcmdtut_over" nc:name="Run Command Tutorial Overview" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="running_simple_commands" nc:link="tutorial/runcmdtut.html#runcmdtut_simple" nc:name="Running Simple Commands" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="using_advanced_options" nc:link="tutorial/runcmdtut.html#runcmdtut_advanced" nc:name="Using Advanced Options" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="saving_and_rerunning_commands" nc:link="tutorial/runcmdtut.html#save" nc:name="Saving and Rerunning Commands" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="using_interpolation_shortcuts" nc:link="tutorial/runcmdtut.html#runcmdtut_shortcuts" nc:name="Using Interpolation Shortcuts" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="prompting_for_input" nc:link="tutorial/runcmdtut.html#query_short" nc:name="Prompting for Input" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="parsing_command_output" nc:link="tutorial/runcmdtut.html#parse" nc:name="Parsing Command Output" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#komodo_reference">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="komodo_faq" nc:link="trouble.html#trouble_top" nc:name="Komodo FAQ" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="key_binding_schemes" nc:link="keybind.html" nc:name="Key Binding Schemes" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="komodo_extensions" nc:link="extensions.html" nc:name="Komodo Extensions" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="komodo_javascript_api_reference" nc:link="komodo-js-api.html" nc:name="Komodo JavaScript API Reference" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="xml_catalogs" nc:link="catalogs.html#xml_catalogs_top" nc:name="XML Catalogs" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="linter_reference" nc:link="linter-reference.html#linter_reference_top" nc:name="Linter Reference" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="user-defined_languages" nc:link="udl.html#udl_top" nc:name="User-Defined Languages" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="luddite_reference" nc:link="luddite.html#luddite_top" nc:name="Luddite Reference" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#key_binding_schemes">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="windows/linux_key_bindings" nc:link="defkeybind.html" nc:name="Windows/Linux Key Bindings" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="os_x_key_bindings" nc:link="osxkeybind.html" nc:name="OS X Key Bindings" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="emacs_key_bindings" nc:link="emacskeybind.html" nc:name="Emacs Key Bindings" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="vi_key_bindings" nc:link="vikeybind.html" nc:name="Vi Key Bindings" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="sharing_key_binding_schemes" nc:link="keybind.html#sharing_keybinding_schemes" nc:name="Sharing Key Binding Schemes" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#vi_key_bindings">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="custom_vi_commands" nc:link="vikeybind.html#vi_commands" nc:name="Custom Vi Commands" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#komodo_extensions">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="creating_an_extension" nc:link="extensions.html#creating_an_extension" nc:name="Creating an Extension" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="extension_tools" nc:link="extensions.html#tools" nc:name="Extension Tools" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#creating_an_extension">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="feature_extensions" nc:link="extensions.html#feature_extensions" nc:name="Feature Extensions" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="language_extensions" nc:link="extensions.html#language_extensions" nc:name="Language Extensions" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#komodo_javascript_api_reference">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="ko" nc:link="komodo-js-api.html#ko" nc:name="ko" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.abbrev" nc:link="komodo-js-api.html#ko.abbrev" nc:name="ko.abbrev" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.abbrev.activeautoabbreviations" nc:link="komodo-js-api.html#ko.abbrev.activeAutoAbbreviations" nc:name="ko.abbrev.activeAutoAbbreviations" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.abbrev.activemanualabbreviations" nc:link="komodo-js-api.html#ko.abbrev.activeManualAbbreviations" nc:name="ko.abbrev.activeManualAbbreviations" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.browse" nc:link="komodo-js-api.html#ko.browse" nc:name="ko.browse" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.codebrowser" nc:link="komodo-js-api.html#ko.codebrowser" nc:name="ko.codebrowser" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.codeintel" nc:link="komodo-js-api.html#ko.codeintel" nc:name="ko.codeintel" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.commands" nc:link="komodo-js-api.html#ko.commands" nc:name="ko.commands" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.dbg" nc:link="komodo-js-api.html#ko.dbg" nc:name="ko.dbg" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.dbg.breakpoints" nc:link="komodo-js-api.html#ko.dbg.breakpoints" nc:name="ko.dbg.breakpoints" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.dbg.invocation" nc:link="komodo-js-api.html#ko.dbg.invocation" nc:name="ko.dbg.invocation" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.dbg.listener" nc:link="komodo-js-api.html#ko.dbg.listener" nc:name="ko.dbg.listener" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.dbg.manager" nc:link="komodo-js-api.html#ko.dbg.manager" nc:name="ko.dbg.manager" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.dbg.manager.currentsession" nc:link="komodo-js-api.html#ko.dbg.manager.currentSession" nc:name="ko.dbg.manager.currentSession" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.dbg.manager.currentsession.dbg" nc:link="komodo-js-api.html#ko.dbg.manager.currentSession.dbg" nc:name="ko.dbg.manager.currentSession.dbg" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.dialogs" nc:link="komodo-js-api.html#ko.dialogs" nc:name="ko.dialogs" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.dialogs.renamefilewrapper" nc:link="komodo-js-api.html#ko.dialogs.renameFileWrapper" nc:name="ko.dialogs.renameFileWrapper" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.dragdrop" nc:link="komodo-js-api.html#ko.dragdrop" nc:name="ko.dragdrop" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.eggs" nc:link="komodo-js-api.html#ko.eggs" nc:name="ko.eggs" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.filepicker" nc:link="komodo-js-api.html#ko.filepicker" nc:name="ko.filepicker" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.fileutils" nc:link="komodo-js-api.html#ko.fileutils" nc:name="ko.fileutils" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.find" nc:link="komodo-js-api.html#ko.find" nc:name="ko.find" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.find.controller" nc:link="komodo-js-api.html#ko.find.controller" nc:name="ko.find.controller" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.findresults" nc:link="komodo-js-api.html#ko.findresults" nc:name="ko.findresults" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.findtoolbar" nc:link="komodo-js-api.html#ko.findtoolbar" nc:name="ko.findtoolbar" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.formatters" nc:link="komodo-js-api.html#ko.formatters" nc:name="ko.formatters" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.help" nc:link="komodo-js-api.html#ko.help" nc:name="ko.help" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.history" nc:link="komodo-js-api.html#ko.history" nc:name="ko.history" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.hyperlinks" nc:link="komodo-js-api.html#ko.hyperlinks" nc:name="ko.hyperlinks" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.hyperlinks.handlers" nc:link="komodo-js-api.html#ko.hyperlinks.handlers" nc:name="ko.hyperlinks.handlers" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.inputbuffer" nc:link="komodo-js-api.html#ko.inputBuffer" nc:name="ko.inputBuffer" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.interpolate" nc:link="komodo-js-api.html#ko.interpolate" nc:name="ko.interpolate" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.interpolate.getviewdata" nc:link="komodo-js-api.html#ko.interpolate.getViewData" nc:name="ko.interpolate.getViewData" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.isearch" nc:link="komodo-js-api.html#ko.isearch" nc:name="ko.isearch" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.keybindings" nc:link="komodo-js-api.html#ko.keybindings" nc:name="ko.keybindings" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.keybindings._commandparams" nc:link="komodo-js-api.html#ko.keybindings._commandParams" nc:name="ko.keybindings._commandParams" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.keybindings.activecommands" nc:link="komodo-js-api.html#ko.keybindings.activeCommands" nc:name="ko.keybindings.activeCommands" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.keybindings.command2key" nc:link="komodo-js-api.html#ko.keybindings.command2key" nc:name="ko.keybindings.command2key" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.keybindings.key2command" nc:link="komodo-js-api.html#ko.keybindings.key2command" nc:name="ko.keybindings.key2command" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.keybindings.keytree" nc:link="komodo-js-api.html#ko.keybindings.keyTree" nc:name="ko.keybindings.keyTree" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.launch" nc:link="komodo-js-api.html#ko.launch" nc:name="ko.launch" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.lint" nc:link="komodo-js-api.html#ko.lint" nc:name="ko.lint" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.lint.displayer" nc:link="komodo-js-api.html#ko.lint.displayer" nc:name="ko.lint.displayer" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.logging" nc:link="komodo-js-api.html#ko.logging" nc:name="ko.logging" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.logging.loggermap" nc:link="komodo-js-api.html#ko.logging.LoggerMap" nc:name="ko.logging.LoggerMap" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.macros" nc:link="komodo-js-api.html#ko.macros" nc:name="ko.macros" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.macros.recorder" nc:link="komodo-js-api.html#ko.macros.recorder" nc:name="ko.macros.recorder" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.main" nc:link="komodo-js-api.html#ko.main" nc:name="ko.main" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.markers" nc:link="komodo-js-api.html#ko.markers" nc:name="ko.markers" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.morekomodo" nc:link="komodo-js-api.html#ko.moreKomodo" nc:name="ko.moreKomodo" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.mozhacks" nc:link="komodo-js-api.html#ko.mozhacks" nc:name="ko.mozhacks" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.mru" nc:link="komodo-js-api.html#ko.mru" nc:name="ko.mru" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.mru._prettyprefnameplural_from_prefname" nc:link="komodo-js-api.html#ko.mru._prettyPrefNamePlural_From_PrefName" nc:name="ko.mru._prettyPrefNamePlural_From_PrefName" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.open" nc:link="komodo-js-api.html#ko.open" nc:name="ko.open" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.printing" nc:link="komodo-js-api.html#ko.printing" nc:name="ko.printing" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.projects" nc:link="komodo-js-api.html#ko.projects" nc:name="ko.projects" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.run" nc:link="komodo-js-api.html#ko.run" nc:name="ko.run" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.run.output" nc:link="komodo-js-api.html#ko.run.output" nc:name="ko.run.output" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.scc" nc:link="komodo-js-api.html#ko.scc" nc:name="ko.scc" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.scc.logger" nc:link="komodo-js-api.html#ko.scc.logger" nc:name="ko.scc.logger" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.sectionlist" nc:link="komodo-js-api.html#ko.sectionlist" nc:name="ko.sectionlist" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.selections" nc:link="komodo-js-api.html#ko.selections" nc:name="ko.selections" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.selections.caretsetinfo" nc:link="komodo-js-api.html#ko.selections.caretSetInfo" nc:name="ko.selections.caretSetInfo" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.selections.searchinfooptions" nc:link="komodo-js-api.html#ko.selections.searchInfoOptions" nc:name="ko.selections.searchInfoOptions" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.skinevents" nc:link="komodo-js-api.html#ko.skinEvents" nc:name="ko.skinEvents" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.sleuth" nc:link="komodo-js-api.html#ko.sleuth" nc:name="ko.sleuth" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.snippets" nc:link="komodo-js-api.html#ko.snippets" nc:name="ko.snippets" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.statusbar" nc:link="komodo-js-api.html#ko.statusBar" nc:name="ko.statusBar" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.statusbar.browserstatushandler" nc:link="komodo-js-api.html#ko.statusBar.browserStatusHandler" nc:name="ko.statusBar.browserStatusHandler" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.stringutils" nc:link="komodo-js-api.html#ko.stringutils" nc:name="ko.stringutils" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.tabstops" nc:link="komodo-js-api.html#ko.tabstops" nc:name="ko.tabstops" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.tabstops._parseresultsbyid" nc:link="komodo-js-api.html#ko.tabstops._parseResultsById" nc:name="ko.tabstops._parseResultsById" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.toolbox2" nc:link="komodo-js-api.html#ko.toolbox2" nc:name="ko.toolbox2" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.toolbox2._sortvaluesbyname" nc:link="komodo-js-api.html#ko.toolbox2._sortValuesByName" nc:name="ko.toolbox2._sortValuesByName" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.toolbox2.createpartfromtype" nc:link="komodo-js-api.html#ko.toolbox2.createPartFromType" nc:name="ko.toolbox2.createPartFromType" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.toolboxes" nc:link="komodo-js-api.html#ko.toolboxes" nc:name="ko.toolboxes" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.treeutils" nc:link="komodo-js-api.html#ko.treeutils" nc:name="ko.treeutils" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.uilayout" nc:link="komodo-js-api.html#ko.uilayout" nc:name="ko.uilayout" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.uriparse" nc:link="komodo-js-api.html#ko.uriparse" nc:name="ko.uriparse" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.views" nc:link="komodo-js-api.html#ko.views" nc:name="ko.views" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.widgets" nc:link="komodo-js-api.html#ko.widgets" nc:name="ko.widgets" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.widgets.getwidget" nc:link="komodo-js-api.html#ko.widgets.getWidget" nc:name="ko.widgets.getWidget" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.widgets.getwidget()" nc:link="komodo-js-api.html#ko.widgets.getWidget()" nc:name="ko.widgets.getWidget()" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.widgets.getwidget().containerpane" nc:link="komodo-js-api.html#ko.widgets.getWidget().containerPane" nc:name="ko.widgets.getWidget().containerPane" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.widgets.getwidget().contentwindow" nc:link="komodo-js-api.html#ko.widgets.getWidget().contentWindow" nc:name="ko.widgets.getWidget().contentWindow" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.widgets.getwidget().tabbox" nc:link="komodo-js-api.html#ko.widgets.getWidget().tabbox" nc:name="ko.widgets.getWidget().tabbox" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.window" nc:link="komodo-js-api.html#ko.window" nc:name="ko.window" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.windowmanager" nc:link="komodo-js-api.html#ko.windowManager" nc:name="ko.windowManager" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.windowmanager.getlastanywindow()" nc:link="komodo-js-api.html#ko.windowManager.getLastAnyWindow()" nc:name="ko.windowManager.getLastAnyWindow()" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.windowmanager.getlastanywindow().arguments[0]" nc:link="komodo-js-api.html#ko.windowManager.getLastAnyWindow().arguments[0]" nc:name="ko.windowManager.getLastAnyWindow().arguments[0]" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="ko.workspace" nc:link="komodo-js-api.html#ko.workspace" nc:name="ko.workspace" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="xtk" nc:link="komodo-js-api.html#xtk" nc:name="xtk" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="xtk.clipboard" nc:link="komodo-js-api.html#xtk.clipboard" nc:name="xtk.clipboard" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="xtk.color" nc:link="komodo-js-api.html#xtk.color" nc:name="xtk.color" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="xtk.domutils" nc:link="komodo-js-api.html#xtk.domutils" nc:name="xtk.domutils" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="xtk.domutils.tooltips" nc:link="komodo-js-api.html#xtk.domutils.tooltips" nc:name="xtk.domutils.tooltips" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="xtk.logging" nc:link="komodo-js-api.html#xtk.logging" nc:name="xtk.logging" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#xml_catalogs">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="using_xml_catalogs" nc:link="catalogs.html#using_xml_catalogs" nc:name="Using XML Catalogs" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="creating_xml_catalogs" nc:link="catalogs.html#creating_xml_catalogs" nc:name="Creating XML Catalogs" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="xml_catalog_resources" nc:link="catalogs.html#xml_catalog_resources" nc:name="XML Catalog Resources" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#linter_reference">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="writing_a_linter" nc:link="linter-reference.html#linter_writing" nc:name="Writing a Linter" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="checking_syntax" nc:link="linter-reference.html#linter_checking_syntax" nc:name="Checking Syntax" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="mulit-language_linting" nc:link="linter-reference.html#linter_multi_lang" nc:name="Mulit-Language Linting" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="controlling_linting" nc:link="linter-reference.html#linter_control" nc:name="Controlling Linting" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="aggregators" nc:link="linter-reference.html#linter_aggregators" nc:name="Aggregators" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#writing_a_linter">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="collisions" nc:link="linter-reference.html#linter_collisions" nc:name="Collisions" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#user-defined_languages">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="introduction" nc:link="udl.html#udl_introduction" nc:name="Introduction" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="luddite_language_overview" nc:link="udl.html#udl_language-overview" nc:name="Luddite Language Overview" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="luddite_in_a_nutshell" nc:link="udl.html#udl_luddite-in-a-nutshell" nc:name="Luddite in a Nutshell" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#luddite_language_overview">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="a_sample" nc:link="udl.html#udl_a-sample" nc:name="A Sample" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#luddite_in_a_nutshell">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="families" nc:link="udl.html#udl_families" nc:name="Families" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="styles" nc:link="udl.html#udl_styles" nc:name="Styles" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="udl_keywords" nc:link="udl.html#udl_keywords" nc:name="UDL Keywords" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="pattern_variables" nc:link="udl.html#udl_pattern-variables" nc:name="Pattern Variables" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="states_and_transitions" nc:link="udl.html#udl_states-and-transitions" nc:name="States and Transitions" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="disambiguation" nc:link="udl.html#udl_disambiguation" nc:name="Disambiguation" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="specifying_folding" nc:link="udl.html#udl_specifying-folding" nc:name="Specifying Folding" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="compiling_and_installing" nc:link="udl.html#udl_compile-install" nc:name="Compiling and Installing" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="samples" nc:link="udl.html#udl_samples" nc:name="Samples" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#states_and_transitions">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="the_initial_state" nc:link="udl.html#udl_the-initial-state" nc:name="The Initial State" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="specifying_state_transitions" nc:link="udl.html#udl_specifying-state-transitions" nc:name="Specifying State Transitions" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="include,_upto,_and_eof_conditions" nc:link="udl.html#udl_include-upto-and-eof-conditions" nc:name="Include, Upto, and EOF Conditions" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="redo_and_lookahead" nc:link="udl.html#udl_redo-and-lookahead" nc:name="Redo and Lookahead" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="preventing_keyword_promotion" nc:link="udl.html#udl_no_keyword" nc:name="Preventing Keyword Promotion" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="pattern_syntax" nc:link="udl.html#udl_pattern-syntax" nc:name="Pattern Syntax" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="pushing_states" nc:link="udl.html#udl_pushing-states" nc:name="Pushing States" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="handling_newlines" nc:link="udl.html#udl_line_oriented_transitions" nc:name="Handling Newlines" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="supporting_arbitrary_delimiters" nc:link="udl.html#udl_arbitrary_delimiters" nc:name="Supporting Arbitrary Delimiters" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+<rdf:Description about="#luddite_reference">
+  <nc:subheadings>
+    <rdf:Seq>
+      <rdf:li> <rdf:Description ID="keywords" nc:link="luddite.html#luddite_keywords" nc:name="Keywords" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="style_names" nc:link="luddite.html#style-names" nc:name="Style Names" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="terms" nc:link="luddite.html#terms" nc:name="Terms" /> </rdf:li>
+      <rdf:li> <rdf:Description ID="concepts" nc:link="luddite.html#concepts" nc:name="Concepts" /> </rdf:li>
+    </rdf:Seq>
+  </nc:subheadings>
+</rdf:Description>
+
+</rdf:RDF>

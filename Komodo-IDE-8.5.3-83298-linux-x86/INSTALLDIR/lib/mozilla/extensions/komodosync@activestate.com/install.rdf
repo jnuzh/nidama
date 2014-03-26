@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>komodosync@activestate.com</em:id>
+    <em:version>0.4.4</em:version>
+    <em:type>2</em:type>
+
+    <!-- Komodo IDE -->
+    <em:targetApplication>
+        <Description>
+            <em:id>{36E66FA0-F259-11D9-850E-000D935D3368}</em:id>
+            <em:minVersion>7.0.0-alpha1</em:minVersion>
+            <em:maxVersion>8.*</em:maxVersion>
+        </Description>
+    </em:targetApplication>
+
+    <em:name>Komodo Sync</em:name>
+    <em:description>Synchronize your Komodo IDE setup between different machines.</em:description>
+    <em:creator>ActiveState Software Inc.</em:creator>
+    <em:homepageURL>http://www.activestate.com/</em:homepageURL>
+    <em:iconURL>chrome://weave/skin/sync-32x32.png</em:iconURL>
+    <em:optionsURL>chrome://weave/content/komodo/prefs-dialog.xul</em:optionsURL>
+  </Description>
+</RDF>

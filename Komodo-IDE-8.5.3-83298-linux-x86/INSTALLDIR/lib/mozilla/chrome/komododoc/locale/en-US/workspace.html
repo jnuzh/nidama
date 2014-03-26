@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/screen.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="favicon.ico" type=
+  "image/x-icon" />
+
+  <title>The Komodo Workspace</title>
+</head>
+
+<body>
+<div id="content">
+  <h1><a name="workspace_top" id="workspace_top">The Komodo
+  Workspace</a></h1>
+
+  <h2><a name="Get_Started_Page" id="Get_Started_Page">The Start
+  Page</a></h2>
+
+  <p>Komodo's Start Page is displayed by default when Komodo is
+  first opened. It provides quick access to, online resources,
+  recently opened files and projects, <a href=
+  "tut-intro.html#tut_over_top">tutorials</a>, and a
+  <a href="getstarted.html#Opening_the_Sample_Project">sample
+  project</a>.</p>
+
+  <p>Sections of the page can be hidden by clicking the arrow icons next
+  to the section title. Other start page preferences can be set under
+  <strong>Edit|Preferences|Appearance</strong>.</p>
+
+  <p>The <strong>Recent Projects and Files</strong> section shows the
+  full path to to the projects and files, and the time they were last
+  modified.</p>
+
+  <h2><a name="Menus" id="Menus">Menus</a></h2>
+
+  <p>The default drop-down menus are: <strong>File</strong>,
+  <strong>Edit</strong>, <strong>Code</strong>, <strong>Navigation</strong>
+  <strong>View</strong>, <strong>Debug</strong>,
+  <strong>Project</strong>, <strong>Tools</strong>, and
+  <strong>Help</strong>. The functions accessed from each menu are
+  described in detail in the relevant section of the User Guide.
+  For example, the items accessed from the Debug menu are described
+  in <a class="doc" href=
+  "debugger.html#debugger_top">Debugging Programs</a>.</p>
+
+  <p>On <strong>Mac OS X</strong>, there is also a <strong>Komodo</strong>
+  menu on the far left.</p>
+
+  <h2><a name="Context_Menus" id="Context_Menus">Context
+  Menus</a></h2>
+
+  <p>Komodo displays right-click context menus with options
+  relative to the area of Komodo where the option was invoked,
+  depending the location of the mouse pointer. Use the left mouse
+  button to select items from context menus.</p>
+
+  <ul>
+    <li><strong>Menu Bar Areas and Toolbar Areas</strong>: Options
+    to view or hide individual toolbars and toolbar text
+    (unavailable on Mac OS X).</li>
+
+    <li><strong>Projects Sidebar (Project Name)</strong>: Options to
+    open, save, activate, and close the projects, and to add a file
+    to the selected project.</li>
+
+    <li><strong>Projects Sidebar (File Name)</strong>: Options to edit,
+    remove or export the selected file ,and access to <a href=
+    "scc.html#scc_commands">source code control</a>
+    commands.</li>
+
+    <li><strong>Toolbox Sidebar</strong>: Options to work with the
+    specified component.</li>
+
+    <li><strong>Editor Pane (File Editing Area)</strong>: Options
+    to cut, copy, and paste text, to set a breakpoint, and to edit
+    the <a href="files.html#files_settings">file
+    properties and settings</a>.</li>
+
+    <li><strong>Editor Pane (Tabs)</strong>: Options to close the
+    selected file and to view the file's properties and
+    settings.</li>
+
+    <li><strong>Bottom Pane</strong>: The context menus available
+    on tabs in the <a href="#Output_Pane">Bottom Pane</a> (e.g. the
+    <strong>Debug</strong> tab and the <strong>Breakpoints</strong>
+    tab) contain subsets of Komodo's top-level menus.<br />
+    <br />
+    <img border="1" src="img/tab_cntxt_menu.gif" /></li>
+  </ul>
+
+  <h2><a name="Toolbars" id="Toolbars">Toolbars</a></h2>
+
+  <p>To hide or show toolbars, or to hide or show button text, do
+  one of the following:</p>
+
+  <ul>
+    <li>From the <strong>View</strong> menu, select
+    <strong>Toolbars</strong>.</li>
+
+    <li>Right-click on a menu bar or toolbar, and toggle the check
+    mark beside the pertinent option.</li>
+
+    <li>From the <strong>Edit</strong> menu, select
+    <strong>Preferences</strong>. (On Mac OS X, from the
+    <strong>Komodo</strong> menu, select
+    <strong>Preferences</strong>.) Then, click the
+    <strong>Appearance</strong> option and select or clear the
+    desired options.</li>
+  </ul>
+
+  <p>The Standard Toolbar provides quick access to common editing
+  functions. Launch the Komodo User Guide by clicking the Help
+  button.</p>
+
+  <div style="margin-left: 2em">
+    <br />
+    <img border="1" src="img/toolbar_std.png" /><br />
+  </div>
+
+  <p>The Tools Toolbar contains the commonly used commands on the
+  <strong>Tools</strong> menu, including <a class="doc" href=
+  "editor.html#browser_preview">Preview in Browser</a>,
+  the <a class="doc" href="regex.html#regex_top">Regular
+  Expression Toolkit</a>, and the <a class="doc" href=
+  "intshell.html#intshell_top">the interactive
+  shell</a>.</p>
+
+  <div style="margin-left: 2em">
+    <br />
+    <img border="1" src="img/toolbar_tools.png" /> <span class=
+    "version_alert">Komodo IDE only</span><br />
+  </div>
+
+  <p>The Workspace Toolbar toggles the main components of the
+  Komodo workspace. Use this toolbar to show/hide the <a href=
+  "#Left_Pane">Left Pane</a>, <a href="#Output_Pane">Bottom
+  Pane</a> and <a href="#Right_Pane">Right Pane</a>, and to display
+  or shift focus to a specific tab in one of these panes (e.g. the
+  <strong>Toolbox</strong> tab).</p>
+
+  <div style="margin-left: 2em">
+    <br />
+    <img border="1" src="img/toolbar_wkspc.png" /><br />
+  </div>
+
+  <p>The Debug Toolbar provides quick access to common debugging
+  functions, such as Step In and Step Over. For more information
+  about debugging programs, see <a class="doc" href=
+  "debugger.html#debugger_top">Debugging
+  Programs</a>.</p>
+
+  <div style="margin-left: 2em">
+    <br />
+    <img border="1" src="img/toolbar_debug.png" /> <span class=
+    "version_alert">Komodo IDE only</span><br />
+  </div>
+
+  <p>Use the Open/Find Toolbar to open files and search for
+  strings. Find strings in files currently displayed in the editor
+  or in files not currently open in Komodo but located on the
+  filesystem. See <a class="doc" href=
+  "search.html#search_find_toolbar">Open/Find
+  Toolbar</a> for more information.</p>
+
+  <div style="margin-left: 2em">
+    <br />
+    <img border="1" src="img/toolbar_open_find.png" /><br />
+  </div>
+
+  <p>The Source Code Control Toolbar (Komodo IDE only) makes it
+  easy to work with files that are stored in <a class="doc" href=
+  "http://www.perforce.com/">Perforce</a> or <a class="doc" href=
+  "http://www.nongnu.org/cvs/">CVS</a>. For more about using the
+  Source Code Control Toolbar, see <a class="doc" href=
+  "scc.html#scc_commands">Source Code Control</a>.</p>
+
+  <div style="margin-left: 2em">
+    <br />
+    <img border="1" src="img/toolbar_scc.png" /> <span class=
+    "version_alert">Komodo IDE only</span><br />
+  </div>
+
+  <p>The Macros Toolbar makes it easier to record, play and save
+  macros. For more information see <a href=
+  "macros.html#macros_top">Macros</a>.</p>
+
+  <div style="margin-left: 2em">
+    <br />
+    <img border="1" src="img/toolbar_macro.png" /><br />
+  </div>
+
+  <p>For users of PDK 6.0 and later, the PDK Toolbar provides quick
+  access to Perl Dev Kit tools. Buttons for launching the core PDK
+  tools (PerlApp, PerlSvc, PerlCtrl, and PerlTray) are grayed out
+  unless a Perl file is the active file in the Editor Pane.
+  Availability of buttons depends on which features are included in
+  your PDK version. If the PDK is not installed on your system, all
+  toolbar options are grayed out when the PDK Toolbar is displayed.
+  For more information on how the PDK integates with Komodo, see
+  <a href="pdk.html#pdk_top">Komodo and the Perl Dev
+  Kit</a>.</p>
+
+  <div style="margin-left: 2em">
+    <br />
+    <img border="1" src="img/toolbar_pdk.png" /><br />
+  </div>
+
+  <p>It is also possible to create <a class="doc" href=
+  "custtbi.html#custtbi_top">Custom Toolbars</a>
+  consisting of items in the <a href=
+  "toolbox.html#toolbox_top">Toolbox</a> or Komodo
+  <a href="project.html#project_top">projects</a> (e.g.
+  run commands, code snippets and directory shortcuts).</p>
+
+  <h2><a name="moveable_widgets" id="moveable_widgets">Panes and Movable
+  Widgets</a></h2>
+
+  <p>The Editor Pane has three panes surrounding it which can be shown
+  or hidden as required. Listed below are the default locations of
+  sidebars and tabs, but any of these "widgets" can be moved by right
+  clicking on its title and selecting <strong>Move widget
+  to</strong> (Right Pane|Left Pane|Bottom Pane|New Floating Pane).</p>
+
+  <h2><a name="Left_Pane" id="Left_Pane">Left Pane</a></h2>
+
+  <p>The Left Pane of the Komodo workspace contains the
+  <strong>Places</strong>, <strong>Code</strong> and
+  <strong>DOM</strong> sidebars.</p>
+
+  <h3><a name="places_sidebar" id="places_sidebar">Places</a></h3>
+
+  <p>The <strong>Places</strong> sidebar displays a file
+  manager and a list of recently used projects. To display it, select
+  <strong>View|Tabs &amp; Sidebars|Places</strong>, or use the
+  associated <a href="prefs.html#Config_Key_Bindings">key
+  binding</a>.</p>
+
+  <div style="margin-left: 2em">
+    <br />
+    <img border="1" src="img/places_projects.png" /><br />
+  </div>
+
+  <p>Related Topics:</p>
+
+  <ul>
+    <li><a class="doc" href="places.html">Places</a></li>
+
+    <li><a class="doc" href="project.html">Projects</a></li>
+
+    <li><a class="doc" href="#manage">Managing Sidebars, Tabs and
+    Panes</a></li>
+  </ul>
+
+  <h3><a name="Code_Tab" id="Code_Tab">Code Sidebar</a> <span class=
+  "version_alert">Komodo IDE only</span></h3>
+
+  <p>The <strong>Code</strong> sidebar displays a hierarchical view of
+  all code symbols (for example, variables, methods, imports) in an
+  open file. Symbols can be sorted and filtered, and the current
+  scope of a symbol can be located. To display the
+  <strong>Code</strong> sidebar, select
+  <strong>View|Tabs &amp; Sidebars|Projects</strong>, or use the associated
+  <a href="prefs.html#Config_Key_Bindings">key
+  binding</a>.</p>
+
+  <div style="margin-left: 2em">
+    <br />
+    <img border="1" src="img/sidebar_code.png" /><br />
+  </div>
+
+  <p>Related Topics:</p>
+
+  <ul>
+    <li><a href=
+    "codeintel.html#codeintel_codebrowser">Code
+    Browser</a></li>
+
+    <li><a class="doc" href="#manage">Managing Sidebars, Tabs and
+    Panes</a></li>
+  </ul>
+
+  <h3><a name="DOM_Tab" id="DOM_Tab">DOM Viewer Sidebar</a>
+  <span class="version_alert">Komodo IDE only</span></h3>
+
+  <p>The <strong>DOM Viewer</strong> tab displays the DOM nodes
+  (e.g. elements and attributes) of the current document as a
+  collapsible tree. The DOM Viewer lets you find, view and jump to
+  any of these nodes quickly.</p>
+
+  <div style="margin-left: 2em">
+    <br />
+    <img border="1" src="img/sidebar_dom.png" /><br />
+  </div>
+
+  <p>Related Topics:</p>
+
+  <ul>
+    <li><a href="dom.html#dom_top">DOM Viewer</a></li>
+
+    <li><a class="doc" href="#manage">Managing Tabs and
+    Panes</a></li>
+  </ul>
+
+  <h3><a name="DB_Explorer_Tab" id="db_tab">Database Explorer Sidebar</a>
+  <span class="version_alert">Komodo IDE only</span></h3>
+
+  <p>The <strong><a class="doc"
+  href="db_explorer.html#database_exp_top">Database
+  Explorer</a></strong> shows ...</p>
+
+  <h2><a name="Right_Pane" id="Right_Pane">Right Pane</a></h2>
+
+  <p>The Right Pane of the Komodo workspace contains the <a class=
+  "doc" href="toolbox.html#toolbox_top">Toolbox</a> and,
+  optionally, a <a class="doc" href=
+  "toolbox.html">Shared Toolbox</a>.</p>
+
+  <h3><a name="Toolbox_Tab" id="Toolbox_Tab">Toolbox Sidebar</a></h3>
+
+  <p>Use the <strong>Toolbox</strong> sidebar to manage and store
+  Komodo components (for example, code
+  snippets, commands, and URLs). Add items to the Toolbox, as well
+  as to folders within the Toolbox. Items can be imported to the
+  Toolbox and exported as Komodo project files and packages. Items
+  added to the Toolbox are displayed with associated icons for easy
+  identification. To display the <strong>Toolbox</strong> sidebar,
+  select <strong>View|Tabs &amp; Sidebars|Toolbox</strong>, or use the associated
+  <a href="prefs.html#Config_Key_Bindings">key binding</a>.</p>
+
+  <div style="margin-left: 2em">
+    <br />
+    <img border="1" src="img/sidebar_toolbox.png" /><br />
+  </div>
+
+  <p>Related Topics:</p>
+
+  <ul>
+    <li><a class="doc" href=
+    "toolbox.html#toolbox_top">Using the Toolbox</a></li>
+
+    <li><a class="doc" href="#manage">Managing Tabs and
+    Panes</a></li>
+  </ul>
+
+  <h3><a name="Shared_Toolbox_Tab" id="Shared_Toolbox_Tab">Shared
+  Toolbox Sidebar</a> <span class="version_alert">Komodo IDE
+  only</span></h3>
+
+  <p>A Shared Toolbox has the same functionality as the <a href=
+  "#Toolbox_Tab">Toolbox</a> except that it can be shared among
+  multiple users. For example, use a Shared Toolbox to store code
+  snippets that are frequently used by a number of programmers. The
+  <strong>Toolbox</strong> sidebar is only available if the Shared
+  Toolbox preference has been set (select
+  <strong>Edit|Preferences|Shared Support</strong>, or, on Mac OS
+  X, select <strong>Komodo|Preferences|Shared Support</strong>).</p>
+
+  <p>Related Topics:</p>
+
+  <ul>
+    <li><a class="doc" href=
+    "toolbox.html#toolbox_top">Shared Toolboxes</a></li>
+
+    <li><a class="doc" href="#manage">Managing Tabs and
+    Panes</a></li>
+  </ul>
+
+  <h2><a name="Editor_Pane" id="Editor_Pane">Editor Pane</a></h2>
+
+  <p>The large pane in the middle of the Komodo workspace is the
+  Editor Pane. The Editor Pane is used for editing and debugging.
+  Each open file has a corresponding tab at the top of the Editor
+  Pane. Change the order of the tabs by clicking and dragging tabs
+  to the desired position. The name of the active file (that is,
+  the file that is currently displayed in the Editor Pane) is
+  displayed in bold text. Use the left and right arrow buttons on
+  the right side of the tabs to scroll though open files. Use the
+  close button "X" on the right side of the tab display to close
+  the active file. An asterisk beside the filename indicates that
+  the file has been changed since it was opened, and needs to be
+  saved. If a file is under source code control, a <a href=
+  "scc.html#file_status">file status icon</a> to the
+  left of the filename indicates its current status.</p>
+
+  <div style="margin-left: 2em">
+    <br />
+    <img border="1" src="img/editor_pane.png" /><br />
+  </div>
+
+  <p>Related Topics:</p>
+
+  <ul>
+    <li><a class="doc" href=
+    "editor.html#editor_top">Editing Files</a></li>
+
+    <li><a class="doc" href=
+    "project.html#project_top">Managing Projects and
+    Files</a></li>
+
+    <li><a class="doc" href="#manage">Managing Tabs and
+    Panes</a></li>
+  </ul>
+
+  <h2><a name="Output_Pane" id="Output_Pane">Bottom Pane</a></h2>
+
+  <p>The Bottom Pane spans the width of the Komodo workspace and
+  displays at the bottom of the screen. The Bottom Pane contains
+  the following tabs:</p>
+
+  <ul>
+    <li><strong>Breakpoints Tab</strong>: manage <a href=
+    "debugger.html#breakpoints_and_spawnpoints">breakpoints
+    and spawnpoints</a> in the current debugging session(s)</li>
+
+    <li><strong>Command Output Tab</strong>: displays the results
+    of commands run in the <a href=
+    "run.html#run_create">Run Command</a> dialog
+    box</li>
+
+    <li><strong>Find Results Tabs</strong>: displays the
+    results of the <strong>Find All</strong>, <strong>Find in
+    Files</strong> or <strong>Replace in Files</strong> functions</li>
+
+    <li><strong>Test Results</strong>: displays <a
+    href="unittest.html">Unit Testing</a> results.</li>
+
+    <li><strong>Notifications Tab</strong>: displays details of
+    <a href="scc.html#scc_top">source code control</a>
+    commands, code intelligence notifications, and other errors,
+    warnings and messages.</li>
+
+    <li><strong>Syntax Checking Status</strong>: shows errors and
+    warnings for <a href="editor.html#Linting">Syntax Checking</a>.</li>
+
+    <li><strong>Interactive Shell Tab</strong>: displayed when the
+    <a href="intshell.html#intshell_top">interactive
+    shell</a> is launched as a stand-alone tool or from within a
+    debugging session</li>
+
+    <li><strong>Debug Tab</strong>: consolidates views of the
+    <a href="debugger.html#output_tab">debugger
+    output</a>, <a href="debugger.html#Call_Stack">call
+    stack</a>, <a href=
+    "debugger.html#viewing_variables">program
+    variables</a> (local and global), and <a href=
+    "debugger.html#Watching_Variables">watched
+    variables</a>.</li>
+  </ul>
+
+  <div style="margin-left: 2em">
+    <br />
+    <img border="1" src="img/bottom_pane.png" /><br />
+  </div>
+
+  <p>The Breakpoints, Test Results, Interactive Shell, and Debug tabs
+  are only available in <a target="_blank" href=
+  "http://activestate.com/products/komodo_edit/edit_vs_ide.plex">Komodo
+  IDE</a>.</p>
+
+  <h2><a name="Status Bar" id="Status_Bar">Status Bar</a></h2>
+
+  <p>At the very bottom of each Komodo window is the Status Bar. From
+  left to right, it displays:</p>
+
+  <ul>
+    <li><strong>Editor Mode</strong>: when using Vi Emulation, this
+    shows which mode you are in (e.g. Visual vs. Insert).</li>
+    <li><strong>Status</strong>: shows messages from Komodo describing
+    events (e.g. the return of external commands).</li>
+    <li><strong><a href="sections_list.html">Section List</a></strong>:
+    an expandable list of code or markup objects in the current file.
+    When not expanded, it displays the object at the current cursor
+    position.</li>
+    <li><strong>Syntax Checking Status</strong>: shows the current
+    status of syntax checking. Clicking this gives options to "Check
+    Syntax Now", "Jump to next result", or "Clear warning/error
+    squiglies".</li>
+    <li><strong>File Encoding</strong>: shows the encoding of the
+    current file (e.g. ASCII, UTF-8, Latin-1, etc.)</li>
+    <li><strong>Line and Column position</strong>: shows the current
+    position of the cursor.</li>
+    <li><strong>Selection</strong>: shows the character and line count
+    of the selection (if there is one).</li>
+    <li><strong>Language</strong>: shows which programming language
+    Komodo is parsing the current file as. Click to select a different
+    language from the pop-up list or "Reset to best guess."</li>
+  </ul>
+
+  <div style="margin-left: 2em">
+    <br />
+    <img border="1" src="img/status_bar.png" /><br />
+  </div>
+
+  <h2><a name="manage" id="manage">Managing Tabs, Sidebars and Panes</a></h2>
+
+  <p>Use the View menu, Workspace Toolbar or Komodo <a href=
+  "prefs.html#Config_Key_Bindings">key bindings</a> to choose which
+  sidebars and tabs are displayed in the Komodo workspace.</p>
+
+  <h3><a name="show_hide_tabs" id="show_hide_tabs">Showing and
+  Hiding Tabs and Sidebars</a></h3>
+
+  <p>To display a tab or sidebar in the left, right or bottom pane,
+  select <strong>View|Tabs &amp; Sidebars|&lt;<em>Name</em>&gt;</strong>, or
+  see Komodo's default key bindings (Help|List Key Bindings) for
+  the appropriate keyboard shortcut. Alternatively, click the
+  <strong>Show Specific Sidebar/Tab</strong> button on the Workspace
+  toolbar.</p>
+
+  <h3><a name="show_hide_panes" id="show_hide_panes">Showing and
+  Hiding Panes</a></h3>
+
+
+  <p>To show and hide the left, right or bottom pane,
+  click the associated button on the Workspace Toolbar. Click the
+  close arrow in the top right corner of a pane to close it.
+  <!--ADD SCREEN SHOT--></p>
+
+  <h3><a name="Resizing_Panes" id="Resizing_Panes">Resizing
+  Panes</a></h3>
+
+  <p>When you are focusing on coding alone, you may want to
+  maximize the Editor Pane. To increase the size of the Editor
+  Pane, hide the Left Pane and the Right Pane. The Left, Right and
+  Bottom Panes can be resized by clicking and dragging.</p>
+
+  <h3><a name="Combining_Tabs" id="Combining_Tabs">Combining
+  Tabs</a></h3>
+
+  <p>Widgets in panes can be combined into one tab by right-clicking on a
+  tab and choosing any option from the <strong>Combine With Tab</strong>
+  submenu. They can be separated into their own tab again by choosing the
+  <strong>Separate Tab</strong> option.</p>
+
+  <h3><a name="Floating_Panes" id="Floating_Panes">Floating
+  Panes</a></h3>
+
+  <p>Any of the sidebars and tabs can be detached from the main
+  Komodo window by right clicking on its title and selecting
+  <strong>Move to Pane|New Floating Pane</strong>.  The new
+  window can then be repositioned on screen as desired.  The
+  widgets can be returned to the Komodo window either by using
+  the same menu, or simply closing its window.  It is also
+  possible to float all of the tabs at once by selecting the
+  <strong>Detach Pane</strong> option in the menu.</p>
+
+  <h2><a name="full_screen" id="full_screen">Enabling Full Screen
+  Mode</a></h2>
+
+  <p>To take advantage of as much of the Komodo workspace as
+  possible, select <strong>View|Full Screen</strong>. When Full
+  Screen mode is enabled, the workspace is maximized, and the
+  toolbars and status bar are hidden. To restore the previous view,
+  select <strong>View|Full Screen</strong> again.</p>
+  <hr />
+
+</div> <!-- content -->
+</body>
+</html>

@@ -1,0 +1,6 @@
+category category-komodo-linter XUL @activestate.com/koLinter?language=XUL;1
+contract @activestate.com/koLinter?language=XUL;1 {c097c54e-847b-42aa-81c0-3de0a71bcd08}
+contract @activestate.com/koLanguage?language=XUL;1 {E9B4C1F5-C9F9-4F85-A920-09A9A74B0950}
+component {c097c54e-847b-42aa-81c0-3de0a71bcd08} components/koXUL_UDL_Language.py
+category komodo-language XUL @activestate.com/koLanguage?language=XUL;1
+component {E9B4C1F5-C9F9-4F85-A920-09A9A74B0950} components/koXUL_UDL_Language.py

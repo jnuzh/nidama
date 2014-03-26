@@ -1,0 +1,14 @@
+component {e39fc45b-0481-473a-86e8-087bf6c8258e} koPublishing.py
+contract @activestate.com/koPublishingService;1 {e39fc45b-0481-473a-86e8-087bf6c8258e}
+contract @activestate.com/koFilePushOperation;1 {443fc04c-5fbf-4fd0-8dcc-9c8c70f9a947}
+component {443fc04c-5fbf-4fd0-8dcc-9c8c70f9a947} koPublishing.py
+contract @activestate.com/koRemoteTransferService;1 {7aa6a3db-08db-43d2-9850-f87e7a2ded53}
+component {7aa6a3db-08db-43d2-9850-f87e7a2ded53} koRemoteTransfer.py
+component {42ead6d1-78e0-45b3-a837-49b4f1b62147} koPublishingSettings.py
+contract @activestate.com/koPublishingSettings;1 {42ead6d1-78e0-45b3-a837-49b4f1b62147}
+category category-komodo-file-status publishing @activestate.com/koFileStatusChecker?type=publishing;1
+component {28733150-b465-42f2-ad09-123696403273} koPublishingStatus.py
+contract @activestate.com/koFileStatusChecker?type=publishing;1 {28733150-b465-42f2-ad09-123696403273}
+interfaces koIPublishingSettings.xpt
+interfaces koIPublishing.xpt
+interfaces koIRemoteTransfer.xpt

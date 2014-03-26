@@ -1,0 +1,12 @@
+
+
+
+
+
+content services jar:komodo_services.jar!/content/
+skin services classic/1.0 jar:komodo_services.jar!/skin/
+locale services en-US jar:komodo_services.jar!/locale/en-US/
+
+
+resource services modules/
+overlay chrome://komodo/content/komodo.xul chrome://services/content/services.xul

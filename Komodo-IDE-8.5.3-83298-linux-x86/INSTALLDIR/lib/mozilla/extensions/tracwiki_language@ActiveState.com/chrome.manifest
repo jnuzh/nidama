@@ -1,0 +1,3 @@
+category komodo-language TracWiki @activestate.com/koLanguage?language=TracWiki;1
+component {b843faa8-aeea-4fcb-aeb9-36c4483c6f95} components/koTracWiki_UDL_Language.py
+contract @activestate.com/koLanguage?language=TracWiki;1 {b843faa8-aeea-4fcb-aeb9-36c4483c6f95}

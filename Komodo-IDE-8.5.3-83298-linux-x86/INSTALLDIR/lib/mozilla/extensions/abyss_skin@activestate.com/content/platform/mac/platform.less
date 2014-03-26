@@ -1,0 +1,27 @@
+@import url("chrome://komodo/skin/plat/current/platform.less");
+
+/* Menu Tweaks */
+
+menupopup
+{
+    label
+    {
+        // Force static font size on mac
+        // Something is causing inconsistencies making relative font sizing
+        // impossible
+        // Todo: Figure out what's causing these inconsistencies
+        // eg. pref popup and editor popup
+        font-size: 12px;
+    }
+
+    .menu-accel-container,
+    .menu-right
+    {
+        margin-right: 0;
+    }
+}
+
+#main-toolboxrow
+{
+    padding-bottom: 2px;
+}

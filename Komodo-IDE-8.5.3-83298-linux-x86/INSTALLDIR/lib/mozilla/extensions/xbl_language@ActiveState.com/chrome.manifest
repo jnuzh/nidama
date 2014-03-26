@@ -1,0 +1,6 @@
+component {46D9A883-9410-47D2-B4CE-5D3186A6D4C8} components/koXBL_UDL_Language.py
+category category-komodo-linter XBL @activestate.com/koLinter?language=XBL;1
+component {4e023df3-4fda-4c74-abe0-b6623d72862e} components/koXBL_UDL_Language.py
+category komodo-language XBL @activestate.com/koLanguage?language=XBL;1
+contract @activestate.com/koLinter?language=XBL;1 {4e023df3-4fda-4c74-abe0-b6623d72862e}
+contract @activestate.com/koLanguage?language=XBL;1 {46D9A883-9410-47D2-B4CE-5D3186A6D4C8}

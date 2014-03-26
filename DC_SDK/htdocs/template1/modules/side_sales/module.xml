@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="GBK"?>
+<module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="../../../module.xsd">
+    <id>side_sales</id>
+    <name>左侧促销</name>
+    <file>side_sales.php</file>
+    <thumbnail>/assets/images/frontpage.png</thumbnail>
+    <description>测试模块</description>
+    <parameters>
+        <param name="sales_link_0" label="链接1" description="链接1" ptype="text" formType="text">
+            http://www.taobao.com
+        </param>
+		<param name="sales_img_0" label="图片1" description="图片1" ptype="text" formType="text">
+            http://img03.taobaocdn.com/tps/i3/T1OaRJXaJxXXXXXXXX-160-160.png
+        </param>
+
+		<param name="sales_link_1" label="链接2" description="链接2" ptype="text" formType="text">
+            http://www.taobao.com
+        </param>
+		<param name="sales_img_1" label="图片2" description="图片2" ptype="text" formType="text">
+            http://img03.taobaocdn.com/tps/i3/T1OaRJXaJxXXXXXXXX-160-160.png
+        </param>
+
+		<param name="sales_link_2" label="链接3" description="链接3" ptype="text" formType="text">
+           http://www.taobao.com
+        </param>
+		<param name="sales_img_2" label="图片3" description="图片3" ptype="text" formType="text">
+            http://img03.taobaocdn.com/tps/i3/T1OaRJXaJxXXXXXXXX-160-160.png
+        </param>
+
+		<param name="sales_link_3" label="链接4" description="链接4" ptype="text" formType="text">
+            http://www.taobao.com
+        </param>
+		<param name="sales_img_3" label="图片4" description="图片4" ptype="text" formType="text">
+            http://img03.taobaocdn.com/tps/i3/T1OaRJXaJxXXXXXXXX-160-160.png
+        </param>
+
+		<param name="sales_link_4" label="链接5" description="链接5" ptype="text" formType="text">
+           http://www.taobao.com
+        </param>
+		<param name="sales_img_4" label="图片5" description="图片5" ptype="text" formType="text">
+            http://img03.taobaocdn.com/tps/i3/T1OaRJXaJxXXXXXXXX-160-160.png
+        </param>
+		
+
+
+		
+
+
+    </parameters>
+</module>

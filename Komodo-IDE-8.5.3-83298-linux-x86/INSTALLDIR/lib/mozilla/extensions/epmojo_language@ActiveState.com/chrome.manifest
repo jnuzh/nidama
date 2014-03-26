@@ -1,0 +1,6 @@
+contract @activestate.com/koLinter?language=epMojo;1 {3b69f94f-4fb6-47bb-a387-9d3ac372195a}
+component {3b69f94f-4fb6-47bb-a387-9d3ac372195a} components/koEpMojo_UDL_Language.py
+category komodo-language epMojo @activestate.com/koLanguage?language=epMojo;1
+contract @activestate.com/koLanguage?language=epMojo;1 {ec34f812-d8c3-4b55-96b5-0601e659208a}
+component {ec34f812-d8c3-4b55-96b5-0601e659208a} components/koEpMojo_UDL_Language.py
+category category-komodo-linter epMojo @activestate.com/koLinter?language=epMojo;1

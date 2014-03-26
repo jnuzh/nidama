@@ -1,0 +1,6 @@
+component {5e69ecf0-525e-11db-82d8-000d935d3368} components/koMason_UDL_Language.py
+contract @activestate.com/koLinter?language=Mason;1 {cf3671e8-6981-468c-90d1-9f77ed22b7cd}
+contract @activestate.com/koLanguage?language=Mason;1 {5e69ecf0-525e-11db-82d8-000d935d3368}
+category komodo-language Mason @activestate.com/koLanguage?language=Mason;1
+component {cf3671e8-6981-468c-90d1-9f77ed22b7cd} components/koMason_UDL_Language.py
+category category-komodo-linter Mason @activestate.com/koLinter?language=Mason;1

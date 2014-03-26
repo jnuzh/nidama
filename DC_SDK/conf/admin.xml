@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Configure PUBLIC "-//Mort Bay Consulting//DTD Configure//EN" "http://jetty.mortbay.org/configure.dtd">
+
+<Configure class="org.mortbay.jetty.webapp.WebAppContext">
+    <Set name="configurationClasses">
+        <Array type="java.lang.String">
+            <Item>org.mortbay.jetty.webapp.WebInfConfiguration</Item>
+            <Item>org.mortbay.jetty.plus.webapp.EnvConfiguration</Item>
+            <Item>org.mortbay.jetty.plus.webapp.Configuration</Item>
+            <Item>org.mortbay.jetty.webapp.JettyWebXmlConfiguration</Item>
+            <Item>org.mortbay.jetty.webapp.TagLibConfiguration</Item>
+        </Array>
+    </Set>
+    <Set name="contextPath">/_ah</Set>
+    <Set name="war"><SystemProperty name="DCSDK_HOME" default="."/>/conf/admin_console.war
+    </Set>
+    <Set name="defaultsDescriptor"><SystemProperty name="DCSDK_HOME" default="."/>/conf/webdefault.xml
+    </Set>
+</Configure>
+

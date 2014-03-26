@@ -1,0 +1,6 @@
+category komodo-language HTML5 @activestate.com/koLanguage?language=HTML5;1
+contract @activestate.com/koLanguage?language=HTML;1 {7FDF82EB-7E8E-40f4-BD39-563FD2B7E94A}
+category komodo-language HTML @activestate.com/koLanguage?language=HTML;1
+component {f662cc4c-4f86-194e-83a8-35f2f0097121} components/koHTML_UDL_Language.py
+contract @activestate.com/koLanguage?language=HTML5;1 {f662cc4c-4f86-194e-83a8-35f2f0097121}
+component {7FDF82EB-7E8E-40f4-BD39-563FD2B7E94A} components/koHTML_UDL_Language.py

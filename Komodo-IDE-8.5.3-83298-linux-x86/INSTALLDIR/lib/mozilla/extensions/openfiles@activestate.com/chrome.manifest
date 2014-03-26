@@ -1,0 +1,10 @@
+
+
+
+
+
+content openfiles jar:openfiles.jar!/content/
+skin openfiles classic/1.0 jar:openfiles.jar!/skin/
+locale openfiles en-US jar:openfiles.jar!/locale/en-US/
+
+overlay chrome://komodo/content/komodo.xul chrome://openfiles/content/overlay.xul

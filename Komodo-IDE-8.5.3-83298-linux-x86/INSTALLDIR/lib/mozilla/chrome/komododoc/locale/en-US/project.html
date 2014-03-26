@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/screen.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="favicon.ico" type=
+  "image/x-icon" />
+
+  <title>Projects</title>
+</head>
+
+<body>
+<div id="content">
+  <h1><a name="project_top" id="project_top">Projects</a></h1>
+
+<!-- TODO - new feature showcases
+  <div class="right-float-box">
+    <p><strong>Feature Showcases</strong></p>
+
+    <ul>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+-->
+  <img src="img/projects_pane.png" alt="Projects Pane"
+  style="float:right;margin:0 2em 2em 2em"/>
+      
+  <p>Komodo Projects are collections of settings and preferences that
+  help you work with a particular set of files. These settings
+  include:</p>
+  
+  <ul>
+    <li>the base directory to display in <a href="places.html">Places</a></li>
+    <li>links to additional directories</li>
+    <li>links to files</li>
+    <li>groups of file and directory links</li>
+    <li>previously open files (optionally re-opened when the project becomes active)</li>
+    <li>debugger preferences</li>
+    <li>test plans</li>
+    <li>language library paths</li>
+    <li>mapped URIs</li>
+  </ul>
+  
+  <h2><a id="project_pane"></a>Projects Pane</h2>
+  
+  <p>The <strong>Projects</strong> pane at the bottom of the <a
+  href="places.html">Places</a> pane is the main interface to projects.
+  It lists all open projects, showing the active project in bold.</p>
+  
+  <p>Double-clicking on a project in this list will make that project
+  active and switch the <strong>Places</strong> pane above to the base
+  directory of the project.</p>
+  
+  <h3><a id="project_active"></a>Open and Recent Projects</h3>
+  
+  <p>By default, only one project can be open at a time in each Komodo
+  window. This active project is displayed at the top of the
+  Projects list in bold with recently used projects following.</p>
+  
+  <p>You can switch between projects by double clicking any in the
+  Recent Projects list, which can optionally close files belonging to
+  the current project and open open files from the next one. Komodo
+  takes a snapshot of which files are open when you close or switch
+  projects, so the workspace can be restored when you open it again.
+  This behavior is configurable in the <a
+  href="prefs.html#projects">Projects and Workspace</a> preferences.</p>
+  
+  <p>Another setting in the <a href="places.html">Places</a>
+  preferences lets you allow multiple open projects. With multiple
+  projects open, only one project (per Komodo window) is "active" at a
+  time. If the active project has saved debugger settings, test plans,
+  library search paths, or mapped URI's, these settings will be enabled
+  for all files that are part of that project.</p>
+  
+  <h3><a id="project_links"></a>File and Folder Links</h3>
+  
+  <p>Projects can contain links to files and folders on the local
+  filesystem or on remote servers. Double-clicking on a file link opens
+  it in an editor tab. Double-clicking on a folder link opens it in the
+  <a href="places.html">Places</a> pane above.</p>
+  
+  <h3><a id="project_groups"></a>Project Groups</h3>
+  
+  <p>Groups are named virtual containers for files and folders. You can
+  use them to organize items for quick access which might be in
+  disparate locations. Groups are not actual direcories, they just
+  contain links to files and folders (or sub-groups).</p>
+  
+  <h3><a id="project_menu">Project Menus</a></h3>
+  
+  <p>Projects menus are available in the main toolbar, the Projects pane
+  toolbar and as a right-click context menu. The toolbar menus operate
+  on the active project and the context menu operates on the selected
+  project.</p>
+  
+  <p>Each menu offers a different list of options, but there is some
+  overlap. The following options are available:</p>
+  
+  <ul>
+    <li><strong>Show in Places</strong>: Changes the Places pane to the
+    base directory of the project without making it the active project.</li>
+    <li><strong>Open Project</strong>: Opens a diolog for choosing a
+    .komodoproject file to open. The project is opened in the pane and
+    becomes the active project by default.</li>
+    <li><strong>New Project</strong>: Creates a new project, then opens
+    it and makes it active.</li>
+    <li><strong>Close Project</strong>: Removes the selected project
+    from the Projects pane.</li>
+    <li><strong>Close All Projects</strong>: Removes all projects from
+    the Projects pane.</li>
+    <li><strong>Save Project</strong>: Saves the current project
+    properties to the ".komodoproject" file.</li>
+    <li><strong>Save Project As...</strong>: Saves a copy of the current
+    project with a different name (or in a different location), then
+    makes the new project active.</li>
+    <li><strong>Rename Project...</strong>: Renames the current
+    project.</li>
+    <li><strong>Open Project in New Window</strong>: Each Komodo window
+    can have only one active project at a time. This feature opens a
+    new Komodo window with the selected project active, allowing you
+    to work with multiple projects silmultaneously.</li>
+    <li><strong>New Project</strong>: Opens the filesystem browser to
+    select the location and name of a new project. The project
+    preferences and settings are stored in a ".komodoproject" file. The
+    directory selected becomes the base directory for display in
+    Places.</li>
+    <li><strong>Refresh Status</strong>: Updates the filesystem and
+    source code control status of all files and directories in the
+    project.</li>
+    
+    <li><strong>Add</strong>: Add files folders and groups.
+      <ul>
+        <li>New File: Add a new file to the project or folder (depending
+        on context or selection).</li>
+        
+        <li>New Group: Add a new named group of folders or files.</li>
+        
+        <li>Existing File: Select a file to include in the project,
+        folder or group.</li>
+        
+        <li>Existing Folder: Select a filesystem folder to include in a
+        project or group.</li>
+        
+        <li>Existing Remote File / Folder: As above, but using the remote
+        filesystem browser.</li>
+      </ul>
+    </li>
+    
+    <li><strong>Source Code Control</strong>: A sub-menu of <a href="scc.html">SCC actions</a>. (Komodo IDE only)</li>
+    <li><strong>Publishing</strong>: A sub-menu of <a href="publish.html">Publishing actions</a>. (Komodo IDE only)</li>
+    <li><strong>Show in File Manager</strong>: Open the selection in the system's default file manager.</li>
+    <li><strong>Remove</strong>: Remove the selection from the project.</li>
+    
+    <li><strong>Properties</strong>: Opens the Properties and Settings
+    dialog for the current or selected project.</li>
+  </ul>
+  
+  <h2><a id="project_prefs">Project Properties and Settings</a></h2>
+  
+  <p>Komodo has preferences at the file, project and global level. File
+  preferences take precedence over project preferencs which take
+  precedence over global preferences. When a project is active, it's
+  settings override global preferences wherever there is overlap.</p>
+  
+  <p>Project settings include the following sub-set of the global
+  preferences:</p>
+  
+      <ul>
+        
+        
+        <li><a href="debugger.html#Debugging_Options">Debugging</a></li>
+
+        <li><a href="unittest.html">Test Plan Configuration</a></li>
+        
+        <li><a href="prefs.html#Internationalization">Internationalization</a></li>
+        
+        <li><a href="prefs.html#Environment">Environment</a></li>
+
+        <li><a href="prefs.html#lang_config">Languages</a></li>
+
+        <li><a href="prefs.html#mapped_uris">Mapped URIs</a></li>
+        
+        <li><a href="prefs.html#syntax_checking">Syntax Checking</a></li>
+      </ul>
+  
+
+</div> <!-- content -->
+</body>
+</html>
+  

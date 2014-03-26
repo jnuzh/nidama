@@ -1,0 +1,6 @@
+component {6072ecd4-525e-11db-82d8-000d935d3368} components/koTemplateToolkit_UDL_Language.py
+contract @activestate.com/koLanguage?language=TemplateToolkit;1 {6072ecd4-525e-11db-82d8-000d935d3368}
+category category-komodo-linter TemplateToolkit @activestate.com/koLinter?language=TemplateToolkit;1
+contract @activestate.com/koLinter?language=TemplateToolkit;1 {72b2df05-86c4-428b-b6bd-27a4f6495806}
+category komodo-language TemplateToolkit @activestate.com/koLanguage?language=TemplateToolkit;1
+component {72b2df05-86c4-428b-b6bd-27a4f6495806} components/koTemplateToolkit_UDL_Language.py

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width; user-scalable=false;">
+  <title>about:buildconfig</title>
+  <link rel="stylesheet" href="chrome://global/skin/about.css" type="text/css">
+  <style type="text/css">
+    th { text-align: start; }
+    h2 { margin-top: 1.5em; }
+    th, td { vertical-align: top; }
+  </style>
+</head>
+<body class="aboutPageWideContainer">
+<h1>about:buildconfig</h1>
+<h2>Build Machine</h2>
+<p>kobuild-centos5</p>
+<h2>Source</h2>
+<p>Built from <a href="http://hg.mozilla.org/releases/mozilla-beta/rev/027478bc86e2">http://hg.mozilla.org/releases/mozilla-beta/rev/027478bc86e2</a></p>
+<h2>Build platform</h2>
+<table>
+  <tbody>
+    <tr>
+      <th>target</th>
+    </tr>
+    <tr>
+      <td>i686-pc-linux-gnu</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Build tools</h2>
+<table>
+  <tbody>
+    <tr>
+      <th>Compiler</th>
+      <th>Version</th>
+      <th>Compiler flags</th>
+    </tr>
+    <tr>
+      <td> /usr/bin/gcc44</td>
+      <td>gcc version 4.4.7 20120313 (Red Hat 4.4.7-1) (GCC) </td>
+      <td> -Wall -Wpointer-arith -Wdeclaration-after-statement -Werror=return-type -Wtype-limits -Wempty-body -Wsign-compare -Wno-unused -Wcast-align -gdwarf-2 -std=gnu99 -fgnu89-inline -fno-strict-aliasing -ffunction-sections -fdata-sections -pthread -pipe  -DNDEBUG -DTRIMMED -gdwarf-2 -Os -freorder-blocks  -fomit-frame-pointer</td>
+    </tr>
+    <tr>
+      <td> /usr/bin/g++44</td>
+      <td>gcc version 4.4.7 20120313 (Red Hat 4.4.7-1) (GCC) </td>
+      <td> -Wall -Wpointer-arith -Woverloaded-virtual -Werror=return-type -Wtype-limits -Wempty-body -Wsign-compare -Wno-invalid-offsetof -Wcast-align -gdwarf-2 -fno-exceptions -fno-strict-aliasing -fno-rtti -ffunction-sections -fdata-sections -fno-exceptions -fshort-wchar -pthread -pipe  -DNDEBUG -DTRIMMED -gdwarf-2 -Os -freorder-blocks  -fomit-frame-pointer </td>
+    </tr>
+  </tbody>
+</table>
+<h2>Configure arguments</h2>
+<p>--disable-installer --disable-pedantic --enable-stdcxx-compat --disable-gstreamer --disable-elf-hack --disable-gio --enable-gnomeui --enable-help-viewer --disable-tests --enable-optimize --disable-debug --enable-debug-symbols=-gdwarf-2 --enable-update-packaging --enable-xsl --enable-application=komodo --enable-extensions=cookie,spellcheck</p>
+</body>
+</html>

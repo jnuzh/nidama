@@ -1,0 +1,3 @@
+contract @activestate.com/koPlaceTreeView;1 {3b4b4e60-0bbd-4efc-b118-a153b3f84166}
+component {3b4b4e60-0bbd-4efc-b118-a153b3f84166} koPlaceTreeView.py
+interfaces koIPlaceTreeView.xpt

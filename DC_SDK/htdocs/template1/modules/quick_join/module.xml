@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="GBK"?>
+<module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="../../../module.xsd">
+    <id>quick_join</id>
+    <name>快速链接</name>
+    <file>quick_join.php</file>
+    <thumbnail>/assets/images/frontpage.png</thumbnail>
+    <description>测试模块</description>
+    <parameters>
+        <param name="link_1" label="链接1" description="链接1" ptype="text" formType="text">
+            http://www.taobao.com
+        </param>
+		<param name="text_1" label="标题1" description="标题1" ptype="text" formType="text">
+            标题1啊
+        </param>
+		<param name="desc_1" label="描述1" description="描述1" ptype="text" formType="text">
+            描述一下描述一下
+        </param>
+
+		<param name="link_2" label="链接1" description="链接1" ptype="text" formType="text">
+             http://www.taobao.com
+        </param>
+		<param name="text_2" label="标题1" description="标题1" ptype="text" formType="text">
+            标题2啊
+        </param>
+		<param name="desc_2" label="描述1" description="描述1" ptype="text" formType="text">
+            描述一下描述一下
+        </param>
+
+		<param name="link_3" label="链接1" description="链接1" ptype="text" formType="text">
+             http://www.taobao.com
+        </param>
+		<param name="text_3" label="标题1" description="标题1" ptype="text" formType="text">
+            标题3啊
+        </param>
+		<param name="desc_3" label="描述1" description="描述1" ptype="text" formType="text">
+            描述一下描述一下
+        </param>
+
+
+		
+
+
+    </parameters>
+</module>

@@ -1,0 +1,132 @@
+/* Copyright (c) 2004-2013 ActiveState Software Inc.
+   See the file LICENSE.txt for licensing information. */
+
+#include "nsISupports.idl"
+#include "nsISimpleEnumerator.idl"
+#include "nsITreeView.idl"
+
+interface koIAsyncCallback;
+interface koICodeIntelBuffer;
+interface koICodeBrowserManager;
+interface koICodeBrowserTreeItem;
+
+// Note: Some of these methods are not exposed to XPCOM because it is (1)
+//       unnecessary -- the only caller is the Python-implemented
+//       koICodeIntelService -- and (2) a pain.
+[scriptable, uuid(ce9f91ed-d345-4eef-959c-997069745844)]
+interface koICodeBrowserTreeView : nsITreeView {
+    void setCodeBrowserMgr(in koICodeBrowserManager codeBrowserMgr);
+    void finalize();
+
+    // Save and restore preferences for the code browser view.
+    void restorePrefs();
+    void savePrefs();
+
+    void ignoreNextToggleOpenState();
+
+    // Called to indicate when the mouse is sitting over the node for
+    // a specific row. A row value of -1 indicates that the mouse is not
+    // over any row.
+    //  "element" identifies the part of the cell the mouse is over. It can
+    //      be one of "cell", "twisty", "image", and "text". The empty string
+    //      may be passed if row is -1.
+    void mouseOverNode(in long row, in wstring element);
+
+    // Method to control the Code Browser working set.
+    // The "working set" is the set of the files that the Code Browser
+    // currently "cares" about, i.e. will display in the "Code" tab.
+    // Generally this is the set of files open in this Komodo window.
+    void add_buf(in koICodeIntelBuffer buf);
+    void remove_buf(in koICodeIntelBuffer buf);
+    void change_buf_lang(in koICodeIntelBuffer buf);
+
+    // Specify the sort order.
+    void sortBy(in wstring key);
+
+    // Specify a filtering regex pattern. (Is compared case-insensitively
+    // against row names.) This raises an exception if the filter is not
+    // a valid regex pattern.
+    void setFilter(in wstring filter);
+
+    // Accessors for information about the currently selected node.
+    // They will return null or 0 if there is no current selection.
+    attribute wstring currentNodeFilePath;
+    // 1-based line number where node is defined. 0 indicates don't know
+    // line or line number isn't meaningful.
+    attribute long currentNodeLine;
+    attribute wstring currentNodeLanguage;
+    attribute wstring currentNodeSymbolPattern; // for searching in Object Browser
+    attribute wstring currentNodeModulePattern; // for searching in Object Browser
+
+    /**
+     * Display and select the node corresponding to the scope at the given
+     * position.
+     *
+     * @param buf The buffer to locate
+     * @param pos The position to locate
+     * @param closestOnly If true, only locate the closest currently open scope
+     * @param callback A callback to receive a notification when the scope has
+     *      been highlighted, or if the operation fails.  Don't expect anything
+     *      useful in the data parameter.
+     */
+    void locateScope(in koICodeIntelBuffer buf,
+                     in long pos,
+                     [optional] in boolean closestOnly,
+                     [optional] in koIAsyncCallback callback);
+
+    void rememberOpenState(in koICodeBrowserTreeItem aItem);
+};
+
+/**
+ * Interface to implement one node in the code browser tree.  Note that the node
+ * may not be visible.
+ */
+[scriptable, uuid(c7aeb1d3-a7da-481d-b31f-22fc6b344fa6)]
+interface koICodeBrowserTreeItem : nsISupports {
+    /**
+     * The buffer this tree item is associated with. May be null for nodes not
+     * belonging to a buffer (e.g. the tree root).
+     */
+    readonly attribute koICodeIntelBuffer buf;
+    /**
+     * The text displayed
+     */
+    readonly attribute AString text;
+    /**
+     * Whether this node is open.  Open nodes display their children.
+     */
+    attribute boolean open;
+    /**
+     * Whther this item is invisible.  Invisible nodes have no row in the tree,
+     * but their children are shown.
+     */
+    attribute boolean invisible;
+    /**
+     * Whether this node is hidden.  Hidden nodes and their descedants are not
+     * displayed.
+     */
+    attribute boolean hidden;
+    /**
+     * Enumerator for children of a given node.  This includes hidden and
+     * invisible children as well.
+     *
+     * @returns An enumerator, where each entry is a koICodeBrowserTreeItem
+     */
+    nsISimpleEnumerator enumerate();
+};
+
+
+// JS-implemented service so the Code Browser UI can be controlled from
+// Python code.
+[scriptable, uuid(C9142A66-E770-4576-B926-07A74B006B34)]
+interface koICodeBrowserManager : nsISupports {
+    attribute koICodeBrowserTreeView view;
+    attribute boolean visible;
+
+    void finalize();
+
+    // Called by the nsITreeView whenever the working set (WS) of files
+    // transitions between no files and one or more files -- so the Code
+    // Browser UI can adjust accordingly.
+    void haveFilesInWS(in boolean value);
+};

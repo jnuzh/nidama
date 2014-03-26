@@ -1,0 +1,6 @@
+category komodo-language Django @activestate.com/koLanguage?language=Django;1
+component {5c36e354-525e-11db-82d8-000d935d3368} components/koDjango_UDL_Language.py
+category category-komodo-linter Django @activestate.com/koLinter?language=Django;1
+component {c30d9ea6-bb99-474d-9488-4d92dd833acb} components/koDjango_UDL_Language.py
+contract @activestate.com/koLanguage?language=Django;1 {5c36e354-525e-11db-82d8-000d935d3368}
+contract @activestate.com/koLinter?language=Django;1 {c30d9ea6-bb99-474d-9488-4d92dd833acb}

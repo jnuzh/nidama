@@ -1,0 +1,6 @@
+contract @activestate.com/koLanguage?language=XML;1 {13CE88EE-3F2D-4ad4-8D33-CC8178E4BA26}
+category komodo-language XML @activestate.com/koLanguage?language=XML;1
+component {13CE88EE-3F2D-4ad4-8D33-CC8178E4BA26} components/koXMLLanguage.py
+category category-komodo-linter XML @activestate.com/koLinter?language=XML;1
+component {03d1177b-1f08-4218-8f43-ccb88f00f308} components/koXMLLinter.py
+contract @activestate.com/koLinter?language=XML;1 {03d1177b-1f08-4218-8f43-ccb88f00f308}

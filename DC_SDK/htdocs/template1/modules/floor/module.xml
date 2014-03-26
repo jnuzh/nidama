@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="GBK"?>
+<module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="../../../module.xsd">
+    <id>floor</id>
+    <name>自定义通栏</name>
+    <file>floor.php</file>
+    <thumbnail>/assets/images/frontpage.png</thumbnail>
+    <description>测试模块</description>
+    <parameters>
+        <param name="img_1" label="图片链接" description="图片-1的源文件" ptype="url" formType="text">
+            assets/images/def/side.png
+        </param>
+        <param name="link_1" label="目标链接" description="图片-1的目标链接" ptype="url" formType="text">http://www.taobao.com
+        </param>
+
+        <param name="carousel_img" label="轮播大图1" description="轮播大图1" ptype="url" formType="text">
+            http://img03.taobaocdn.com/tps/i3/T1KFpJXd4XXXXXXXXX-510-210.jpg
+        </param>
+        <param name="carousel_img_0" label="轮播大图1" description="轮播大图1" ptype="url" formType="text">
+            http://img03.taobaocdn.com/tps/i3/T1KFpJXd4XXXXXXXXX-510-210.jpg
+        </param>
+        <param name="carousel_img_1" label="轮播大图2" description="轮播大图2" ptype="url" formType="text">
+            http://img03.taobaocdn.com/tps/i3/T1KFpJXd4XXXXXXXXX-510-210.jpg
+        </param>
+        <param name="carousel_img_2" label="轮播大图3" description="轮播大图3" ptype="url" formType="text">
+            http://img03.taobaocdn.com/tps/i3/T1KFpJXd4XXXXXXXXX-510-210.jpg
+        </param>
+        <param name="carousel_img_3" label="轮播大图4" description="轮播大图4" ptype="url" formType="text">
+            http://img03.taobaocdn.com/tps/i3/T1KFpJXd4XXXXXXXXX-510-210.jpg
+        </param>
+
+        <param name="carousel_link_0" label="轮播链接1" description="轮播链接1" ptype="url" formType="text">
+            http://s.taobao.com/1
+        </param>
+        <param name="carousel_link_1" label="轮播链接2" description="轮播链接2" ptype="url" formType="text">
+            http://s.taobao.com/2
+        </param>
+        <param name="carousel_link_2" label="轮播链接3" description="轮播链接3" ptype="url" formType="text">
+            http://s.taobao.com/3
+        </param>
+        <param name="carousel_link_3" label="轮播链接4" description="轮播链接4" ptype="url" formType="text">
+            http://s.taobao.com/4
+        </param>
+
+        <param name="carousel_nav_img_0" label="轮播小图1" description="轮播小图1" ptype="url" formType="text">
+            http://img01.taobaocdn.com/tps/i1/T1waRJXfdxXXXXXXXX-40-40.png
+        </param>
+        <param name="carousel_nav_img_1" label="轮播小图2" description="轮播小图2" ptype="url" formType="text">
+            http://img01.taobaocdn.com/tps/i1/T1waRJXfdxXXXXXXXX-40-40.png
+        </param>
+        <param name="carousel_nav_img_2" label="轮播小图3" description="轮播小图3" ptype="url" formType="text">
+            http://img01.taobaocdn.com/tps/i1/T1waRJXfdxXXXXXXXX-40-40.png
+        </param>
+        <param name="carousel_nav_img_3" label="轮播小图4" description="轮播小图4" ptype="url" formType="text">
+            http://img01.taobaocdn.com/tps/i1/T1waRJXfdxXXXXXXXX-40-40.png
+        </param>
+
+    </parameters>
+</module>

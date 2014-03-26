@@ -1,0 +1,6 @@
+category komodo-language XSLT @activestate.com/koLanguage?language=XSLT;1
+category category-komodo-linter XSLT @activestate.com/koLinter?language=XSLT;1
+contract @activestate.com/koLanguage?language=XSLT;1 {7F76A3CE-7FE1-4363-99EB-4AAAFA79BC88}
+component {390b2ce2-9df8-41a7-8e35-d2a4d76618d6} components/koXSLTLanguage.py
+contract @activestate.com/koLinter?language=XSLT;1 {390b2ce2-9df8-41a7-8e35-d2a4d76618d6}
+component {7F76A3CE-7FE1-4363-99EB-4AAAFA79BC88} components/koXSLTLanguage.py
