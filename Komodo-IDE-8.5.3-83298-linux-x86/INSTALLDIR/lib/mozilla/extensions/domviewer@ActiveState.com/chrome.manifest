@@ -1,9 +1,0 @@
-content domviewer jar:domviewer.jar!/content/
-locale domviewer en-US jar:domviewer.jar!/locale/en-US/
-overlay chrome://komodo/content/komodo.xul chrome://domviewer/content/overlay.xul
-overlay chrome://komodo/content/pref/file-advanced-properties.xul chrome://domviewer/content/pref-overlay.xul
-skin domviewer classic/1.0 jar:domviewer.jar!/skin/
-
-interfaces components/koIDOMView.xpt
-component {f3691fa9-210a-400d-b909-7c7684094a1f} components/koDOMView.py
-contract @activestate.com/KoDOMTreeView;1 {f3691fa9-210a-400d-b909-7c7684094a1f}

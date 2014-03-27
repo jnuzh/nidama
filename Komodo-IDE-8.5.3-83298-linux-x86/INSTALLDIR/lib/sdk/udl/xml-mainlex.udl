@@ -1,9 +1,0 @@
-# XML UDL definition
-# 
-# Copyright (C) ActiveState Software Inc.
-# Author(s):
-#   Eric Promislow <ericp@activestate.com>
-
-language XML
-
-include "xml.udl"

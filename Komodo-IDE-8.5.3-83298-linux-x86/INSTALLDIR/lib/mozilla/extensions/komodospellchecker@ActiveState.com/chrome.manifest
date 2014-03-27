@@ -1,4 +1,0 @@
-content komodospellchecker jar:komodospellchecker.jar!/content/
-skin komodospellchecker classic/1.0 jar:komodospellchecker.jar!/skin/
-locale komodospellchecker en-US jar:komodospellchecker.jar!/locale/en-US/
-overlay chrome://komodo/content/komodo.xul chrome://komodospellchecker/content/koSpellCheckOverlay.xul
