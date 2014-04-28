@@ -1,0 +1,17 @@
+
+.frame{ margin:0px!important; padding:0px!important; border:0px solid #e3e3e3!important;}
+.block{ margin:0px!important; padding:0px!important; border:0px solid #e3e3e3!important;}
+
+.eis_f1{ background:url(eis_pic_bg.jpg) no-repeat 0 0!important; height:317px; margin-top:18px!important;}
+.eis_hdpic{ width:970px; padding-left:7px;  height:310px;   position:relative; padding-top:6px;}
+.eis_hdpic div .eis_img{ width:605px; height:305px; display:block; cursor:pointer;}
+.eis_hdpic div .eis_img01{ position:absolute; display:block; width:306px; height:214px; left:23px; top:20px;}
+.eis_hdpic .eis_div{ margin-left:10px; margin-top:10px;}
+.eis_hdpic div h3{ position:absolute; top:25px; font-weight:400; right:20px; height:30px; line-height:30px; width:330px;  font-size:20px;}
+.eis_hdpic div h3 a{color:#0071a7; text-shadow:0px 1px 0px #fff;}
+.eis_hdpic div p{ position:absolute; display:block; line-height:30px; color:#333; font-size:14px;  line-height:30px; width:330px; right:0px; top:60px; padding:0 20px 0 0px; text-align:left; font-size:12px;overflow:hidden;}
+.eis_hdpic div p a{ color:#333; font-size:14px; text-shadow:0px 1px 0px #fff; }
+.eis_hdpicarea{  height:17px; overflow:hidden; width:130px; position:absolute; right:10px; bottom:20px;}
+.eis_hdpicarea a{ float:left; background:url(area1L-bg1.jpg) no-repeat; width:25px; height:17px; display:block; }
+.eis_hdpicarea a.act{background:url(area1L-bg2.jpg) no-repeat 0 0;}
+.eis_hdpicarea a:hover{ text-decoration:none}

@@ -1,21 +1,149 @@
 
-<h1>Ã‘±¶”¶”√ø™∑¢</h1>
 
-<p>”¶”√ªÒ»°”√ªßmother_funµƒ◊ ¡œ</p>
+
 <?php
+    include("menu.php");
+    include("TaobaoHelper.php");
+    include("TFTools.php");
+    include("XmlHelper.php");
+    ?>
 
+<div class="column one">
+<?php
+    $request = NULL;
+    if(isset($_GET['SessionKey'])){
+        $request = new MFRequest($_GET['SessionKey']);
+        $_SESSION['SessionKey']=$_GET['SessionKey'];
+    }else{
+        $request = new MFRequest($_SESSION['SessionKey']);
+    }
+
+    $user_info = $request->userGet();
+    echoInTable8($user_info);
+    echo "<br/>";
+    echoInTable4($request->shopGet($user_info->nick));
+    echo "<br/>";
 ?>
+</div>
+
+<div class="column two">
 <?php
-echo "<p>begin</p>";
-header("Content-Type: text/html; charset=gb2312");
-include("taobao_sdk/TopSdk.php");
-$c = new TopClient;
-$c->appkey = "1021741748";
-$c->secretKey = "sandboxa301cddc44328d6a71817de9e";
-$sessionKey="6102429a868d94a8144002bbc09b9e1b0e5e8160465e5013629363321";
-$req = new UserGetRequest;
-$req->setFields("nick,sex");
-$resp = $c->execute($req, $sessionKey);
-print_r($resp);
-echo "<p>end</p>";
+    
+    $radioCheck = array(
+                        "onsale"=>"",
+                        "inventor"=>"",
+                        "all"=>"",
+    );
+    if(isset($_GET['ShowContent'])){
+        $op = $_GET['ShowContent'];
+        $radioCheck[$op]="checked";
+    }else if(isset($_SESSION['ShowContent'])){
+        $op = $_SESSION['ShowContent'];
+        $radioCheck[$op]="checked";
+    }else{
+        $op = "onsale";
+        $radioCheck[$op]="checked";
+    }
+    
+    
+    echo "<form action='home.php' method='get' id='formChoice'>";
+    echo "<input type='radio' name='ShowContent' value='onsale'  onclick='submitChoice()'".$radioCheck['onsale']."/> ‰ªÖÊ©±Á™ó";
+    echo "<input type='radio' name='ShowContent' value='inventor'  onclick='submitChoice()'".$radioCheck['inventor']."/> ‰ªÖ‰ªìÂ∫ì";
+    echo "<input type='radio' name='ShowContent' value='all'  onclick='submitChoice()'".$radioCheck['all']."/> ÂÖ®ÈÉ®ÂÆùË¥ù";
+    echo "</from>";
+    
+    function getArray($node) {
+        $array = false;
+        
+        if ($node->hasAttributes()) {
+            foreach ($node->attributes as $attr) {
+                $array[$attr->nodeName] = $attr->nodeValue;
+            }
+        }
+        
+        if ($node->hasChildNodes()) {
+            if ($node->childNodes->length == 1) {
+                $array[$node->firstChild->nodeName] = getArray($node->firstChild);
+            } else {
+                foreach ($node->childNodes as $childNode) {
+                    if ($childNode->nodeType != XML_TEXT_NODE) {
+                        $array[$childNode->nodeName][] = getArray($childNode);
+                    }
+                }
+            }
+        } else {
+            return $node->nodeValue;
+        }
+        return $array;
+    }
+    
+    switch($op){
+        case "onsale":{
+
+            echoInTable5($request->itemsOnsaleGet());
+        }break;
+        case "inventor":{
+            echoInTable7($request->itemsInventorGet());
+        }break;
+        case "all":{
+        	$onsale_xml = $request->itemsOnsaleGet();
+            $inventor_xml = $request->itemsInventorGet();
+   			 append_simplexml($onsale_xml,$inventor_xml);
+			 echoInTable9($onsale_xml);
+        }break;
+        default:
+    }
+    
+    $_SESSION['ShowContent']=$op;
+
+
+
+	//ÊàêÂäüÁöÑÊ°à‰æã
+//	print_r($request->itemAdd());
+    
+    
+//print_r($request->tmcMessageProduce());
+/*
+    print_r($request->tmcUserGet());
+    set_time_limit(0);
+    while (true) {
+        sleep(5);
+        print_r($request->tmcMessagesConsume());
+        echo "<br/>";
+        ob_flush();
+        flush();
+        usleep(1000);
+    }
+    
+    */
+?>
+
+</div>
+
+
+<div class="column three">
+<?php
+    
+   
+    
+    $xml = simplexml_load_file('data.xml');
+    $parent_node = $xml->xpath("user[nick='sandbox_motherfun']")[0];
+    $parent_id=$parent_node->xpath("@id")[0];
+
+    echo "<hr/><a href='home.php?SessionKey=".$parent_node->sessionkey."'>‰∏ªÂ∫óÈì∫".$parent_node->nick."</a>";
+    foreach ($xml->xpath("user[pid=".$parent_id."]") as $child) {
+        echo "<hr/><a href='home.php?SessionKey=".$child->sessionkey."'>ÈôÑÂ±ûÂ∫óÈì∫".$child->nick."</a>";
+    }
+    echo "<hr/>";
+    
+    
+   
+  //  $x = $dom2->createElement("edit");
+  // 	$dom2->appendChild($x);
+//	print_r($dom2);
+?>
+
+</div>
+<?php
+    include("foot.php");
 ?>
