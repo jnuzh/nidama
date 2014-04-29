@@ -12,7 +12,7 @@
     
 
     
-    $_SESSION['SessionKey'] = "6100f08b2a205de81a869e5f8b45e448c7530d7dce3d9e03629363321";
+    $_SESSION['SessionKey'] = "61010075a1526931131d12f6b2cf03803641d47cf0142cf3629363321";
     $xml = simplexml_load_file('data.xml');
     $user = XF($xml->xpath("user[sessionkey='".$sessionkey."']"));
     echo "<h2>欢迎".$user->nick."使用淘宝商品数据同步器</h2>";
