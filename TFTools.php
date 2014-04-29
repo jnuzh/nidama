@@ -63,7 +63,7 @@ background:#FFFFCC;
     function echoInTable2($xml)
     {
         echo "<table border='1'>";
-        $top = $xml->children()[0];
+        $top = XF($xml->children());
         echo "<tr>";
         foreach ($top->children() as $child) {
             echo "<td>" . $child->getName() . "</td>";
