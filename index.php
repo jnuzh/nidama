@@ -36,14 +36,14 @@ EOT;
     echo "</div>";
 
     
-    
+    /*
     $parent_node = XF($xml->xpath("user[nick='sandbox_motherfun']"));
     $parent_id=XF($parent_node->xpath("@id"));
     $request_array = array(new MFRequest($parent_node->sessionkey));
     foreach ($xml->xpath("user[pid=".$parent_id."]") as $child) {
         $request_array[] = new MFRequest($child->sessionkey);
     }
-    
+    */
     
     /*
     
@@ -53,7 +53,7 @@ EOT;
     }
     
     */
-    
+    /*
     set_time_limit(0);
     while (true) {
         sleep(5);
@@ -63,6 +63,7 @@ EOT;
         flush();
         usleep(1000);
     }
+    */
     //成功的案例
     //	print_r($request->itemAdd());
     
