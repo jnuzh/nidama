@@ -3,7 +3,7 @@
     header('Content-type:text/html;charset=utf-8');
     include("TaobaoHelper.php");
     include("TFTools.php");
-    include("XmlHelper.php");
+    include_once("XmlHelper.php");
     
     $xml = simplexml_load_file('data.xml');
     $parent_node = $xml->xpath("user[nick='sandbox_motherfun']")[0];

@@ -2,7 +2,7 @@
     include("menu.php");
     include("TaobaoHelper.php");
     include("TFTools.php");
-    include("XmlHelper.php");
+    include_once("XmlHelper.php");
     
     echo <<<EOT
     <script type="text/javascript">

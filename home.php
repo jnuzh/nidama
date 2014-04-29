@@ -2,10 +2,10 @@
 
 
 <?php
-    include("menu.php");
-    include("TaobaoHelper.php");
-    include("TFTools.php");
-    include("XmlHelper.php");
+    include_once("menu.php");
+    include_once("TaobaoHelper.php");
+    include_once("TFTools.php");
+    include_once("XmlHelper.php");
     ?>
 
 <div class="column one">
@@ -28,6 +28,17 @@
 
 <div class="column two">
 <?php
+    
+    echo <<<EOT
+    <script type="text/javascript">
+    <!--
+    function submitChoice(){
+        document.getElementById('formChoice').submit();
+    }
+    -->
+    </script>
+    
+EOT;
     
     $radioCheck = array(
                         "onsale"=>"",

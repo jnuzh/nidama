@@ -65,13 +65,7 @@ clear:left;
 -->
 </style>
 
-<script type="text/javascript">
-<!--
-function submitChoice(){
-    document.getElementById('formChoice').submit();
-}
--->
-</script>
+
 
 <title>淘宝应用开发</title>
 </head>
@@ -80,9 +74,17 @@ function submitChoice(){
 <table>
 <tr  class='navigator'>
 <td class='navigator'><a class='navigator' href="index.php">主页</a></td>
+<td class='navigator'><a class='navigator' href="user.php">个人账户</a></td>
 <td class='navigator'><a class='navigator' href="manager.php">同步管理</a></td>
-<td class='navigator'><a class='navigator' href="manager.php">店铺信息</a></td>
-<td class='navigator'><a class='navigator'>关于</a></td>
+
+<?php
+    include_once("XmlHelper.php");
+    $sessionkey = $_SESSION['SessionKey'];
+    $xml = simplexml_load_file('data.xml');
+    $user = XF($xml->xpath("user[sessionkey='".$sessionkey."']"));
+    echo "<td class='navigator'><a class='navigator' href = 'home.php?SessionKey=".$user->sessionkey."'>店铺管理</a></td>";
+    ?>
+<td class='navigator'><a class='navigator' href="Help.php">关于</a></td>
 <tr>
 </table>
 </div>
