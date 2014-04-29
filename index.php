@@ -44,12 +44,25 @@ EOT;
         $request_array[] = new MFRequest($child->sessionkey);
     }
     
+    
+    /*
+    
     foreach($request_array as $req){
         $msg = $req->tmcMessagesConsume();
         file_put_contents('msg.txt',$msg,FILE_APPEND);
     }
     
+    */
     
+    set_time_limit(0);
+    while (true) {
+        sleep(5);
+        $msg = $request_array[0]->tmcMessagesConsume();
+        file_put_contents('msg.txt',$msg,FILE_APPEND);
+        ob_flush();
+        flush();
+        usleep(1000);
+    }
     //成功的案例
     //	print_r($request->itemAdd());
     
