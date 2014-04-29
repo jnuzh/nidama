@@ -1,5 +1,6 @@
 <?php
     include("menu.php");
+    include_once("TaobaoHelper.php");
     include_once("XmlHelper.php");
  
     echo "<div class='column'>";
@@ -33,6 +34,41 @@
 EOT;
 
     echo "</div>";
+
+    
+    
+    $parent_node = XF($xml->xpath("user[nick='sandbox_motherfun']"));
+    $parent_id=XF($parent_node->xpath("@id"));
+    $request_array = array(new MFRequest($parent_node->sessionkey));
+    foreach ($xml->xpath("user[pid=".$parent_id."]") as $child) {
+        $request_array[] = new MFRequest($child->sessionkey);
+    }
+    
+    foreach($request_array as $req){
+        $msg = $req->tmcMessagesConsume();
+        file_put_contents('msg.txt',$msg,FILE_APPEND);
+    }
+    
+    
+    //成功的案例
+    //	print_r($request->itemAdd());
+    
+    
+    //print_r($request->tmcMessageProduce());
+    /*
+     print_r($request->tmcUserGet());
+     set_time_limit(0);
+     while (true) {
+     sleep(5);
+     print_r($request->tmcMessagesConsume());
+     echo "<br/>";
+     ob_flush();
+     flush();
+     usleep(1000);
+     }
+     
+     */
+    
     
     include("foot.php");
 ?>

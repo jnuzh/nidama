@@ -109,24 +109,7 @@ EOT;
 
 
 
-	//成功的案例
-//	print_r($request->itemAdd());
-    
-    
-//print_r($request->tmcMessageProduce());
-/*
-    print_r($request->tmcUserGet());
-    set_time_limit(0);
-    while (true) {
-        sleep(5);
-        print_r($request->tmcMessagesConsume());
-        echo "<br/>";
-        ob_flush();
-        flush();
-        usleep(1000);
-    }
-    
-    */
+
 ?>
 
 </div>
