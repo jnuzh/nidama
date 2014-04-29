@@ -127,8 +127,8 @@
    
     
     $xml = simplexml_load_file('data.xml');
-    $parent_node = $xml->xpath("user[nick='sandbox_motherfun']")[0];
-    $parent_id=$parent_node->xpath("@id")[0];
+    $parent_node = XF($xml->xpath("user[nick='sandbox_motherfun']"));
+    $parent_id=XF($parent_node->xpath("@id"));
 
     echo "<hr/><a href='home.php?SessionKey=".$parent_node->sessionkey."'>主店铺".$parent_node->nick."</a>";
     foreach ($xml->xpath("user[pid=".$parent_id."]") as $child) {

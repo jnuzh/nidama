@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <items>
     
-<item chief_iid="2100515229781">
-    <sub_iid>2100515593175</sub_iid>
-</item>
+<chief_item iid="2100515229781" nick="sandbox_motherfun">
+    <sub_item>
+        <nick>sandbox_redfun</nick>
+        <iid>2100515593175</iid>
+    </sub_item>
+</chief_item>
 
 
+<chief_item iid="2100509812102" nick="sandbox_motherfun">
+
+</chief_item>
 
 
+<chief_item iid="2100515229784" nick="sandbox_motherfun">
 
+</chief_item>
 
-
-<item chief_iid="2100509812102"/><item chief_iid="2100515229784"/><item chief_iid="2100515229821"/><item chief_iid="2100515159160"/><item chief_iid="2100515159160"/><item chief_iid="2100515159160"/><item chief_iid="2100515159160"/><item chief_iid="2100515159160"/><item chief_iid="2100515159160"/><item chief_iid="2100515159160"/></items>
+</items>

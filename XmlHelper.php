@@ -23,5 +23,7 @@ function append_simplexml(&$simplexml_to, &$simplexml_from)
         append_simplexml($simplexml_temp, $simplexml_child);
     }
 }
-
+    function XF($xml){
+        return $xml[0];
+    }
 ?>   
