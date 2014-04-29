@@ -42,8 +42,8 @@ EOT;
 
     //初始化所有商店的请求对象
     $xml = simplexml_load_file('data.xml');
-    $parent_node = $xml->xpath("user[nick='sandbox_motherfun']")[0];
-    $parent_id=$parent_node->xpath("@id")[0];
+    $parent_node = XF($xml->xpath("user[nick='sandbox_motherfun']"));
+    $parent_id=XF($parent_node->xpath("@id"));
     $request_array = array(new MFRequest($parent_node->sessionkey));
     foreach ($xml->xpath("user[pid=".$parent_id."]") as $child) {
         $request_array[] = new MFRequest($child->sessionkey);

@@ -41,9 +41,9 @@
             }
             echo "<td>无</td>";
         }
-        echo "<td>".$xml_array[0]->xpath("item[num_iid=".$chief_item->xpath("@iid")[0]."]")[0]->num."</td>";
-        echo "<td>"."<a href='managerEdit.php?chief_iid=".$chief_item->xpath("@iid")[0]."'>编辑</a>"."</td>";
-        echo "<td>"."<a href='manager.php?operation=delete&iid=".$chief_item->xpath("@iid")[0]."'>删除</a>"."</td>";
+        echo "<td>".XF($xml_array[0]->xpath("item[num_iid=".XF($chief_item->xpath("@iid"))."]/num"))."</td>";
+        echo "<td>"."<a href='managerEdit.php?chief_iid=".XF($chief_item->xpath("@iid"))."'>编辑</a>"."</td>";
+        echo "<td>"."<a href='manager.php?operation=delete&iid=".XF($chief_item->xpath("@iid"))."'>删除</a>"."</td>";
         echo "</tr>";
     }
     echo "</table>";
