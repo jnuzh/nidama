@@ -39,7 +39,9 @@
                  $event_nick = $msg->nick;
                  $json = $msg->content;
                  
-                 
+                 print_r($json);
+                 print_r($json['num_iid']);
+                 print_r($json.num_iid);
                  $event_num_iid = $json.num_iid;
             
               
