@@ -39,10 +39,7 @@
                  $event_nick = $msg->nick;
                  $json = $msg->content;
                  
-                 print_r($json);
-                 print_r($json['num_iid']);
-                 print_r($json.num_iid);
-                 $event_num_iid = $json.num_iid;
+                 $event_num_iid = $json[0]->num_iid;
             
               
                
@@ -52,7 +49,7 @@
                  
                  
                  foreach($event_items as $item){
-                     if((string)$item->num_iid!=(string)$json.num_iid){
+                     if((string)$item->num_iid!=(string)$event_num_iid){
                          $req = $request_array[(string)$item->nick];
                          switch($msg->topic){
                              case "taobao_item_ItemAdd":{//增加
