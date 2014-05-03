@@ -48,6 +48,7 @@
                  echo "找到关联小组！";
                  foreach($event_items as $item){
                      if((string)$item->num_iid!=(string)$event_num_iid){
+                         echo "关联商品：$item->num_iid  <br/>";
                          $req = $request_array[(string)$item->nick];
                          switch($msg->topic){
                              case "taobao_item_ItemAdd":{//增加
@@ -73,6 +74,8 @@
                                  echo "没有订阅过这种消息：".$msg->topic."";
                              }
                          }
+                     }else{
+                         echo "关联商品：$item->num_iid  <br/>";
                      }
                  }
              }
