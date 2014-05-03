@@ -31,18 +31,18 @@
              if(count($resp->messages)==0) continue;
              echo "收到消息！";
              
-             foreach($resp->messages as $msg){
+             foreach($resp->messages->tmc_message as $msg){
                  
           
-                 print_r($msg);
+                 
                  //获取这次消息的nick、num_iid【对于暂时添加的消息有用
                  $event_nick = $msg->nick;
                  $json = $msg->content;
                  
                  
-                 $event_num_iid = $json['num_iid'];
+                 $event_num_iid = $json.num_iid;
             
-                 
+              
                
                  
                  //找到所在的关联小组
