@@ -31,10 +31,8 @@
              if(count($resp->messages)==0) continue;
              echo "收到消息！";
              
-             foreach($resp->messages->tmc_message as $msg){
-                 
-          
-                 
+             foreach($resp->messages as $tmc){
+                 $msg = $tmc->tmc_message
                  //获取这次消息的nick、num_iid【对于暂时添加的消息有用
                  $event_nick = $msg->nick;
                  $json = $msg->content;
@@ -46,8 +44,8 @@
                  
                  //找到所在的关联小组
                  $event_items = $groups->xpath("group/items[item[num_iid='$event_num_iid']]");
-                 
-                 
+                 if($event_items==null) continue;
+                 echo "找到关联小组！";
                  foreach($event_items as $item){
                      if((string)$item->num_iid!=(string)$event_num_iid){
                          $req = $request_array[(string)$item->nick];
@@ -75,8 +73,6 @@
                                  echo "没有订阅过这种消息：".$msg->topic."";
                              }
                          }
-                     }else{
-                         echo "该消息涉及的商品没有加入组别。";
                      }
                  }
              }
