@@ -34,16 +34,16 @@
              foreach($resp->messages as $msg){
                  
           
-                 
+                 print_r($msg);
                  //获取这次消息的nick、num_iid【对于暂时添加的消息有用
                  $event_nick = $msg->nick;
                  $json = $msg->content;
                  
-                 print_r($json);
+                 
                  $event_num_iid = $json['num_iid'];
             
                  
-                 echo $event_num_iid;
+               
                  
                  //找到所在的关联小组
                  $event_items = $groups->xpath("group/items[item[num_iid='$event_num_iid']]");
