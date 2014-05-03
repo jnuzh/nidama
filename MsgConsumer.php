@@ -32,7 +32,7 @@
              echo "收到消息！";
              
              foreach($resp->messages as $tmc){
-                 $msg = $tmc->tmc_message
+                 $msg = $tmc->tmc_message;
                  //获取这次消息的nick、num_iid【对于暂时添加的消息有用
                  $event_nick = $msg->nick;
                  $json = $msg->content;
