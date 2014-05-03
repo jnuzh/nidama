@@ -412,6 +412,16 @@ EOT;
         
     }
     
+    
+    function echoInAjaxPage1(){
+        
+        include_once("shopItemShow.php");
+    }
+    
+    function echoInAjaxPage2(){
+        include_once("relatedItemShow.php");
+    }
+    
 
     
 ?>

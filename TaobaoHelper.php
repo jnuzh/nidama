@@ -104,10 +104,24 @@ class MFRequest
         return $resp->item;
     }
     
+    function itemUpdateNum($numIid,$num){
+        $req = new ItemUpdateRequest;
+        $req->setNumIid($numIid);
+        $req->setNum($num);
+        $resp = $this->center->execute($req, $this->sessionKey);
+        return $resp->item;
+    }
     function itemUpdateTitle($numIid,$title){
         $req = new ItemUpdateRequest;
         $req->setNumIid($numIid);
         $req->setTitle($title);
+        $resp = $this->center->execute($req, $this->sessionKey);
+        return $resp->item;
+    }
+    function itemUpdateDesc($numIid,$desc){
+        $req = new ItemUpdateRequest;
+        $req->setNumIid($numIid);
+        $req->setDesc($desc);
         $resp = $this->center->execute($req, $this->sessionKey);
         return $resp->item;
     }

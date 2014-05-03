@@ -1,5 +1,5 @@
 <?php
-    include("menu.php");
+    include("header.php");
     ?>
 
 
@@ -59,5 +59,5 @@ EOT;
 
 
 <?php
-    include("foot.php");
+    include("footer.php");
     ?>

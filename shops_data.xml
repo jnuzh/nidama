@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shops>
+    <shop>
+        <nick>sandbox_motherfun</nick>
+        <sessionkey>6102524266649ea8879551e4088682181dced2d11ec82b33629363321</sessionkey>
+        <groups>
+            <groupid>A10086</groupid>
+        </groups>
+    </shop>
+    
+    
+    <shop>
+        <nick>sandbox_bluefun</nick>
+        <sessionkey>61024075841f81f1e2a3ce1f8641b0a961ca51bb5eb06223632386628</sessionkey>
+        <groups>
+            <groupid>A10086</groupid>
+            <groupid>B10010</groupid>
+        </groups>
+    </shop>
+    
+    <shop>
+        <nick>sandbox_redfun</nick>
+        <sessionkey>61012279d50198405428ac594720cd923e51112dfee31993632386814</sessionkey>
+        <groups>
+            <groupid>A10086</groupid>
+            <groupid>B10010</groupid>
+        </groups>
+    </shop>
+    
+</shops>
+

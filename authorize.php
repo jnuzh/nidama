@@ -1,6 +1,6 @@
 
 <?php
-    include("menu.php");
+    include("header.php");
     ?>
 
 <?php
@@ -21,5 +21,5 @@
 
 
 <?php
-    include("foot.php");
+    include("footer.php");
     ?>

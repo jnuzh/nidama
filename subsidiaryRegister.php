@@ -1,5 +1,5 @@
 <?php
-    include("menu.php");
+    include("header.php");
     ?>
 
 
@@ -44,5 +44,5 @@
 
 
 <?php
-    include("foot.php");
+    include("footer.php");
     ?>

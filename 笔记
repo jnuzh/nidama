@@ -1,3 +1,58 @@
 1.店铺中包含有上架商品和下架商品。其中，只有上架商品才可以购买，下架商品无法购买，但在店主看来仍旧显示在商店中。客户进入店铺时只会看到上架商品。
 
 2.商品必须以拍下减库存方式进行库存计数，否则在此模式下，很容易出现超卖现象。
+
+3.shopManager出现session问题
+
+规则：
+1.一种商品只能属于一个关联小组
+2.店铺的商品消息传来时，只需要寻找商品所在的关联小组，就可以把所在小组的对应关联商品信息全部更新。
+3.只需要所有店铺的sessionkey即可。
+4.每家店铺都可以进入多个关联组别。但是单个商品只能进入单个小组。
+5.消息消费时，会遍历所有的店铺，然后查询商品所在的小组，更新其他的关联商品。此时其他的关联商品只属于当前小组，不会发生二次修改。
+
+
+1.购买应用的店主拥有一个关联组别，比如A。关联组别可以在用户页面中进行修改，添加删除关联的店铺，但自己的店铺无法删除。
+2.在关联商品关联页面中，会显示当前组别A中所有的关联店铺的关联商品。可以添加、编辑、删除。
+3.应用的店主应该要有一个组别标志。
+4.假如店主的店铺被其他的组别拉到了，那么其他组别中也只会显示店主店铺中未被关联到的商品，不会影响到原来组别的其他成员。
+5.应用的店主可以有多个组别吗？不需要。因为如果店主的店铺是a,关联店铺是b,c,d，如果店主想仅仅关联bc，那么就直接关联bc就可以了。没有上限。有可能店主用这个来卖钱吗？
+不可能，因为如果店主向其他外人说他可以帮人同步数据，那么其他人就需要进行授权，我虽然不知道，的确能够授权成功，但是店主因此可以修改他人的数据，任意修改。那么这是可以的吗？
+对的，就是说，应用的老大可以修改任何成员，所以，这个应用只能用于能被信任的一些人。所以，每个店主购买应用后应该是被分配一个组别。然后其他人要申请进入组别时，只需要组别号即可。
+
+1.在商店管理页面中，有所有关联店铺的商品信息，显示着哪些商品已经被关联了。而且显示被哪个组别关联，如果是别的组别关联，会显示别应用关联。
+
+
+
+
+
+tag/Button重定向：   echo "<input type='submit' value='新增' onclick=\"window.location.replace('relatedItemEditor.php')\"/>";
+tag/xpath position:xml中数组是从0开始，但是position是从1开始的，我设定了items_seq，是以1开始的。
+tag/array print     
+    function print_array(arr){
+        for(var key in arr){
+            if(typeof(arr[key])=='array'||typeof(arr[key])=='object'){//递归调用
+                print_array(arr[key]);
+            }else{
+                document.write(key + ' = ' + arr[key] + '<br>');
+            }
+        }
+    }
+    
+
+tag/It is not safe to rely on the system's timezone settings
+具体操作方式如下：
+1、在php配置文件中添加timezone的配置（参照debian的配置规则，添加小的配置规则文件即可，好维护，自定义性好）
+~# vim /etc/php/cli-php5.3/ext-active/date_timezone.ini
+date.timezone = "Asia/Shanghai"
+~ # env-update
+~ # source /etc/profile
+自定义的文件放在cli-php5.3/ext-active目录中，是因为php默认是采用cli方式，另外ext-active目录是表示启用特性的专用目录，这个可以从/etc/env.d/20php5.3文件中看出来
+MANPATH="/usr/lib/php5.3/man/"
+CONFIG_PROTECT_MASK="/etc/php/cli-php5.3/ext-active/ /etc/php/cgi-php5.3/ext-active/ /etc/php/apache2-php5.3/ext-active/"
+2、在出现错误提示的php文件中添加date_default_timezone_set('Asia/Shanghai');位置是在<?php   ?>中
+注：
+在 某些参考资料中是说这两个方法任选其一就可，但经我测试，必须两个方法同时使用，才不会再出现错误提示。经实测其实第二个方法并不需要在每个出现错误提示 的PHP文件中添加，只需在其中一个PHP文件中添加即可。另外添加的时区不需要与提示中的时区一样，比如系统给我的提示是Chongqing,但我设置 成Shanghai也是一样的，当然这个时间也是与我系统的时区设置是一样的。
+
+
+
