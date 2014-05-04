@@ -89,6 +89,7 @@
         echo "商品id是：$num_iid  \n";
         echo "消息主题是：$event_topic \n";
         
+        /***************   对关联商品进行操作        **************/
         //找到所在的关联小组
         $event_items = XF($groups->xpath("group/items[item[num_iid='$event_num_iid']]"));
         if($event_items==null){
@@ -97,6 +98,7 @@
         }else{
             echo "BEGIN****************找到关联小组！开始执行！****************<br/>";
         }
+
         
         foreach($event_items as $item){
             if((string)$item->num_iid!=(string)$event_num_iid){
@@ -115,8 +117,8 @@
                         else $req->print_error();
 
                         //确保本地数据的同步
-                        $target_item = XF($groups->xpath("group/items/item[num_iid='$item->num_iid']"));
-                        $target_item->num_iid=null;
+                        $local_item = XF($groups->xpath("group/items/item[num_iid='$item->num_iid']"));
+                        $local_item->num_iid=null;
     
                         
                     }break;
@@ -140,6 +142,37 @@
                 }
             }
         }
+        
+        
+        
+        /***************   对此次消息的目标商品进行操作        **************/
+        
+        switch($event_topic){
+            case "taobao_item_ItemAdd":{//增加
+                
+            }break;
+            case "taobao_item_ItemDelete":{//删除
+                //确保本地数据的同步
+                $local_item = XF($groups->xpath("group/items/item[num_iid='$event_num_iid']"));
+                $local_item->num_iid=null;
+                
+                
+            }break;
+            case "taobao_item_ItemUpdate":{//修改
+                
+            }break;
+            case "taobao_item_ItemUpshelf":{//上架
+                
+            }break;
+            case "taobao_item_ItemDownshelf":{//下架
+                
+            }break;
+            default:{
+                echo "没有订阅过这种消息：$event_topic \n";
+            }
+        }
+        
+        
         $groups->asXML('groups_data.xml');
         echo "\n****************完成同步，消息消费完毕！****************END\n";
         
