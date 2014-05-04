@@ -31,8 +31,8 @@
              foreach($resp->messages as $tmc){
                  $msg = $tmc->tmc_message;
                  $event_nick = $msg->nick;
-                 $json = $msg->content;
-                 $event_num_iid = $json[0]->num_iid;
+                 $json = XF($msg->content);
+                 $event_num_iid = $json.num_iid;
                  print_r($json);
                  remoteMsgConsume($msg->topic,$event_nick,$event_num_iid);
             }
