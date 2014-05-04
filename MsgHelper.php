@@ -113,8 +113,11 @@
                         $result = $req->itemDelete($item->num_iid);
                         if($result) echo "操作是ItemDelete:对商品 $item->num_iid 进行了删除操作。\n";
                         else $req->print_error();
-                        
-                        
+
+                        //确保本地数据的同步
+                        $target_item = XF($groups->xpath("group/items/item[num_iid='$item->num_iid']"));
+                        $target_item->num_iid=null;
+    
                         
                     }break;
                     case "taobao_item_ItemUpdate":{//修改
@@ -137,6 +140,7 @@
                 }
             }
         }
+        $groups->asXML('groups_data.xml');
         echo "\n****************完成同步，消息消费完毕！****************END\n";
         
         

@@ -24,7 +24,11 @@
 
 2.消息通道只能接收到淘宝店铺传来的消息，用API进行操作是不会经过淘宝店铺的，所以不会有消息。
 
+3.需要用到进程通信。服务器要开启一个php进程来读取淘宝店铺传来的消息，然后对其同组别的关联商品进行同步处理。要想让前台页面能发送信息到这个进程，大概要用什么方法？
 
+4.删除操作会影响groups_data.xml的数据出现问题，该如何解决。
+
+5.暂时还是使用xml文件来保存数据，有时间要改用MySQL。
 
 tag/Button重定向：   echo "<input type='submit' value='新增' onclick=\"window.location.replace('relatedItemEditor.php')\"/>";
 tag/xpath position:xml中数组是从0开始，但是position是从1开始的，我设定了items_seq，是以1开始的。
