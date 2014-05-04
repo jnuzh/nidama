@@ -28,6 +28,6 @@ function append_simplexml(&$simplexml_to, &$simplexml_from)
     }
 }
     function XF($xml){
-        return $xml[0];
+        return $xml==null?null:$xml[0];
     }
 ?>   

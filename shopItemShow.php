@@ -4,6 +4,7 @@
     include_once("TaobaoHelper.php");
     include_once("EchoHelper.php");
     include_once("XmlHelper.php");
+    include_once("MsgHelper.php");
     include_once("ajaxPage.php");
 
     $groupid = "A10086";
@@ -20,15 +21,46 @@
     switch($op){
         case "delisting":{
             $req->itemUpdateDelisting($_REQUEST['num_iid']);
+            localMsgConsume("taobao_item_ItemDownshelf",$nick,$_REQUEST['num_iid']);
         }break;
         case "listing":{
             $req->itemUpdateListing($_REQUEST['num_iid'],$_REQUEST['num']);
+            localMsgConsume("taobao_item_ItemUpshelf",$nick,$_REQUEST['num_iid']);
         }break;
         case "delete":{
             $req->itemDelete($_REQUEST['num_iid']);
+            localMsgConsume("taobao_item_ItemDelete",$nick,$_REQUEST['num_iid']);
         }break;
         case "add":{
-            print_r($req->itemAdd());
+            $req->itemAddWithTitleAndDesc("妖器「御币」");
+           // localMsgConsume("taobao_item_ItemAdd",$nick,$_REQUEST['num_iid']);
+        }break;
+        case "addSerialA":{
+            $name   =   "恶魔";
+            $tag    =   'A';
+            for($i = 0;$i<10;$i++){
+                $tag++;
+                $req->itemAddWithTitleAndDesc($name.$tag);
+            }
+        }break;
+        case "addSerialB":{
+            $name   =   "妖怪";
+            $tag    =   'A';
+            for($i = 0;$i<10;$i++){
+                $tag++;
+                $req->itemAddWithTitleAndDesc($name.$tag);
+            }
+        }break;
+        case "addSerialC":{
+            $name   =   "天使";
+            $tag    =   'A';
+            for($i = 0;$i<10;$i++){
+                $tag++;
+                $req->itemAddWithTitleAndDesc($name.$tag);
+            }
+        }break;
+        case "deleteAll":{
+            
         }break;
         default:
     }
@@ -46,6 +78,7 @@
             $xml = $req->itemsOnsaleGet();
             append_simplexml($xml,$req->itemsInventorGet());
         }break;
+            
         default:
     }
 
@@ -57,7 +90,6 @@
     $number = 10;//每页显示条数
     
 
-    
     echo "<div id='$content_id'>";
     echo "<input type='radio'  onclick=\"dopage('$content_id','$url&show=onsale')\" ".($show=='onsale'?'checked':'')."/> 仅橱窗";
     echo "<input type='radio'  onclick=\"dopage('$content_id','$url&show=instock')\" ".($show=='instock'?'checked':'')."/>仅仓库";
@@ -102,7 +134,12 @@
     
     
     
-    echo "<br/><br/><hr/><a href=javascript:dopage('$content_id','$url&show=$show&page=$page&op=add');>增加测试商品</a>";
+    echo "<br/><br/><hr/>开发人员测试使用：";
+    echo "<br/><a href=javascript:dopage('$content_id','$url&show=$show&page=$page&op=add');>增加一件测试商品</a>";
+    echo "<br/><a href=javascript:dopage('$content_id','$url&show=$show&page=$page&op=addSerialA');>增加恶魔系列测试商品</a>";
+    echo "<br/><a href=javascript:dopage('$content_id','$url&show=$show&page=$page&op=addSerialB');>增加妖怪系列测试商品</a>";
+    echo "<br/><a href=javascript:dopage('$content_id','$url&show=$show&page=$page&op=addSerialC');>增加天使系列测试商品</a>";
+    echo "<br/><a href=javascript:dopage('$content_id','$url&show=$show&page=$page&op=deleteAll');>删除所有商品</a>";
     echo "</div>";
     
     
