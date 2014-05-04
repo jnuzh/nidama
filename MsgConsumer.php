@@ -32,8 +32,9 @@
                  $msg = $tmc->tmc_message;
                  $event_nick = $msg->nick;
                  $json = XF($msg->content);
-                 $event_num_iid = $json.num_iid;
-                 print_r($json);
+                 $event_content = json_decode($json,true);
+                 $event_num_iid = $event_content->num_iid;
+                 print_r($event_content);
                  remoteMsgConsume($msg->topic,$event_nick,$event_num_iid);
             }
          }
