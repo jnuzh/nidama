@@ -32,35 +32,22 @@
             localMsgConsume("taobao_item_ItemDelete",$nick,$_REQUEST['num_iid']);
         }break;
         case "add":{
-            $req->itemAddWithTitleAndDesc("妖器「御币」");
-           // localMsgConsume("taobao_item_ItemAdd",$nick,$_REQUEST['num_iid']);
+            $req->itemAddWithTitle("妖器「御币」");
         }break;
         case "addSerialA":{
-            $name   =   "恶魔";
-            $tag    =   'A';
-            for($i = 0;$i<10;$i++){
-                $tag++;
-                $req->itemAddWithTitleAndDesc($name.$tag);
-            }
+            $req->itemsAddWithTitle("天使");
         }break;
         case "addSerialB":{
-            $name   =   "妖怪";
-            $tag    =   'A';
-            for($i = 0;$i<10;$i++){
-                $tag++;
-                $req->itemAddWithTitleAndDesc($name.$tag);
-            }
+            $req->itemsAddWithTitle("路人");
         }break;
         case "addSerialC":{
-            $name   =   "天使";
-            $tag    =   'A';
-            for($i = 0;$i<10;$i++){
-                $tag++;
-                $req->itemAddWithTitleAndDesc($name.$tag);
-            }
+            $req->itemsAddWithTitle("恶魔");
         }break;
         case "deleteAll":{
-            
+            $xml = $req->itemsAllGet();
+            foreach($xml->item as $item){
+                $req->itemDelete($item->num_iid);
+            }
         }break;
         default:
     }
@@ -75,8 +62,7 @@
             $xml = $req->itemsInventorGet();
         }break;
         case "all":{
-            $xml = $req->itemsOnsaleGet();
-            append_simplexml($xml,$req->itemsInventorGet());
+            $xml = $req->itemsAllGet();
         }break;
             
         default:
@@ -136,9 +122,9 @@
     
     echo "<br/><br/><hr/>开发人员测试使用：";
     echo "<br/><a href=javascript:dopage('$content_id','$url&show=$show&page=$page&op=add');>增加一件测试商品</a>";
-    echo "<br/><a href=javascript:dopage('$content_id','$url&show=$show&page=$page&op=addSerialA');>增加恶魔系列测试商品</a>";
-    echo "<br/><a href=javascript:dopage('$content_id','$url&show=$show&page=$page&op=addSerialB');>增加妖怪系列测试商品</a>";
-    echo "<br/><a href=javascript:dopage('$content_id','$url&show=$show&page=$page&op=addSerialC');>增加天使系列测试商品</a>";
+    echo "<br/><a href=javascript:dopage('$content_id','$url&show=$show&page=$page&op=addSerialA');>增加天使系列测试商品</a>";
+    echo "<br/><a href=javascript:dopage('$content_id','$url&show=$show&page=$page&op=addSerialB');>增加人类系列测试商品</a>";
+    echo "<br/><a href=javascript:dopage('$content_id','$url&show=$show&page=$page&op=addSerialC');>增加恶魔系列测试商品</a>";
     echo "<br/><a href=javascript:dopage('$content_id','$url&show=$show&page=$page&op=deleteAll');>删除所有商品</a>";
     echo "</div>";
     

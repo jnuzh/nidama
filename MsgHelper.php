@@ -110,6 +110,9 @@
                         $result = $req->itemDelete($item->num_iid);
                         if($result) echo "操作是ItemDelete:对商品 $item->num_iid 进行了删除操作。\n";
                         else $req->print_error();
+                        
+                        
+                        
                     }break;
                     case "taobao_item_ItemUpdate":{//修改
                         echo "操作是ItemUpdate:对商品 $item->num_iid 进行了更新操作。\n";

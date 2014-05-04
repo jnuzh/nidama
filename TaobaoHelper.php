@@ -1,6 +1,6 @@
 <?php
 include("taobao_sdk/TopSdk.php");
-    
+    include_once("XmlHelper.php");
 
     
 class MFRequest
@@ -113,6 +113,13 @@ class MFRequest
             return $resp->items;
         }
     }
+    
+    function itemsAllGet(){
+        $xml = $this->itemsOnsaleGet();
+        append_simplexml($xml,$this->itemsInventorGet());
+        return $xml;
+    }
+    
     function itemGet($numIid)
     {
         $req = new ItemGetRequest;
@@ -325,7 +332,7 @@ class MFRequest
     
     
     /////////////////////开发人员使用
-    function itemAddWithTitleAndDesc($title)
+    function itemAddWithTitle($title)
     {
         $req = new ItemAddRequest;
         $req->setNum(100);
@@ -347,6 +354,11 @@ class MFRequest
         }
     }
     
-    
+    function itemsAddWithTitle($title){
+        $tag    =   'A';
+        for($i = 0;$i<10;$i++){
+            $this->itemAddWithTitle($title.($tag++));
+        }
+    }
 }
 ?>
