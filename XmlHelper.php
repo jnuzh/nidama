@@ -11,7 +11,11 @@
  */
 function append_simplexml(&$simplexml_to, &$simplexml_from)
 {
-    if($simplexml_from[0] == NULL) return;//自己添加的，防止报空的警告
+    if($simplexml_from[0] == null) return;//自己添加的，防止报空的警告
+    if($simplexml_to[0]==null) {
+        $simplexml_to=$simplexml_from;
+        return;
+    }
     foreach ($simplexml_from->children() as $simplexml_child)
     {
         $simplexml_temp = $simplexml_to->addChild($simplexml_child->getName(), (string) $simplexml_child);

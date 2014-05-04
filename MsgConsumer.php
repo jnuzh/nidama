@@ -20,9 +20,6 @@
          sleep(5);
          echo "监听消息中...";
          
-         
-         
-         
          foreach($request_array as $req){
              $resp = $req->tmcMessagesConsume();//收集消息
             // file_put_contents('msg.txt',$resp,FILE_APPEND);//记录消息
@@ -80,15 +77,6 @@
                  }
              }
          }
-         
-         
-         
-         
-         
-         
-         ob_flush();
-         flush();
-         usleep(1000);
      }
  
     //	print_r($request->itemAdd());//辅助工具，添加商品

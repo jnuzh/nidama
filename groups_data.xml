@@ -1,102 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <groups>
     <group id="A10086">
-        <items keynick="sandbox_motherfun">
-            <item>
-                <nick>sandbox_motherfun</nick>
-                <num_iid>2100515230389</num_iid>
-            </item>
-            <item>
-                <nick>sandbox_bluefun</nick>
-                <num_iid>2100515914330</num_iid>
-            </item>
-            <item>
-                <nick>sandbox_redfun</nick>
-                <num_iid>2100515593175</num_iid>
-            </item>
-        </items>
-        <items keynick="sandbox_motherfun">
-            <item>
-                <nick>sandbox_motherfun</nick>
-                <num_iid>2100515229784</num_iid>
-            </item>
-            <item>
-                <nick>sandbox_bluefun</nick>
-                <num_iid/>
-            </item>
-            <item>
-                <nick>sandbox_redfun</nick>
-                <num_iid>2100515593171</num_iid>
-            </item>
-        </items>
-    <items keynick="sandbox_motherfun">
-        <item>
-            <nick>sandbox_motherfun</nick>
-            <num_iid>2100509812221</num_iid>
-        </item>
-        <item>
-            <nick>sandbox_bluefun</nick>
-            <num_iid/></item>
-        <item>
-            <nick>sandbox_redfun</nick>
-            <num_iid>2100515581617</num_iid>
-        </item>
-    </items>
-    <items keynick="sandbox_motherfun">
-            <item>
-                <nick>sandbox_motherfun</nick>
-                <num_iid>2100509837578</num_iid>
-            </item>
-            <item>
-                <nick>sandbox_bluefun</nick>
-                <num_iid/>
-            </item>
-        <item>
-            <nick>sandbox_redfun</nick>
-            <num_iid>2100515581614</num_iid>
-        </item>
-    </items>
-    <items keynick="sandbox_bluefun">
-        <item>
-            <nick>sandbox_motherfun</nick>
-            <num_iid>2100515229821</num_iid>
-        </item>
-        <item>
-            <nick>sandbox_bluefun</nick>
-            <num_iid/>
-        </item>
-        <item>
-            <nick>sandbox_redfun</nick>
-            <num_iid>2100515581615</num_iid>
-        </item>
-    </items>
-    <items keynick="sandbox_motherfun">
-        <item>
-            <nick>sandbox_motherfun</nick>
-            <num_iid/>
-        </item>
-        <item>
-            <nick>sandbox_bluefun</nick>
-            <num_iid/>
-        </item>
-        <item>
-            <nick>sandbox_redfun</nick>
-            <num_iid/>
-        </item>
-    </items>
-    <items keynick="sandbox_redfun"><item><nick>sandbox_motherfun</nick><num_iid></num_iid></item><item><nick>sandbox_bluefun</nick><num_iid></num_iid></item><item><nick>sandbox_redfun</nick><num_iid>2100515593172</num_iid></item></items><items keynick="sandbox_bluefun"><item><nick>sandbox_motherfun</nick><num_iid/></item><item><nick>sandbox_bluefun</nick><num_iid/></item><item><nick>sandbox_redfun</nick><num_iid/></item></items><items keynick="sandbox_redfun"><item><nick>sandbox_motherfun</nick><num_iid/></item><item><nick>sandbox_bluefun</nick><num_iid/></item><item><nick>sandbox_redfun</nick><num_iid/></item></items><items keynick="sandbox_motherfun"><item><nick>sandbox_motherfun</nick><num_iid/></item><item><nick>sandbox_bluefun</nick><num_iid/></item><item><nick>sandbox_redfun</nick><num_iid/></item></items></group>
+    
+    <items keynick="sandbox_motherfun"><item><nick>sandbox_motherfun</nick><num_iid>2100516135591</num_iid></item><item><nick>sandbox_bluefun</nick><num_iid>2100516316804</num_iid></item><item><nick>sandbox_redfun</nick><num_iid>2100515581615</num_iid></item></items><items keynick="sandbox_motherfun"><item><nick>sandbox_motherfun</nick><num_iid>2100516135593</num_iid></item><item><nick>sandbox_bluefun</nick><num_iid>2100516316805</num_iid></item><item><nick>sandbox_redfun</nick><num_iid>2100515581580</num_iid></item></items><items keynick="sandbox_motherfun"><item><nick>sandbox_motherfun</nick><num_iid>2100516135592</num_iid></item><item><nick>sandbox_bluefun</nick><num_iid>2100516192706</num_iid></item><item><nick>sandbox_redfun</nick><num_iid>2100515581616</num_iid></item></items><items keynick="sandbox_motherfun"><item><nick>sandbox_motherfun</nick><num_iid>2100516192710</num_iid></item><item><nick>sandbox_bluefun</nick><num_iid>2100516192707</num_iid></item><item><nick>sandbox_redfun</nick><num_iid>2100515593171</num_iid></item></items><items keynick="sandbox_motherfun"><item><nick>sandbox_motherfun</nick><num_iid>2100516192709</num_iid></item><item><nick>sandbox_bluefun</nick><num_iid>2100516316806</num_iid></item><item><nick>sandbox_redfun</nick><num_iid>2100515593172</num_iid></item></items><items keynick="sandbox_motherfun"><item><nick>sandbox_motherfun</nick><num_iid>2100516316810</num_iid></item><item><nick>sandbox_bluefun</nick><num_iid>2100516316807</num_iid></item><item><nick>sandbox_redfun</nick><num_iid>2100515593173</num_iid></item></items><items keynick="sandbox_motherfun"><item><nick>sandbox_motherfun</nick><num_iid>2100516316809</num_iid></item><item><nick>sandbox_bluefun</nick><num_iid>2100516192708</num_iid></item><item><nick>sandbox_redfun</nick><num_iid>2100515593174</num_iid></item></items><items keynick="sandbox_motherfun"><item><nick>sandbox_motherfun</nick><num_iid>2100509837578</num_iid></item><item><nick>sandbox_bluefun</nick><num_iid>2100516316808</num_iid></item><item><nick>sandbox_redfun</nick><num_iid>2100515581617</num_iid></item></items></group>
     
     <group id="B10010">
-        <items>
-            <item>
-                <nick>sandbox_bluefun</nick>
-                <num_iid>2100515914330</num_iid>
-            </item>
-            <item>
-                <nick>sandbox_redfun</nick>
-                <num_iid>2100515593175</num_iid>
-            </item>
-        </items>
 
     </group>
 

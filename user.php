@@ -9,11 +9,11 @@
     $all_shops = simplexml_load_file('shops_data.xml');
     $target_shop_array = $all_shops->xpath("shop[groups/groupid='$groupid']");
     
-    
-    
-    
-    
-    
+    foreach ($target_shop_array as $shop) {
+        $req = new MFRequest($shop->sessionkey);
+        $req->tmcUserPermit();
+    }
+
     
     
     echo "<div class='column four'>";
@@ -34,6 +34,7 @@
         echo "<td>$shop->nick</td>";
         echo "<td>".($i==1?"":"删除")."</td>";
         echo "</tr>";
+        
     }
     echo "</table>";
     

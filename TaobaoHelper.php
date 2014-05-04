@@ -161,12 +161,12 @@ class MFRequest
     function itemAdd()
     {
         $req = new ItemAddRequest;
-        $req->setNum(10);
-        $req->setPrice("998");
+        $req->setNum(100);
+        $req->setPrice("50");
         $req->setType("fixed");
         $req->setStuffStatus("new");
-        $req->setTitle("沙箱测试：学姐头部");
-        $req->setDesc("这是学姐的头");
+        $req->setTitle("沙箱测试：先史遗产 水晶外星人");
+        $req->setDesc("这是先史遗产系列卡牌。");
         $req->setLocationState("广东");
         $req->setLocationCity("珠海");
         $req->setCid(50000802);
@@ -200,7 +200,7 @@ class MFRequest
         $req->setPackingList("说明书:1;耳机:1;充电器:1");
         $req->setMarketId("2");
         $req->setSellPt("明星同款");
-        $req->setImage('@'. dirname(__FILE__).'/02.jpg');
+        $req->setImage('@'. dirname(__FILE__).'/default.png');
         $resp = $this->center->execute($req, $this->sessionKey);
         return $resp;    
     }
@@ -215,7 +215,7 @@ class MFRequest
     
     function tmcUserPermit(){
 		$req = new TmcUserPermitRequest;
-		$req->setTopics("taobao_item_ItemUpdate,taobao_item_ItemDelete ");
+		$req->setTopics("taobao_item_ItemAdd,taobao_item_ItemUpdate,taobao_item_ItemDelete,taobao_item_ItemUpshelf,taobao_item_ItemDownshelf");
         $resp = $this->center->execute($req, $this->sessionKey);
         return $resp;
     }

@@ -27,6 +27,9 @@
         case "delete":{
             $req->itemDelete($_REQUEST['num_iid']);
         }break;
+        case "add":{
+            print_r($req->itemAdd());
+        }break;
         default:
     }
     
@@ -96,6 +99,10 @@
     }
     echo "</table>";
     echo ajaxPage($content_id,"$url&show=$show",$total,$number);
+    
+    
+    
+    echo "<br/><br/><hr/><a href=javascript:dopage('$content_id','$url&show=$show&page=$page&op=add');>增加测试商品</a>";
     echo "</div>";
     
     
