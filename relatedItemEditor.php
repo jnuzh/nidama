@@ -49,8 +49,8 @@ echo <<<EOT
         }
         var sel = document.getElementById("option_keynick");
         var keynick = sel.options[sel.selectedIndex].value;
-         dopage_ex('relation_id','relatedItemButtonAjax.php?groupid=$groupid&items_seq=$items_seq&keynick='+keynick+'&data='+JSON.stringify(arr),'relatedManager.php');
-        //dopage('relation_id','relatedItemButtonAjax.php?groupid=$groupid&items_seq=$items_seq&keynick='+keynick+'&data='+JSON.stringify(arr));
+         //dopage_ex('relation_id','relatedItemButtonAjax.php?groupid=$groupid&items_seq=$items_seq&keynick='+keynick+'&data='+JSON.stringify(arr),'relatedManager.php');
+        dopage('relation_id','relatedItemButtonAjax.php?groupid=$groupid&items_seq=$items_seq&keynick='+keynick+'&data='+JSON.stringify(arr));
 
         
     }
