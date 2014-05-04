@@ -33,7 +33,7 @@
                  $event_nick = $msg->nick;
                  $json = XF($msg->content);
                  $event_content = json_decode($json,true);
-                 $event_num_iid = $event_content->num_iid;
+                 $event_num_iid = $event_content['num_iid'];
                  print_r($event_content);
                  remoteMsgConsume($msg->topic,$event_nick,$event_num_iid);
             }
