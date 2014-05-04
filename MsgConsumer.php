@@ -19,14 +19,14 @@
     $n=20;
      while ($n--) {
          sleep(5);
-         echo "监听消息中...";
+         echo "监听消息中...\n";
          
          foreach($request_array as $req){
              $resp = $req->tmcMessagesConsume();//收集消息
             
              // file_put_contents('msg.txt',$resp,FILE_APPEND);//记录消息
              if(count($resp->messages)==0) continue;
-             echo "收到消息！<br/>";
+             echo "收到消息！\n";
              
              foreach($resp->messages as $tmc){
                  $msg = $tmc->tmc_message;
@@ -34,7 +34,7 @@
                  $json = $msg->content;
                  $event_num_iid = $json[0]->num_iid;
             
-                 localMsgConsume($msg->topic,$event_nick,$event_num_iid);
+                 remoteMsgConsume($msg->topic,$event_nick,$event_num_iid);
             }
          }
      }
