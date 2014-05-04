@@ -13,6 +13,7 @@
 
     $groupid = $_REQUEST['groupid'];
     $items_seq = $_REQUEST['items_seq'];
+    $show =  isset($_REQUEST['show'])?$_REQUEST['show']:"on";
     
     $all_shops = simplexml_load_file('shops_data.xml');
     $target_shop_array = $all_shops->xpath("shop[groups/groupid='$groupid']");
@@ -33,7 +34,7 @@
  
   
     
-    $url ="relatedItemTableAjax.php?groupid=$groupid&items_seq=$items_seq";
+    $url ="relatedItemTableAjax.php?groupid=$groupid&items_seq=$items_seq&show=$show";
 echo <<<EOT
     <script>
 
@@ -51,11 +52,14 @@ echo <<<EOT
         var keynick = sel.options[sel.selectedIndex].value;
          dopage_ex('relation_id','relatedItemButtonAjax.php?groupid=$groupid&items_seq=$items_seq&keynick='+keynick+'&data='+JSON.stringify(arr),'relatedManager.php');
         //dopage('relation_id','relatedItemButtonAjax.php?groupid=$groupid&items_seq=$items_seq&keynick='+keynick+'&data='+JSON.stringify(arr));
-
-        
+  
     }
+    
+
     </script>
 EOT;
+    
+    
     
     echo "主店铺卖家昵称：";
     echo " <select id='option_keynick'  >";
@@ -66,14 +70,14 @@ EOT;
     }
     echo "</select>";
     
-    
+    echo "<hr/>";
     foreach($target_shop_array as $shop){
         $nick = (string)($shop->nick);
         $target_item = $target_items->xpath("item[nick='$nick']");
         $target_num_iid = (string)($target_item==null?"":$target_item[0]->num_iid);
         $content_id = "ajax_".$nick;
         
-        echo "<hr/>";
+        echo "<br/><br/>";
         echo "昵称为$nick 的店铺商品：";
         echo " <select id='option_$nick'  onChange=submitOption('$content_id','$nick',this) >";
         echo "<option value=''>无</option>";
@@ -102,20 +106,29 @@ EOT;
     
     
     echo "<div class='column four'>";
+    
+    /*
+    echo "查看方式：";
+    echo "<input type='radio'  onclick=\"dopage('$content_id','$url&show=onsale')\" ".($show=='on'?'checked':'')."/> 显示详情";
+    echo "<input type='radio'  onclick=\"dopage('$content_id','$url&show=onsale')\" ".($show=='off'?'checked':'')."/>不显示";
+    
+    */
     echo <<<EOT
-    <h3>注意</h3>
+    <h3>注意事项</h3>
     <ul>
-    <li>所有新增同步都是以主店铺的商品为准。</li>
-    <li>选择附属店铺下拉框中的商品确认信息</li>
-    <li>点击确定同步后，附属店铺中指定的商品的出售状态和数量都会被更新为与当前主店铺商品一样</li>
-    <li>选择复制商品，将会在附属店铺中添加一个与主店铺商品信息完全一样的商品。(待定)</li>
-     <li>可以切换主店铺进行复制操作，但是只有真正的主店铺才能进行同步（待定）</li>
+    <li>暂无</li>
     </ul>
     
 EOT;
     echo "</div>";
     
-   
+    /*
+     <li>所有新增同步都是以主店铺的商品为准。</li>
+     <li>选择附属店铺下拉框中的商品确认信息</li>
+     <li>点击确定同步后，附属店铺中指定的商品的出售状态和数量都会被更新为与当前主店铺商品一样</li>
+     <li>选择复制商品，将会在附属店铺中添加一个与主店铺商品信息完全一样的商品。(待定)</li>
+     <li>可以切换主店铺进行复制操作，但是只有真正的主店铺才能进行同步（待定）</li>
+     */
     
     
     include("footer.php");

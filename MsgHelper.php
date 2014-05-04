@@ -84,6 +84,8 @@
         $event_num_iid = $num_iid;
         $event_topic = $topic;
         
+        
+        echo "BEGIN****************消息出现，开始分析！****************<br/>";
         echo "这次消息的信息如下：\n";
         echo "昵称是：$nick \n";
         echo "商品id是：$num_iid  \n";
@@ -93,10 +95,10 @@
         //找到所在的关联小组
         $event_items = XF($groups->xpath("group/items[item[num_iid='$event_num_iid']]"));
         if($event_items==null){
-            echo "BEGIN****************没有找到关联小组！消息消费完毕****************END<br/>";
+            echo "****************没有找到关联小组！消息消费完毕****************END<br/>";
             return;
         }else{
-            echo "BEGIN****************找到关联小组！开始执行！****************<br/>";
+            echo "****************找到关联小组！开始执行！****************<br/>";
         }
 
         

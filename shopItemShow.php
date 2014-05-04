@@ -120,7 +120,7 @@
     
     
     
-    echo "<br/><br/><hr/>开发人员测试使用：";
+    echo "<br/><br/><hr/>供开发人员测试使用：";
     echo "<br/><a href=javascript:dopage('$content_id','$url&show=$show&page=$page&op=add');>增加一件测试商品</a>";
     echo "<br/><a href=javascript:dopage('$content_id','$url&show=$show&page=$page&op=addSerialA');>增加天使系列测试商品</a>";
     echo "<br/><a href=javascript:dopage('$content_id','$url&show=$show&page=$page&op=addSerialB');>增加人类系列测试商品</a>";
