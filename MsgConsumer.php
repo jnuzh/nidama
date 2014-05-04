@@ -14,6 +14,7 @@
         $request_array[$nick] = new MFRequest($shop->sessionkey);
     }
     
+    echo "启动消息监听器!\n";
     
     set_time_limit(0);
     $n=20;
