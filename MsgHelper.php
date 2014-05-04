@@ -84,7 +84,10 @@
         $event_num_iid = $num_iid;
         $event_topic = $topic;
         
-        
+        echo "这次消息的信息如下：\n";
+        echo "昵称是：$nick \n";
+        echo "商品id是：$num_iid  \n";
+        echo "消息主题是：$event_topic \n";
         
         //找到所在的关联小组
         $event_items = XF($groups->xpath("group/items[item[num_iid='$event_num_iid']]"));
