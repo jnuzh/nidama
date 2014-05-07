@@ -3,6 +3,7 @@
     include_once("TaobaoHelper.php");
     include_once("XmlHelper.php");
     include_once("EchoHelper.php");
+    include_once("MySQLHelper.php");
     
     echo "<div class='column'>";
     
@@ -38,7 +39,15 @@
 
 EOT;
     
+    $mysql = new MFMySQL("nidama");
+    $result = $mysql->query("select * from tbl_User");
+    while($row = mysql_fetch_array($result))
+    {
+        echo $row['username'] . " " . $row['groupid'];
+        echo "<br />";
+    }
 
+    $mysql->close();
     
     echo "</div>";
     
