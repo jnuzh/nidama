@@ -38,7 +38,7 @@
   
 
 EOT;
-    
+    /*
     $mysql = new MFMySQL("nidama");
     $result = $mysql->query("select * from tbl_User");
     while($row = mysql_fetch_array($result))
@@ -48,7 +48,7 @@ EOT;
     }
 
     $mysql->close();
-    
+    */
     echo "</div>";
     
     include("footer.php");
