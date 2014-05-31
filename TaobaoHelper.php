@@ -400,11 +400,11 @@ class MFRequest
         $req->setTradeId($tid);   //交易流水号
         
         $req->setSName($sInfo->contact_name);   //发件人名称
-        $req->setSAreaId(6523);  //发件人区域ID？？？？？
+        $req->setSAreaId(0756);  //发件人区域ID？？？？？
         $req->setSAddress($sInfo->addr); //发件人街道地址
         $req->setSZipCode($sInfo->zip_code);   //发件人邮编
-        $req->setRMobilePhone($sInfo->mobile_phone);
-        $req->setRTelephone($sInfo->phone);
+        $req->setSMobilePhone($sInfo->mobile_phone);
+        $req->setSTelephone($sInfo->phone);
         $req->setSProvName($sInfo->province);
         $req->setSCityName($sInfo->city);
         $req->setSDistName($sInfo->country);
