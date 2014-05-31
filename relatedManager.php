@@ -26,7 +26,7 @@ EOT;
 
     echo "<input type='submit' style='width:111px;height:111px;font-size:20px;' value='更新同步' onclick='submitSyn()'/>";
 
-    echo "<input type='submit' style='width:111px;height:111px;font-size:20px;' value='自动关联' onclick='submitSyn()'/>";
+  //  echo "<input type='submit' value='自动关联' onclick='submitSyn()'/>";
     
     echo "</div>";
     
