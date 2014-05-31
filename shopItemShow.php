@@ -67,7 +67,9 @@
             
         default:
     }
-
+    if($xml==null) $req->print_error();
+  
+    
     
     $content_id = "ajax_page_one";                              //区域的id号，必须修改！
     $url ="shopItemShow.php?nick=$nick";                                           //当前php文件名，必须修改！
@@ -119,15 +121,17 @@
     echo ajaxPage($content_id,"$url&show=$show",$total,$number);
     
     
-    
+   
     echo "<br/><br/><hr/>供开发人员测试使用：";
     echo "<br/><a href=javascript:dopage('$content_id','$url&show=$show&page=$page&op=add');>增加一件测试商品</a>";
     echo "<br/><a href=javascript:dopage('$content_id','$url&show=$show&page=$page&op=addSerialA');>增加天使系列测试商品</a>";
     echo "<br/><a href=javascript:dopage('$content_id','$url&show=$show&page=$page&op=addSerialB');>增加人类系列测试商品</a>";
     echo "<br/><a href=javascript:dopage('$content_id','$url&show=$show&page=$page&op=addSerialC');>增加恶魔系列测试商品</a>";
     echo "<br/><a href=javascript:dopage('$content_id','$url&show=$show&page=$page&op=deleteAll');>删除所有商品</a>";
+     
+     
     echo "</div>";
     
-    
+  
     
     ?>

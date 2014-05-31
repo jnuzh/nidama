@@ -324,12 +324,125 @@ class MFRequest
         }
 	}
     
-    function print_error(){
-        echo "<br/>出现错误！返回为：";
-        print_r($this->error);
-        echo "<br/>";
+    
+    function tradesSoldGet(){
+        $req = new TradesSoldGetRequest;
+        $req->setFields("seller_nick,buyer_nick,title,type,created,sid,tid,seller_rate,buyer_rate,status,payment,rate_status,orders.title,orders.pic_path,orders.price,orders.num,orders.iid,orders.num_iid");
+        $resp = $this->center->execute($req, $this->sessionKey);
+        if($resp->getName()=="error_response"){
+            $this->error = $resp;
+            return null;
+        }else{
+            return $resp->trades;
+        }
     }
     
+    function tradeGet($tid){
+        $req = new TradeGetRequest;
+        $req->setFields("orders.title,orders.price, orders.num, orders.num_iid, orders.status, orders.oid, orders.total_fee, orders.payment, orders.discount_fee,  orders.item_meal_name, orders.outer_iid, buyer_nick, title, type, created, tid, seller_rate, buyer_rate, status,buyer_message");
+        $req->setTid($tid);
+        $resp = $this->center->execute($req, $this->sessionKey);
+        if($resp->getName()=="error_response"){
+            $this->error = $resp;
+            return null;
+        }else{
+            return $resp->trade;
+        }
+    }
+    
+    function tradeFullinfoGet($tid){
+        $req = new TradeFullinfoGetRequest;
+        $req->setFields("orders.title,orders.price, orders.num, orders.num_iid, orders.status, orders.oid, orders.total_fee, orders.payment, orders.discount_fee,  orders.item_meal_name, orders.outer_iid, buyer_nick, title, type, created, tid, seller_rate, buyer_rate, status,buyer_message,receiver_name, receiver_state, receiver_city, receiver_district, receiver_address, receiver_zip, receiver_mobile, receiver_phone,buyer_area");
+        $req->setTid($tid);
+        $resp = $this->center->execute($req, $this->sessionKey);
+        if($resp->getName()=="error_response"){
+            $this->error = $resp;
+            return null;
+        }else{
+            return $resp->trade;
+        }
+    }
+    
+    function logisticsCompaniesGet(){
+        $req = new LogisticsCompaniesGetRequest;
+        $req->setFields("id,code,name,reg_mail_no");
+        $req->setIsRecommended("true");
+        $req->setOrderMode("offline");
+        $resp = $this->center->execute($req, $this->sessionKey);
+        if($resp->getName()=="error_response"){
+            $this->error = $resp;
+            return null;
+        }else{
+            return $resp->logistics_companies;
+        }
+    }
+
+    function logisticsAddressSearch(){
+        $req = new LogisticsAddressSearchRequest;
+        $resp = $this->center->execute($req, $this->sessionKey);
+        if($resp->getName()=="error_response"){
+            $this->error = $resp;
+            return null;
+        }else{
+            return $resp->addresses;
+        }
+    }
+
+    
+    
+    function logisticsConsignOrderCreateandsend($user_id,$lcomId,$tid,$sInfo,$rInfo){
+        $req = new LogisticsConsignOrderCreateandsendRequest;
+        $req->setUserId($user_id);
+        $req->setOrderSource(1);
+        $req->setOrderType(0);
+        $req->setLogisType(1);
+        $req->setCompanyId($lcomId); //物流公司ID
+        $req->setTradeId($tid);   //交易流水号
+        
+        $req->setSName($sInfo->contact_name);   //发件人名称
+        $req->setSAreaId($sInfo->area_id);  //发件人区域ID？？？？？
+        $req->setSAddress($sInfo->addr); //发件人街道地址
+        $req->setSZipCode($sInfo->zip_code);   //发件人邮编
+        $req->setRMobilePhone($sInfo->phone);
+        $req->setRTelephone($sInfo->mobile_phone);
+        $req->setSProvName($sInfo->province);
+        $req->setSCityName($sInfo->city);
+        $req->setSDistName($sInfo->country);
+        
+        $req->setRName($rInfo->receiver_name);  //收件人名称
+        $req->setRAreaId(0756);  //收件人区域？？？？？
+        $req->setRAddress($rInfo->receiver_address); //收件人街道地址
+        $req->setRZipCode($rInfo->receiver_zip); //收件人邮编
+        $req->setRMobilePhone($rInfo->receiver_phone);
+        $req->setRTelephone($rInfo->receiver_mobile);
+        $req->setRProvName($rInfo->receiver_state);  //省
+        $req->setRCityName($rInfo->receiver_city);  //市
+        $req->setRDistName($rInfo->receiver_district);  //区
+        
+       
+        $req->setItemJsonString("[{'itemName':'ssss','singlePrice':10,'itemCount':12},{'itemName':'xxxxx',singlePrice:10,itemCount:12}]");  //物品的json数据
+
+
+        
+        $resp = $this->center->execute($req, $this->sessionKey);
+        echo "ok";
+        if($resp->getName()=="error_response"){
+            $this->error = $resp;
+            return null;
+        }else{
+            return $resp;
+        }
+    }
+    
+    
+    
+    function print_error(){
+        if($this->error){
+            echo "<br/>出现错误！返回为：";
+            print_r($this->error);
+            echo "<br/>";
+        }
+    }
     
     /////////////////////开发人员使用
     function itemAddWithTitle($title)

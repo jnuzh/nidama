@@ -59,4 +59,5 @@ CONFIG_PROTECT_MASK="/etc/php/cli-php5.3/ext-active/ /etc/php/cgi-php5.3/ext-act
 在 某些参考资料中是说这两个方法任选其一就可，但经我测试，必须两个方法同时使用，才不会再出现错误提示。经实测其实第二个方法并不需要在每个出现错误提示 的PHP文件中添加，只需在其中一个PHP文件中添加即可。另外添加的时区不需要与提示中的时区一样，比如系统给我的提示是Chongqing,但我设置 成Shanghai也是一样的，当然这个时间也是与我系统的时区设置是一样的。
 
 
+sandbox_cilai_c taobao1234
 

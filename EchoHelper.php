@@ -113,12 +113,12 @@ background:#FFFFCC;
     {
         echo "<table border='1'>";
         echo "<tr class='title'><td align='center' colspan=9><font size=5>店铺信息</font></td></tr>";
-        echo "<tr><td>cid</td><td>".$xml->cid."</td></tr>";
-        echo "<tr><td>sid</td><td>".$xml->sid."</td></tr>";
+        echo "<tr><td>店铺ID</td><td>".$xml->sid."</td></tr>";
+        echo "<tr><td>店铺类别ID</td><td>".$xml->cid."</td></tr>";
         echo "<tr><td>店名</td><td>".$xml->title."</td></tr>";
         echo "<tr><td>描述</td><td>".$xml->desc."</td></tr>";
         echo "<tr><td>公告</td><td>".$xml->bulletin."</td></tr>";
-        echo "<tr><td>图片</td><td>".$xml->pic_path."</td></tr>";
+        echo "<tr><td>图片</td><td><img src='".$xml->pic_url."'></td></tr>";
         echo "<tr><td>卖家昵称</td><td>".$xml->nick."</td></tr>";
         echo "</table>";
     }
@@ -127,7 +127,7 @@ background:#FFFFCC;
     {
         echo "<table border='1'>";
         echo "<tr class='title'><td align='center' colspan=9><font size=5>商品属性</font></td></tr>";
-        echo "<tr><td>ID</td><td>".$xml->num_iid."</td></tr>";
+        echo "<tr><td>商品ID</td><td>".$xml->num_iid."</td></tr>";
         echo "<tr><td>名称</td><td>".$xml->title."</td></tr>";
         echo "<tr><td>描述</td><td>".$xml->desc."</td></tr>";
         echo "<tr><td>商品链接</td><td><a href=".$xml->detail_url.">".$xml->detail_url."</a></td></tr>";
@@ -203,12 +203,12 @@ background:#FFFFCC;
         echo "<table border=1>";
         echo "<tr class='title'><td align='center' colspan=10><font size=5>仓库宝贝列表</font></td></tr>";
         echo "<tr class='titleList'>";
-        echo "<td>ID</td>";
+        echo "<td>商品ID</td>";
         echo "<td>名称</td>";
         echo "<td>图片</td>";
         echo "<td>价格</td>";
         echo "<td>出售状态</td>";
-        echo "<td>cid</td>";
+        echo "<td>类别ID</td>";
         echo "<td>数量</td>";
         echo "<td>操作</td>";
         echo "<td>操作</td>";
@@ -296,8 +296,8 @@ background:#FFFFCC;
     {
         echo "<table border='1'>";
         echo "<tr class='title'><td align='center' colspan=9><font size=5>店主信息</font></td></tr>";
-        echo "<tr><td>id</td><td>".$xml->user_id."</td></tr>";
-        echo "<tr><td>uid</td><td>".$xml->uid."</td></tr>";
+        echo "<tr><td>用户数字ID</td><td>".$xml->user_id."</td></tr>";
+        echo "<tr><td>用户字符串ID</td><td>".$xml->uid."</td></tr>";
         echo "<tr><td>昵称</td><td>".$xml->nick."</td></tr>";
         echo "<tr><td>创建时间</td><td>".$xml->created."</td></tr>";
         echo "<tr><td>最近访问</td><td>".$xml->last_visit."</td></tr>";
@@ -422,6 +422,77 @@ EOT;
         include_once("relatedItemShow.php");
     }
     
+
+    
+    function echoInTable33($xml)
+    {
+        
+        echo "<table border=1>";
+        echo "<tr class='title'><td align='center' colspan=10><font size=5>交易记录</font></td></tr>";
+        echo "<tr class='titleList'>";
+        echo "<td>交易ID</td>";
+        echo "<td>创建时间</td>";
+        echo "<td>买家昵称</td>";
+        echo "<td>支付金额</td>";
+        echo "<td>交易状态</td>";
+        
+        
+        echo "</tr>";
+        foreach ($xml->children() as $child) {
+            echo "<tr>";
+            echo "<td>".$child->tid."</td>";
+            echo "<td>".$child->created."</td>";
+            echo "<td>".$child->buyer_nick."</td>";
+            echo "<td>".$child->payment."</td>";
+            echo "<td>".$child->status."</td>";
+            
+            
+            echo "</tr>";
+        }
+        echo "</table>";
+        
+    }
+    
+    function echoInTable34($xml)
+    {
+        echo "<table border=1>";
+        echo "<tr class='title'><td align='center' colspan=10><font size=5>订单商品信息</font></td></tr>";
+        echo "<tr class='titleList'>";
+        echo "<td>商品编号</td>";
+        echo "<td>商品名称</td>";
+        echo "<td>价格</td>";
+        echo "<td>支付金额</td>";
+        echo "<td>商品状态</td>";
+        
+        
+        echo "</tr>";
+        foreach ($xml->orders->children() as $child) {
+            echo "<tr>";
+            echo "<td>".$child->num_iid."</td>";
+            echo "<td>".$child->title."</td>";
+            echo "<td>".$child->price."</td>";
+            echo "<td>".$child->payment."</td>";
+            echo "<td>".$child->status."</td>";
+            
+            echo "</tr>";
+        }
+        echo "</table>";
+        
+    }
+
+    function echoInTable35($xml)
+    {
+        
+        echo "<table border=1>";
+        echo "<tr class='title'><td align='center' colspan=10><font size=5>订单信息</font></td></tr>";
+        echo "<tr><td>订单编号</td><td>".$xml->tid."</td></tr>";
+        echo "<tr><td>创建时间</td><td>".$xml->created."</td></tr>";
+        echo "<tr><td>买家昵称</td><td>".$xml->buyer_nick."</td></tr>";
+        echo "<tr><td>订单状态</td><td>".$xml->status."</td></tr>";
+        echo "<tr><td>买家留言</td><td>".$xml->buyer_message."</td></tr>";
+        echo "</table>";
+        
+    }
 
     
 ?>

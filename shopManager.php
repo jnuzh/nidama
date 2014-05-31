@@ -18,7 +18,7 @@
  
     echo "<div class='column one'>";
     $user_info = $request->userGet();
-    echoInTable8($user_info);
+   // echoInTable8($user_info);
     echo "<br/>";
     echoInTable4($request->shopGet($user_info->nick));
     echo "<br/>";

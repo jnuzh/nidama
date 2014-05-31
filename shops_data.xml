@@ -2,7 +2,7 @@
 <shops>
     <shop>
         <nick>sandbox_motherfun</nick>
-        <sessionkey>6101114d14732e192a61f71084ea5007252e446f1e8d0bf3629363321</sessionkey>
+        <sessionkey>6100f30b2a205de88b45e448c7530d7dce3d9e1450e98c03629363321</sessionkey>
         <groups>
             <groupid>A10086</groupid>
         </groups>
@@ -11,7 +11,7 @@
     
     <shop>
         <nick>sandbox_bluefun</nick>
-        <sessionkey>61004151aed180d55a7ed8d1b7451dd2a1d877fd87ac9f13632386628</sessionkey>
+        <sessionkey>6101e1460d1f49666576b61b7125e21283dbf4aebca77ae3632386628</sessionkey>
         <groups>
             <groupid>A10086</groupid>
             <groupid>B10010</groupid>
@@ -20,7 +20,7 @@
     
     <shop>
         <nick>sandbox_redfun</nick>
-        <sessionkey>6100721a07246758fcf9942c6e3281a6af96ac4fa521e373632386814</sessionkey>
+        <sessionkey>6102205dd18471cec0f5f73a516b827d126dd082ffe74743632386814</sessionkey>
         <groups>
             <groupid>A10086</groupid>
             <groupid>B10010</groupid>

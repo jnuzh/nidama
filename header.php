@@ -35,6 +35,12 @@ a.navigator{
     color:#ffffff;
 }
 
+.row{
+    // outline:1px dashed red;
+clear:left;
+    // background:#9AC;
+}
+
 .column{
    // outline:1px dashed red;
     float:left;
@@ -62,6 +68,21 @@ a.navigator{
 .four{
 width:30%;
 }
+
+.send{
+width:50%;
+margin:0 0%;
+padding:0 2%;
+}
+
+
+.receive{
+width:50%;
+margin:0 0%;
+padding:0 2%;
+}
+
+
 .footer{
 clear:left;
 }
@@ -77,10 +98,11 @@ clear:left;
 <table>
 <tr  class='navigator'>
 <td class='navigator'><a class='navigator' href="index.php">主页</a></td>
-<td class='navigator'><a class='navigator' href="user.php">账户组别</a></td>
-<td class='navigator'><a class='navigator' href="relatedManager.php">关联商品</a></td>
-<td class='navigator'><a class='navigator' href="shopManager.php">店铺商品</a></td>
-<td class='navigator'><a class='navigator' href="Help.php">关于</a></td>
+<td class='navigator'><a class='navigator' href="user.php">账号管理</a></td>
+<td class='navigator'><a class='navigator' href="relatedManager.php">同步管理</a></td>
+<td class='navigator'><a class='navigator' href="shopManager.php">商品管理</a></td>
+<td class='navigator'><a class='navigator' href="tradeManager.php">订单管理</a></td>
+<td class='navigator'><a class='navigator' href="Help.php">帮助</a></td>
 <tr>
 </table>
 </div>

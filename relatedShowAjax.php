@@ -16,6 +16,7 @@
     foreach ($target_shop_array as $shop) {
         $req = new MFRequest($shop->sessionkey);
         $all_array[(string)($shop->nick)]   = $req->itemsOnsaleGet();
+        $req->print_error();
         append_simplexml($all_array[(string)($shop->nick)],$req->itemsInventorGet());
     }
     
@@ -73,7 +74,6 @@
     }
     </script>
 EOT;
-    
     
     echo "<div id='$content_id'>";
 
